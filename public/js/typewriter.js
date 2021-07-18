@@ -121,12 +121,14 @@ function replace(e){
 
 function unordered(elem){
     var parent=elem.parentNode,
+        active=document.activeElement,
         ul = document.createElement('ul'),
         li = document.createElement('li');
+   if(active.nodeName=="LI") return;
+
    ul.appendChild(li);
    ul.classList.add("main");
    li.classList.add("main");
-
 
    li.contentEditable="true";
    parent.replaceChild(ul,elem);
@@ -136,9 +138,11 @@ function unordered(elem){
 
 function ordered(elem,start){
     var parent=elem.parentNode,
+        active=document.activeElement,
         ol = document.createElement('ol'),
         li = document.createElement('li');
   
+   if(active.nodeName=="LI") return;
    ol.appendChild(li);
    ol.start=start;
    ol.classList.add("main");
@@ -313,8 +317,9 @@ document.addEventListener('keydown', function(event) {
                      p_previousElem.focus();                
                  }
               
-               if(previousElem!=="undefined") previousElem.focus();
-                  elem.remove();              
+               if(previousElem!=="undefined") 
+                 previousElem.focus();
+              elem.remove();              
              } 
          }
     }
