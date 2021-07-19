@@ -6,7 +6,7 @@ function App() {
   return (
 <div className="pad" >
   <h1 id="heading">TYPE - WRITER PAD </h1>
-  <input id="pad_parent" size="35" className="main" autofocus placeholder="Start here"/>
+  <input id="pad_parent" size="35" className="main" autoFocus placeholder="Start here"/>
 </div>
   );
 }

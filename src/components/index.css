@@ -2,9 +2,10 @@
 body{
     font-family: 'Roboto', sans-serif;
 background: linear-gradient(90deg, rgba(251, 237, 150, 0.1) 0%, rgba(171, 236, 214, 0.1) 100%);
-  padding: 0 20rem;
+padding: 0 20rem;
 }
 .pad {
+  margin-top:70px;
   margin-bottom:50px;
 }
 #heading{

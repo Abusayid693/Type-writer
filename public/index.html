@@ -11,13 +11,20 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script src="./js/typewriter.js"></script>
+     <style>
+       canvas{
+         transition:0.3s;
+         border:1px solid black;
+         width:80%;  
+        }
+      </style>
+    <script type="module" src="./modules/typewriter.js"></script>
+    <!-- <script type="module" src="../src/index.js"></script> -->
 
   </body>
 </html>
