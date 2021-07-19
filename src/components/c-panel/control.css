@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+.panel{
+    width: 13rem;
+    height: 80vh;
+    position: fixed;
+    border: 2px solid black;
+    border-radius: 32px;
+   left: 20px;
+   top: 15vh;
+   font-family: 'Roboto', sans-serif;
+   padding: 0 10px;
+   background-color: black;
+
+}
+.drop{
+   margin-top: 50px;
+   font-weight: 300;
+}

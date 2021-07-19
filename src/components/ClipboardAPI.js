@@ -28,6 +28,7 @@ window.addEventListener('paste', function(e){
           loadImage(src,$,c);
         }
        p.classList.add("main");
+       c.classList.add("main");
        c.classList.add("img")
        p.contentEditable="true";
        c.contentEditable="true";

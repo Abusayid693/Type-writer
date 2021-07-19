@@ -3,7 +3,7 @@ var i=0,
     b=0;
 
 function italicANDbold(e){
-    if (e.keyCode == 96 && !i && b)
+  if (e.keyCode == 96 && !i && b)
     {
       cursive(e,"both");
       i=1;
@@ -23,7 +23,6 @@ function italicANDbold(e){
   else if(e.keyCode == 96 && !i && !b )
     {
       cursive(e,"italic");
-      stack.push("i");
       i=1;
     }
 //   Normal to bold
@@ -63,18 +62,22 @@ function cursive(e,type){
 /******** Function for assigning bold and italics contents *********/
 
 function assign(pn,type){
-    if(type=="both")
+  if(type=="both")
     {
      pn.style.fontWeight="bold";
      pn.style.fontStyle="italic";
    }
   else if(type=="normal")
   {
-    return;
+
+     pn.style.fontWeight="normal";
+     pn.style.fontStyle="normal"; 
+    // return;
   }
   else{
     let a= (type=="bold")?pn.style.fontWeight=type:pn.style.fontStyle=type;
   }
+
 }
 
 
