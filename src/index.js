@@ -12,7 +12,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
+function hyu(){
+  alert("kjbejb");
+}
 
 
 

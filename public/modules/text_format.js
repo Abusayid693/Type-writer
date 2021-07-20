@@ -38,7 +38,9 @@ function cursive(e, type) {
   if (elem.nodeName == "LI") {
     assign(elem, type);
     return;
-  } else {
+  }
+  else if (elem.classList.contains(code)) return;
+  else {
     pn = document.createElement(elem.nodeName);
     pn.classList.add("main");
   }

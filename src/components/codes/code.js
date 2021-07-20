@@ -1,32 +1,35 @@
+/*** CODE SUMMARY
+ * code(elem) : Changes the current element with a code block editing div
+ *
+ * copyCode() : copy the code content into clip board
+ *
+ */
+
 function code(elem) {
   let newElement = document.createElement("div"),
-    p = document.createElement("p"),
-    i = document.createElement("i"),
-
     parent = elem.parentNode;
-  i.classList.add("far","fa-clipboard");
-  newElement.classList.add("codes");
-  p.classList.add("code");
-  p.contentEditable = "true";
-  newElement.contentEditable = "true";
-  
-  // newElement.append(i);
-  newElement.appendChild(p);
 
+  newElement.classList.add("codes");
+
+  newElement.contentEditable = "true";
+
+  newElement.innerHTML =
+    "<div className='codes' ><i id='codeCopy' contentEditable='false'class='far copy fa-clipboard'></i><p contentEditable='true' className='code'>code here</p></div>";
 
   parent.replaceChild(newElement, elem);
 
-  p.focus();
+  newElement.focus();
+  copyCode();
+}
+
+function copyCode() {
+  var btn = document.querySelector("#codeCopy"),
+    codes;
+
+  btn.addEventListener("click", () => {
+    codes = btn.parentElement.textContent;
+    btn.classList = "fas copy fa-check";
+  });
 }
 
 export { code };
-
-// document.addEventListener("keypress",fkey)
-
-// function fkey(event){
-//     if (event.shiftKey) {
-//      document.addEventListener("keypress", append);
-//     } else {
-
-//     }
-//   }
