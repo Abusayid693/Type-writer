@@ -1,0 +1,22 @@
+
+.codes{
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    border-radius: 6px;
+    padding: 50px 50px;
+    margin: 20px 20px 20px 30px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.2rem;
+    position: relative;
+  }
+  .far{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      padding: 2px;
+      border-radius: 3px;
+  }
+  .far:hover{
+      background-color: wheat;
+  }
