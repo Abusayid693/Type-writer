@@ -3,8 +3,6 @@ import "./control.css";
 import Select from "react-select";
 import { Link } from "react-router-dom";
 
-
-
 const options = [
   { value: "Montserrat, sans-serif", label: "Montserrat" },
   { value: "Roboto, sans-serif", label: "Roboto" },
@@ -51,20 +49,6 @@ class Fonts extends React.Component {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Container extends React.Component {
   state = {
     selectedOption: null,
@@ -84,11 +68,12 @@ class Container extends React.Component {
 
     return (
       <div className="panel">
-      <div className="cheader">
+        <div className="cheader">
           <p>C-Panel</p>
           <Link to="/saved-files">
-          <button>control</button></Link>
-          </div>
+            <button>control</button>
+          </Link>
+        </div>
         <Fonts />
       </div>
     );
