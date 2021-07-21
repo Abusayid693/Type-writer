@@ -2,16 +2,16 @@
 
 
 .panel{
-    width: 13rem;
-    height: 80vh;
+    width: 15rem;
+    height: 100vh;
     position: fixed;
-    border: 2px solid black;
-    border-radius: 32px;
-   left: 20px;
-   top: 15vh;
+    border: 1.5px solid rgb(207, 206, 206);
+    /* border-radius: 32px; */
+   left: 0;
+   top: 0vh;
    font-family: 'Roboto', sans-serif;
    padding: 0 10px;
-   background-color: black;
+   background-color:white;
 
 }
 .drop{

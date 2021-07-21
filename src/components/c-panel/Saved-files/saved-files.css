@@ -1,0 +1,25 @@
+.cheader{
+    margin-top: 30px;
+    border-bottom: 1px solid rgb(235, 228, 228);
+    height: fit-content;
+    padding-bottom: 10px;
+    
+}
+.cheader p{
+    font-weight: 300;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin: 0;
+}
+.cheader button{
+    background-color: black;
+    color: white;
+    display: inline-block;
+    border: none;
+    font-size: 1.25rem;
+    margin: 0 0 0 0;
+    /* float:right; */
+    padding: 9px;
+    border-radius: 7px;
+   cursor: pointer;
+}

@@ -1,6 +1,9 @@
 import React from "react";
 import "./control.css";
 import Select from "react-select";
+import { Link } from "react-router-dom";
+
+
 
 const options = [
   { value: "Montserrat, sans-serif", label: "Montserrat" },
@@ -81,6 +84,11 @@ class Container extends React.Component {
 
     return (
       <div className="panel">
+      <div className="cheader">
+          <p>C-Panel</p>
+          <Link to="/saved-files">
+          <button>control</button></Link>
+          </div>
         <Fonts />
       </div>
     );
