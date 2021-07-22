@@ -11,10 +11,14 @@ function deleteNode(event) {
       p_parent;
     if (elem.id == "pad_parent") return;
     else if (elem.textContent == "") {
+      
       if (elem.nodeName == "LI") {
         parent = elem.parentElement;
         pTag(parent);
-      } else {
+      }
+      else if(elem.previousSibling==null) {elem.remove();
+         return;}
+       else {
         previousElem = elem.previousSibling;
         elem.remove();
         //     Removing HR from the thread
