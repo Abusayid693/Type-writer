@@ -35,7 +35,13 @@ class App extends React.Component {
     imageCapture();
     initialize();
     this.typewriter();
+    // this.test();
   }
+ 
+  test(){
+    document.querySelector(".pad").innerHTML="<h1>ghjg</h1>"
+  }
+  
 
   typewriter() {
     var i = 0, //variable used for italics
