@@ -2,11 +2,23 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-/** CodeView block is replaced with current div adding syntax highlighter to the current code   */
+import "./code.css"
+
+
+
 function CodeView(props) {
+
+  const style ={
+    margin : "0px 0 0 40px",
+    backgroundColor:"white",
+    borderRadius:"5px",
+    fontSize:"1.2rem",
+    width:"500px"
+  }
   return (
-    <div className="codes" contentEditable="false">
+    <div className={"code-syntax",props.plass} contentEditable="true">
       <SyntaxHighlighter
+       customStyle={style}
         contentEditable="true"
         language="javascript"
         style={docco}
@@ -20,7 +32,7 @@ function CodeView(props) {
 }
 
 function codesyn(text, elem) {
-  ReactDOM.render(<CodeView text={text} />, document.querySelector(elem));
+  ReactDOM.render(<CodeView text={text} plass={elem} />, document.querySelector("." +elem));
 }
 
 // Variable to keep a track record of number of code-blocks
@@ -33,29 +45,22 @@ function code(elem) {
 
   newElement.classList.add("code-view", classIdentification);
   newElement.contentEditable = "true";
-  newElement.focus();
   newElement.innerHTML =
-    "<div class='codes' contentEditable='true' ><i id='codeCopy' contentEditable='false' class='far copy fa-clipboard'></i><p contentEditable='true' class='code'>.</p></div>";
+    "<div class='codes' contentEditable='true' ><p contentEditable='true' class='code'>- </p></div>";
 
   parent.replaceChild(newElement, elem);
   numberOfCodeBlocks++;
 }
 
-function copyCode() {
-  var btn = document.querySelector("#codeCopy"),
-    codes;
-
-  btn.addEventListener("click", () => {
-    codes = btn.parentElement.textContent;
-    btn.classList = "fas copy fa-check";
-  });
-}
 
 function initialize() {
+  var appendCodeBlock=false;
+
   document.addEventListener("keypress", (event) => {
     var elem = document.activeElement;
-    if (event.ctrlKey && elem.classList.contains("code-view")) {
-      codesyn(elem.textContent, "." + elem.classList[1]);
+    if (event.ctrlKey && elem.classList.contains("code-view") && appendCodeBlock) {
+      appendCodeBlock=false;
+      codesyn(elem.textContent,elem.classList[1]);
       elem.classList.add("main");
     } else {
       console.log("Active element is not code block");
@@ -67,9 +72,28 @@ function initialize() {
     if (e.keyCode == 32) {
       var elem = document.activeElement,
         text = elem.textContent;
-      if (text == "'''") code(document.activeElement);
+      if (text == "'''") {
+        appendCodeBlock=true;
+        code(document.activeElement)};
     }
   }
+
+
+
+
+  document.addEventListener("keypress", ContinueC);
+
+  function ContinueC(e) {
+    var elem=document.activeElement;
+    if (e.which === 13 && appendCodeBlock && elem.classList.contains("code-view")) {
+       var newElem=document.createElement("p");
+           newElem.contentEditable = "true";
+           elem.parentNode.insertBefore(newElem, elem.nextSibling);
+           newElem.focus();
+           code(newElem)
+           codesyn(elem.textContent, elem.classList[1]);
+    }
+}
 }
 
 export { initialize };
