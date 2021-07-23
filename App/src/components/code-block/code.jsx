@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/dist/esm/styles/hljs/docco";
-
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 /** CodeView block is replaced with current div adding syntax highlighter to the current code   */
 function CodeView(props) {
   return (
-    <div className="codes">
+    <div className="codes" contentEditable="false">
       <SyntaxHighlighter
-        contentEditable="false"
+        contentEditable="true"
         language="javascript"
-        style={prism}
-        wrapLines={true}
-        showLineNumbers={true}
+        style={docco}
+        wrapLines={false}
+        showLineNumbers={false}
       >
         {props.text}
       </SyntaxHighlighter>

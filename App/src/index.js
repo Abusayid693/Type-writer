@@ -12,10 +12,20 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-function hyu(){
-  alert("kjbejb");
+
+
+function imageResize(){
+  var temp=document.querySelector("canvas");
+  if(temp==null) return;
+  else {
+alert("jhg")
+    temp.addEventListener("click",()=>{
+      alert('fjj')
+    })
+    // temp.style.width = '60%'
+
+}
+// alert("jhg")
 }
 
-
-
-
+imageResize();

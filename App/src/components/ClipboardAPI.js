@@ -7,7 +7,6 @@ export default function imageCapture() {
       c = document.createElement("canvas"),
       p = document.createElement("p"),
       $ = c.getContext("2d");
-
     //   detecting clipboard item image or not
     if (e.clipboardData.files.length > 0 && elem.classList.contains("main")) {
       //   Handaling clipboard event to pasta image to a new canvas next to
@@ -46,3 +45,5 @@ export default function imageCapture() {
     img.src = src;
   }
 }
+
+
