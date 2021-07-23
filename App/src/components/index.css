@@ -55,7 +55,7 @@ canvas{
   transition:0.3s;
   border:1px solid black;
   width:100%;  
-  height: fit-content;
+
 }
 .pad input{
   background-color: transparent;

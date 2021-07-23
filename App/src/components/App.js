@@ -10,6 +10,8 @@ import { italicANDbold } from "./modules/text_format.js";
 import imageCapture from "./ClipboardAPI.js";
 import { initialize,CodeBloackData } from "./code-block/code.jsx";
 
+
+
 function imageResize(){
   var temp=document.querySelector("canvas");
   if(temp==null) return;
@@ -18,7 +20,7 @@ alert("jhg")
     temp.addEventListener("click",()=>{
       alert('fjj')
     })
-    // temp.style.width = '60%'
+    temp.style.transform = "scale(0.8)";
 
 }
 // alert("jhg")
@@ -169,7 +171,6 @@ class App extends React.Component {
           autoFocus
           placeholder="Start here"
         />
-        <button onClick={imageResize} >bvccy</button>
       </div>
     );
   }
