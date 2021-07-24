@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import "./code-block/code.css";
-import { formatEqn } from "./modules/Format-Equations.js";
+import { formatEqn } from "./Format-equation/Format-Equations.js";
 import { unordered, ordered } from "./modules/lists.js";
 import { heading } from "./modules/header.js";
 import { hR } from "./modules/horizontal-ruller.js";
