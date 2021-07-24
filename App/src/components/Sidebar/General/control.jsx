@@ -1,8 +1,9 @@
 import React from "react";
 import "./control.css";
+import "./fonts.css";
 import Select from "react-select";
 import { Link } from "react-router-dom";
-// import {DiscreteSlider} from "../../imageResizer/imageResizer.jsx"
+
 
 
 const options = [
@@ -77,7 +78,6 @@ class Container extends React.Component {
           </Link>
         </div>
         <Fonts />
-        {/* <DiscreteSlider /> */}
       </div>
     );
   }

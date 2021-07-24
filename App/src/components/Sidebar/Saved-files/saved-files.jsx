@@ -14,7 +14,10 @@ function File() {
         <p>{file1.title}</p>
       </div>
       <div className="bottom">
-       <a> <i class="fas fa-chevron-right"></i></a>
+        <a>
+          {" "}
+          <i class="fas fa-chevron-right"></i>
+        </a>
       </div>
     </div>
   );
@@ -48,7 +51,6 @@ class SavedFiles extends React.Component {
         <File />
         <File />
         <File />
-
       </div>
     );
   }

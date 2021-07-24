@@ -1,20 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-
-
-.panel{
-    width: 16rem;
-    height: 100vh;
-    position: fixed;
-    border: 1.5px solid rgb(207, 206, 206);
-    /* border-radius: 32px; */
-   left: 0;
-   top: 0vh;
-   font-family: 'Roboto', sans-serif;
-   padding: 0 10px;
-   background-color:white;
-
+.panel {
+  width: 16rem;
+  height: 100vh;
+  position: fixed;
+  border: 1.5px solid rgb(207, 206, 206);
+  left: 0;
+  top: 0vh;
+  font-family: "Roboto", sans-serif;
+  padding: 0 10px;
+  background-color: white;
 }
-.drop{
-   margin-top: 50px;
-   font-weight: 300;
+.drop {
+  margin-top: 50px;
+  font-weight: 300;
 }
