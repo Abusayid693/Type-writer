@@ -1,17 +1,7 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import "./imageResizer.css";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: 300,
-  },
-  margin: {
-    height: theme.spacing(3),
-  },
-}));
 
 const marks = [
   {
@@ -37,31 +27,23 @@ const marks = [
   {
     value: 100,
     label: "100",
-  }
+  },
 ];
 
 class DiscreteSlider extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  componentDidMount() {
-    this.initialize();
-    // this.valuetext();
-  }
-
-  initialize() {}
   valuetext(value) {
-    var a= value/100
+    var a = value / 100 + 0.13;
     console.log(a);
-    var b="scale("+a+")";
-  var temp=document.querySelector("canvas");
-  if(temp==null) return;
-  else
-   temp.style.transform = b;
+    var b = "scale(" + a + ")";
+    var temp = document.querySelectorAll(".captured"),
+      length = temp.length;
+    if (temp[length - 1] == null) return;
+    else
+      temp[length - 1].style.transform = b;
   }
-
-
 
   render() {
     return (
@@ -73,10 +55,9 @@ class DiscreteSlider extends React.Component {
           defaultValue={40}
           getAriaValueText={this.valuetext}
           aria-labelledby="discrete-slider-custom"
-          step={6}
+          step={10}
           valueLabelDisplay="auto"
           marks={marks}
-        //   onChange={this.handleChange}
         />
       </div>
     );

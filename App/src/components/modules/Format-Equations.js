@@ -1,4 +1,4 @@
-/** SUMMARY : This function formats polynomical equations
+/** SUMMARY : This Algorithm formats polynomical equations
 into html tag to properly display.
 
 Eg : 
@@ -21,8 +21,7 @@ function formatEqn(elem) {
     f = 0,
     l,
     firstD = 1,
-    firstS = 1,
-    temp;
+    firstS = 1;
 
   div.contentEditable = "true";
   div.classList.add("eqan");
@@ -43,10 +42,10 @@ function formatEqn(elem) {
       firstD = 1;
       firstS = 1;
     } else if (f) {
-      var temp = firstS ? (sup[su] = l) : (sup[su] += l);
+      firstS ? (sup[su] = l) : (sup[su] += l);
       firstS = 0;
     } else {
-      var temp = firstD ? (data[d] = l) : (data[d] += l);
+      firstD ? (data[d] = l) : (data[d] += l);
       firstD = 0;
     }
   }

@@ -1,6 +1,6 @@
 var i = 0,
-  b = 0,
-   code;
+    b = 0,
+    code;
 
 function italicANDbold(e) {
   if (e.keyCode == 96 && !i && b) {
@@ -32,8 +32,7 @@ function italicANDbold(e) {
 
 function cursive(e, type) {
   var elem = document.activeElement,
-    parent = elem.parentNode,
-    pn;
+      newElement;
 
   e.preventDefault();
   if (elem.nodeName == "LI") {
@@ -42,33 +41,33 @@ function cursive(e, type) {
   }
   else if (elem.classList.contains(code)) return;
   else {
-    pn = document.createElement(elem.nodeName);
-    pn.classList.add("main");
+    newElement = document.createElement(elem.nodeName);
+    newElement.classList.add("main");
   }
 
-  assign(pn, type);
-  pn.contentEditable = "true";
-  pn.style.display = "inline";
+  assign(newElement, type);
+  newElement.contentEditable = "true";
+  newElement.style.display = "inline";
   elem.style.display = "inline";
-  elem.parentNode.insertBefore(pn, elem.nextSibling);
-  pn.focus();
+  elem.parentNode.insertBefore(newElement, elem.nextSibling);
+  newElement.focus();
 }
 
 /******** Function for assigning bold and italics contents *********/
 
-function assign(pn, type) {
+function assign(elem, type) {
   if (type == "both") {
-    pn.style.fontWeight = "bold";
-    pn.style.fontStyle = "italic";
+    elem.style.fontWeight = "bold";
+    elem.style.fontStyle = "italic";
   } else if (type == "normal") {
-    pn.style.fontWeight = "normal";
-    pn.style.fontStyle = "normal";
+    elem.style.fontWeight = "normal";
+    elem.style.fontStyle = "normal";
     // return;
   } else {
     let a =
       type == "bold"
-        ? (pn.style.fontWeight = type)
-        : (pn.style.fontStyle = type);
+        ? (elem.style.fontWeight = type)
+        : (elem.style.fontStyle = type);
   }
 }
 

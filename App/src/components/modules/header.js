@@ -1,6 +1,6 @@
 function heading(elem, e) {
   let parent = elem.parentNode,
-    newElement = e;
+      newElement = e;
 
   elem.classList.add("main");
   newElement.classList.add("main");
