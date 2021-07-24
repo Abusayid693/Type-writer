@@ -7,7 +7,7 @@ import { heading } from "./modules/header.js";
 import { hR } from "./modules/horizontal-ruller.js";
 import { deleteNode } from "./modules/nodeDelete.js";
 import { italicANDbold } from "./modules/text_format.js";
-import { imageCapture } from "./ClipboardAPI.js";
+import { imageCapture } from "./image-capture/ClipboardAPI.js";
 import { initialize, CodeBloackData } from "./code-block/code.jsx";
 
 function H1() {

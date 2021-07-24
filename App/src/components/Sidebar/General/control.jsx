@@ -2,7 +2,7 @@ import React from "react";
 import "./control.css";
 import Select from "react-select";
 import { Link } from "react-router-dom";
-import {DiscreteSlider} from "../../imageResizer/imageResizer.jsx"
+// import {DiscreteSlider} from "../../imageResizer/imageResizer.jsx"
 
 
 const options = [
@@ -77,7 +77,7 @@ class Container extends React.Component {
           </Link>
         </div>
         <Fonts />
-        <DiscreteSlider />
+        {/* <DiscreteSlider /> */}
       </div>
     );
   }
