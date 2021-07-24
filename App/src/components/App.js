@@ -23,7 +23,7 @@ function H4() {
   return document.createElement("h4");
 }
 
-class App extends React.Component {
+class Typewriter extends React.Component {
   state = {
     selectedOption: null,
   };
@@ -124,11 +124,17 @@ class App extends React.Component {
     document.addEventListener("keydown", deleteNode);
   }
 
+  pop(){
+    alert("hello")
+  }
+
   render() {
     const { selectedOption } = this.state;
 
     return (
-      <div className="pad">
+      <div className="pad"
+       onChange={this.pop}
+      >
         <h1 id="heading">TYPE - WRITER PAD </h1>
         <input
           id="pad_parent"
@@ -138,8 +144,30 @@ class App extends React.Component {
           placeholder="Start here"
         />
       </div>
+
     );
   }
 }
+
+
+
+
+class App extends React.Component{
+
+
+  pop(){
+    alert("hello")
+  }
+  render(){
+  return(
+    <div className="Whole"
+    onChange={this.pop}
+    >
+    <Typewriter />
+    </div>
+  );
+  }
+}
+
 
 export default App;
