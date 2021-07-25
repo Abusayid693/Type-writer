@@ -1,28 +1,31 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import axios from "axios";
+import { render } from "react-equation";
 // import "./version.css"
 
-function VersionControl() {
-  let VersionControlStarted = false;
-
-  const state = {
-    start: "Start version control",
-    save: "Save current",
+class VersionControl extends React.Component {
+  state = {
+    type: "Start version control",
   };
 
-  const [type, setState] = useState(state.start);
+  componentDidMount() {
+    this.getData();
+  }
 
-// Getting data from the server
-
-function getData(){
-
-  
-}
-
-
+  getData = () => {
+    axios
+      .get("/data")
+      .then((response) => {
+        const data = response.data;
+        console.log("Data received", data);
+      })
+      .catch(() => {
+        console.log("Data receiving error error");
+      });
+  };
 
   // Sending data to the server
-  function handleClick() {
+  handleClick = () => {
     const payload = {
       title: "Payload data",
       body: "<h1>Fuck</h1>",
@@ -41,19 +44,20 @@ function getData(){
         console.log("Data sending error");
       });
 
-    if (VersionControlStarted) {
-      console.log("version control started");
-    } else {
-      setState(state.save);
-      VersionControlStarted = true;
-    }
-  }
+    this.setState({
+      type: "Save",
+    });
+  };
 
-  return (
-    <div className="version_control">
-      <button onClick={handleClick}>{type}</button>
-    </div>
-  );
+  render() {
+    console.log("State: ", this.state);
+
+    return (
+      <div className="version_control">
+        <button onClick={this.handleClick}>{this.state.type}</button>
+      </div>
+    );
+  }
 }
 
 export default VersionControl;
