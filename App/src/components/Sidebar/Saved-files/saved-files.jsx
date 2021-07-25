@@ -7,10 +7,9 @@ import Button from "@material-ui/core/Button";
 function File(props) {
 
   function showVersion() {
-    alert(props.data.title);
-    document.querySelector(".Whole").innerHTML=props.data.title;
+    document.querySelector(".Whole").innerHTML=props.data.body;
   }
-  
+
   return (
     <div className="">
       <Button variant="contained" color="secondary" onClick={showVersion}>
@@ -30,16 +29,17 @@ class SavedFiles extends React.Component {
   }
 
   componentDidMount() {
-    this.getData();
+    this.getData(false);
   }
 
-  getData = () => {
+  getData = (isSaved) => {
     axios
       .get("/data")
       .then((response) => {
         const data = response.data;
-        this.setState({ Data: data });
-        if(data.length) this.setState({ type:"Save current version" });
+        this.setState({ Data: data.reverse() });
+        if(data.length)
+         (isSaved)?this.setState({ type:"version saved"}):this.setState({ type:"Save current version"})
         console.log("Data received", data);
       })
       .catch(() => {
@@ -50,7 +50,7 @@ class SavedFiles extends React.Component {
   handleClick = () => {
     const payload = {
       title: "Payload data",
-      body: "<h1>Fuck</h1>",
+      body: document.querySelector(".Whole").innerHTML
     };
 
     axios({
@@ -60,14 +60,11 @@ class SavedFiles extends React.Component {
     })
       .then(() => {
         console.log("Data sent to the server");
+        this.getData(true);
       })
       .catch(() => {
         console.log("Data sending error");
       });
-
-    this.setState({
-      type:"Save current version"
-    });
   };
 
   displayVersions = (data) => {
