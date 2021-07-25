@@ -1,46 +1,81 @@
 import React from "react";
 import "./saved-files.css";
 import { Link } from "react-router-dom";
-import VersionControl from "../../subcomponents/version-control.jsx";
+import axios from "axios";
+import Button from "@material-ui/core/Button";
 
-const file1 = {
-  title: "About Machine learning",
-  date: "2nd oct 2021",
-};
+function File(props) {
 
-function File() {
+  function showVersion() {
+    alert(props.data.title);
+    document.querySelector(".Whole").innerHTML=props.data.title;
+  }
+  
   return (
-    <div className="file">
-      <div className="top">
-        <p>{file1.title}</p>
-      </div>
-      <div className="bottom">
-        <a>
-          {" "}
-          <i class="fas fa-chevron-right"></i>
-        </a>
-      </div>
+    <div className="">
+      <Button variant="contained" color="secondary" onClick={showVersion}>
+        Secondary
+      </Button>
     </div>
   );
 }
 
 class SavedFiles extends React.Component {
   state = {
-    selectedOption: null,
+    Data: [],
+    type: "Start version control",
   };
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    this.initialize();
+    this.getData();
   }
 
-  initialize() {}
+  getData = () => {
+    axios
+      .get("/data")
+      .then((response) => {
+        const data = response.data;
+        this.setState({ Data: data });
+        if(data.length) this.setState({ type:"Save current version" });
+        console.log("Data received", data);
+      })
+      .catch(() => {
+        console.log("Data receiving error error");
+      });
+  };
+
+  handleClick = () => {
+    const payload = {
+      title: "Payload data",
+      body: "<h1>Fuck</h1>",
+    };
+
+    axios({
+      url: "/",
+      method: "POST",
+      data: payload,
+    })
+      .then(() => {
+        console.log("Data sent to the server");
+      })
+      .catch(() => {
+        console.log("Data sending error");
+      });
+
+    this.setState({
+      type:"Save current version"
+    });
+  };
+
+  displayVersions = (data) => {
+    if (!data.length) return null;
+    return data.map((data) => <File data={data} />);
+  };
 
   render() {
-    const { selectedOption } = this.state;
-
     return (
       <div className="saved-files panel">
         <div className="cheader">
@@ -49,10 +84,8 @@ class SavedFiles extends React.Component {
             <button>control</button>
           </Link>
         </div>
-        <File />
-        <File />
-        <File />
-        <VersionControl />
+        <button onClick={this.handleClick}>{this.state.type}</button>
+        {this.displayVersions(this.state.Data)}
       </div>
     );
   }

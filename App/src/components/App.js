@@ -124,17 +124,15 @@ class Typewriter extends React.Component {
     document.addEventListener("keydown", deleteNode);
   }
 
-  pop(){
-    alert("hello")
+  pop() {
+    alert("hello");
   }
 
   render() {
     const { selectedOption } = this.state;
 
     return (
-      <div className="pad"
-       onChange={this.pop}
-      >
+      <div className="pad" onChange={this.pop}>
         <h1 id="heading">TYPE - WRITER PAD </h1>
         <input
           id="pad_parent"
@@ -144,30 +142,18 @@ class Typewriter extends React.Component {
           placeholder="Start here"
         />
       </div>
-
     );
   }
 }
 
-
-
-
-class App extends React.Component{
-
-
-  pop(){
-    alert("hello")
-  }
-  render(){
-  return(
-    <div className="Whole"
-    onChange={this.pop}
-    >
-    <Typewriter />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="Whole">
+        <Typewriter />
+      </div>
+    );
   }
 }
-
 
 export default App;
