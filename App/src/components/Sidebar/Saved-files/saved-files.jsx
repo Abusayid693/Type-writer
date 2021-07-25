@@ -1,8 +1,7 @@
 import React from "react";
 import "./saved-files.css";
 import { Link } from "react-router-dom";
-import VersionControl from "../../subcomponents/version-control.jsx"
-
+import VersionControl from "../../subcomponents/version-control.jsx";
 
 const file1 = {
   title: "About Machine learning",

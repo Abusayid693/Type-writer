@@ -57,8 +57,7 @@ class Test extends React.Component {
 }
 
 function renderImage(src, s) {
-  ReactDOM.render(<Test src={src} />
-  , document.querySelector("#" + s));
+  ReactDOM.render(<Test src={src} />, document.querySelector("#" + s));
 }
 
 function imageCapture() {
@@ -71,11 +70,8 @@ function imageCapture() {
     c.classList.add("captured", "main");
     c.id = "img" + numImages;
 
-    //   detecting clipboard item image or not
     if (e.clipboardData.files.length > 0 && elem.classList.contains("main")) {
       parent.replaceChild(c, elem);
-      //   Handaling clipboard event to pasta image to a new canvas next to
-      //   current active element
       if (imgs == undefined) return false;
       for (var i = 0; i < imgs.length; i++) {
         if (imgs[i].type.indexOf("image") == -1) continue;
@@ -90,7 +86,6 @@ function imageCapture() {
     }
   });
 
-  // Drawing image and setting canvas width and height
   function loadImage(src) {
     renderImage(src, "img" + numImages);
     numImages++;

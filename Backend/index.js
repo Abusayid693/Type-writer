@@ -2,84 +2,42 @@ const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const path = require("path");
-// const cors=require("cors");
 const app = express();
 const TextFile = require("./Models/models");
-
-
-
-
-
 const PORT = process.env.PORT || 8000;
 
 app.use(morgan("tiny"));
-// app.use(cors());
-app.use(express.json())
-app.use(express.urlencoded({extended:true}));
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(
-  "mongodb://localhost/mern",
-  // "mongodb+srv://Rehan:Alexa693@cluster0.2wzmd.mongodb.net/typeWriter?retryWrites=true&writeConcern=majority/locationDB ",
+  "mongodb://localhost/mern" ||
+    "mongodb+srv://Rehan:Alexa693@cluster0.2wzmd.mongodb.net/typeWriter?retryWrites=true&writeConcern=majority/locationDB ",
   { useUnifiedTopology: true },
   { useNewUrlParser: true }
 );
 
-
-// Test data
-
-// const test = {
-//   title: "About over hype of Machine learning",
-//   body: "<h1>Fuck</h1>",
-// };
-
-// const newTextFile = new TextFile(test);
-// newTextFile.save((error)=>{
-//     if(error)
-//     console.log(error);
-//     else
-//     console.log("Text file added to database");
-// });
-
-
-
-
 app.get("/data", (req, res) => {
-
   TextFile.find({})
-          .then((data)=>{
-           console.log('Data: ' ,data);
-           res.json(data);
-          })
-          .catch((error)=>{
-           console.log('Error: ' ,error);
-          })
-
-  // res.send("Hello");
+    .then((data) => {
+      console.log("Data: ", data);
+      res.json(data);
+    })
+    .catch((error) => {
+      console.log("Error: ", error);
+    });
 });
-
-
-
 
 app.post("/", (req, res) => {
-
-console.log('POST',req.body)
-
-const payload=req.body;
-const newTextFile = new TextFile(payload);
-newTextFile.save((error)=>{
-  if(error)
-  console.log(error);
-  else
-  console.log("Text file added to database");
+  console.log("POST", req.body);
+  const payload = req.body;
+  const newTextFile = new TextFile(payload);
+  newTextFile.save((error) => {
+    if (error) console.log(error);
+    else console.log("Text file added to database");
+  });
+  res.send("Data received in server");
 });
-
-res.send("Data received in server")
-
-});
-
-
-
 
 mongoose.connection.on("connected", () => {
   console.log("Database successfully connected");

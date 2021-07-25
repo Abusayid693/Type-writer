@@ -4,8 +4,6 @@ import "./fonts.css";
 import Select from "react-select";
 import { Link } from "react-router-dom";
 
-
-
 const options = [
   { value: "Montserrat, sans-serif", label: "Montserrat" },
   { value: "Roboto, sans-serif", label: "Roboto" },

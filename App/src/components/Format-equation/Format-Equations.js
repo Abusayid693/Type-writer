@@ -26,7 +26,7 @@ function formatEqn(elem) {
   div.contentEditable = "true";
   div.classList.add("equation" + i);
   div.classList.add("main");
-  
+
   for (var j = 1; j < elem.textContent.length; j++) text += elem.textContent[j];
 
   parent.replaceChild(div, elem);

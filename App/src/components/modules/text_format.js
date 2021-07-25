@@ -1,6 +1,6 @@
 var i = 0,
-    b = 0,
-    code;
+  b = 0,
+  code;
 
 function italicANDbold(e) {
   if (e.keyCode == 96 && !i && b) {
@@ -14,8 +14,8 @@ function italicANDbold(e) {
   //   Returning to normal from italics
   if ((e.keyCode == 96 || e.keyCode == 42) && i | b) {
     cursive(e, "normal");
-    (i = 0);
-     (b = 0);
+    i = 0;
+    b = 0;
   }
 
   //   Normal to italics
@@ -32,14 +32,13 @@ function italicANDbold(e) {
 
 function cursive(e, type) {
   var elem = document.activeElement,
-      newElement;
+    newElement;
 
   e.preventDefault();
   if (elem.nodeName == "LI") {
     assign(elem, type);
     return;
-  }
-  else if (elem.classList.contains(code)) return;
+  } else if (elem.classList.contains(code)) return;
   else {
     newElement = document.createElement(elem.nodeName);
     newElement.classList.add("main");
