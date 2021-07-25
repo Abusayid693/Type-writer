@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 // import "./version.css"
 
-
 function VersionControl() {
   let VersionControlStarted = false;
 
@@ -13,29 +12,37 @@ function VersionControl() {
 
   const [type, setState] = useState(state.start);
 
+// Getting data from the server
+
+function getData(){
+
+  
+}
+
+
+
+  // Sending data to the server
   function handleClick() {
-   
     const payload = {
-        title: "Payload data",
-        body: "<h1>Fuck</h1>",
-      };
+      title: "Payload data",
+      body: "<h1>Fuck</h1>",
+    };
 
     axios({
-      url : '',
-      method : 'POST',
-      data : payload
+      //using proxy
+      url: "/",
+      method: "POST",
+      data: payload,
     })
-    .then(()=>{
-        console.log("Data sent to the server")
-    })
-    .catch(()=>{
-        console.log("Data sending error")
-
-    });
-
+      .then(() => {
+        console.log("Data sent to the server");
+      })
+      .catch(() => {
+        console.log("Data sending error");
+      });
 
     if (VersionControlStarted) {
-      alert("file-saved");
+      console.log("version control started");
     } else {
       setState(state.save);
       VersionControlStarted = true;
