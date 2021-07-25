@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(
-  "mongodb://localhost/typewriter" ||
+  "mongodb://localhost/typewriter1" ||
     "mongodb+srv://Rehan:Alexa693@cluster0.2wzmd.mongodb.net/typeWriter?retryWrites=true&writeConcern=majority/locationDB ",
   { useUnifiedTopology: true },
   { useNewUrlParser: true }

@@ -16,55 +16,28 @@ p {
   margin: 0;
 }
 .cheader button {
-  background-color: black;
-  color: white;
   display: inline-block;
-  border: none;
-  font-size: 1.25rem;
-  margin: 0;
-  padding: 9px;
-  border-radius: 7px;
-  cursor: pointer;
   position: absolute;
   right: 0;
   bottom: 3%;
 }
-.file {
-  width: 100%;
-  height: 4rem;
-  border: 1.5px solid rgb(207, 204, 204);
-  border-radius: 5px;
-  margin: 35px 0;
-}
-.file .top {
-  height: 4rem;
-  display: inline-block;
-  width: 75%;
-  font-weight: 400;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  border-right: 1px solid rgb(228, 228, 228);
-  transition: 0.3s;
+button{
+  background-color: black;
+  color: white;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 9px;
+  border-radius: 7px;
+  border: none;
   cursor: pointer;
 }
-
-.file .bottom {
-  height: 4rem;
-  display: inline-block;
-  width: 19%;
-  text-align: center;
-  margin: 0;
+.saved-versions {
+text-align: center;
+}
+.versions {
+  margin: 40px 40px;
 }
 
-.bottom a {
-  color: rgb(146, 141, 141);
-  margin: 0;
-  transition: 0.1s;
-  cursor: pointer;
-}
-.bottom a:hover {
-  color: rgb(211, 204, 204);
-}
-.file .top:hover {
-  background-color: rgb(250, 246, 246);
-}
+
+
+

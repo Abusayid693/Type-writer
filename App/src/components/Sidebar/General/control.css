@@ -8,6 +8,7 @@
   font-family: "Roboto", sans-serif;
   padding: 0 10px;
   background-color: white;
+  overflow: scroll;
 }
 .drop {
   margin-top: 50px;

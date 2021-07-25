@@ -5,15 +5,18 @@ import axios from "axios";
 import Button from "@material-ui/core/Button";
 
 function File(props) {
-
   function showVersion() {
-    document.querySelector(".Whole").innerHTML=props.data.body;
+    document.querySelector(".Whole").innerHTML = props.data.body;
   }
 
   return (
-    <div className="">
-      <Button variant="contained" color="secondary" onClick={showVersion}>
-        Secondary
+    <div className="versions">
+      <Button variant="outlined" onClick={showVersion}>
+        <p>
+          Date : {props.data.date}
+          <br />
+          Time : {props.data.time}
+        </p>
       </Button>
     </div>
   );
@@ -38,9 +41,11 @@ class SavedFiles extends React.Component {
       .then((response) => {
         const data = response.data;
         this.setState({ Data: data.reverse() });
-        if(data.length)
-         (isSaved)?this.setState({ type:"version saved"}):this.setState({ type:"Save current version"})
-        console.log("Data received", data);
+        if (data.length)
+          isSaved
+            ? this.setState({ type: "version saved" })
+            : this.setState({ type: "Save current version" });
+        console.log("Data received");
       })
       .catch(() => {
         console.log("Data receiving error error");
@@ -48,11 +53,27 @@ class SavedFiles extends React.Component {
   };
 
   handleClick = () => {
+    const today = new Date();
+    const lastSaved = this.state.Data[0].body;
+    console.log("Last saved data : ", lastSaved);
+
     const payload = {
       title: "Payload data",
-      body: document.querySelector(".Whole").innerHTML
+      body: document.querySelector(".Whole").innerHTML,
+      date:
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate(),
+      time:
+        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
     };
-
+    if (lastSaved == payload.body) {
+      alert("Already upto date")
+      return;
+    }
+    this.getData(true);
     axios({
       url: "/",
       method: "POST",
@@ -60,7 +81,6 @@ class SavedFiles extends React.Component {
     })
       .then(() => {
         console.log("Data sent to the server");
-        this.getData(true);
       })
       .catch(() => {
         console.log("Data sending error");
@@ -81,8 +101,10 @@ class SavedFiles extends React.Component {
             <button>control</button>
           </Link>
         </div>
-        <button onClick={this.handleClick}>{this.state.type}</button>
-        {this.displayVersions(this.state.Data)}
+        <div className="saved-versions">
+          <button onClick={this.handleClick}>{this.state.type}</button>
+          {this.displayVersions(this.state.Data)}
+        </div>
       </div>
     );
   }

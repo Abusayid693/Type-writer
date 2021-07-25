@@ -6,10 +6,8 @@ const Schema = mongoose.Schema;
 const TextFileSchema = new Schema({
   title: String,
   body: String,
-  date: {
-    type: String,
-    default: Date.now(),
-  }
+  date:String,
+  time:String
 });
 
 // Model
@@ -17,4 +15,4 @@ const TextFileSchema = new Schema({
 const TextFile = mongoose.model("TextFile", TextFileSchema);
 
 
-module.exports = TextFile
+module.exports = TextFile 
