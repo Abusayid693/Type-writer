@@ -2,7 +2,9 @@ import React from "react";
 import "./control.css";
 import "./fonts.css";
 import Select from "react-select";
+import DownloadPDF from "../Downloading-formats/pdf.jsx";
 import { Link } from "react-router-dom";
+
 
 const options = [
   { value: "Montserrat, sans-serif", label: "Montserrat" },
@@ -76,6 +78,7 @@ class Container extends React.Component {
           </Link>
         </div>
         <Fonts />
+        <DownloadPDF />
       </div>
     );
   }

@@ -146,7 +146,7 @@ class Typewriter extends React.Component {
 class App extends React.Component {
   render() {
     return (
-      <div className="Whole">
+      <div className="Whole" id="content-22">
         <Typewriter />
       </div>
     );

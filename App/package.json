@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "equation-resolver": "^0.3.2",
+    "file-saver": "^2.0.5",
+    "jspdf": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-dropdown": "^1.9.2",
@@ -47,6 +49,5 @@
   "devDependencies": {
     "eslint": "^7.31.0"
   },
-  
-  "proxy":"http://localhost:8000"
+  "proxy": "http://localhost:8000"
 }
