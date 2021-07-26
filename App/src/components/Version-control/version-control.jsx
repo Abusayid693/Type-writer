@@ -1,26 +1,5 @@
 import React from "react";
-import "./version-control.css";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import Button from "@material-ui/core/Button";
-
-function File(props) {
-  function showVersion() {
-    document.querySelector(".Whole").innerHTML = props.data.body;
-  }
-
-  return (
-    <div className="versions">
-      <Button variant="outlined" onClick={showVersion}>
-        <p>
-          Date : {props.data.date}
-          <br />
-          Time : {props.data.time}
-        </p>
-      </Button>
-    </div>
-  );
-}
+import { Link, axios, getPayLoad, File } from "./imports.jsx";
 
 class SavedFiles extends React.Component {
   state = {
@@ -53,24 +32,13 @@ class SavedFiles extends React.Component {
   };
 
   handleClick = () => {
-    const today = new Date();
     const lastSaved = this.state.Data[0].body;
     console.log("Last saved data : ", lastSaved);
 
-    const payload = {
-      title: "Payload data",
-      body: document.querySelector(".Whole").innerHTML,
-      date:
-        today.getFullYear() +
-        "-" +
-        (today.getMonth() + 1) +
-        "-" +
-        today.getDate(),
-      time:
-        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
-    };
+    const payload = getPayLoad();
+
     if (lastSaved == payload.body) {
-      alert("Already upto date")
+      alert("Already upto date");
       return;
     }
     this.getData(true);

@@ -1,28 +1,11 @@
 import React from "react";
-import "./control.css";
-import "./fonts.css";
-import Select from "react-select";
-import DownloadPDF from "../Downloading-formats/Download.jsx";
-import { Link } from "react-router-dom";
-
-
-const options = [
-  { value: "Montserrat, sans-serif", label: "Montserrat" },
-  { value: "Roboto, sans-serif", label: "Roboto" },
-  { value: "Tajawal, sans-serif", label: "Tajawal" },
-  { value: "Cairo, sans-serif", label: "Cairo" },
-  { value: "Open Sans, sans-serif", label: "Open Sans" },
-  { value: "Poppins, sans-serif", label: "Poppins" },
-];
-
-const customStyles = {
-  option: (provided, state) => ({
-    ...provided,
-    color: "black",
-    backgroundColor: "white",
-    padding: 10,
-  }),
-};
+import {
+  Select,
+  DownloadPDF,
+  Link,
+  options,
+  customStyles
+} from "./imports.jsx"
 
 class Fonts extends React.Component {
   state = {

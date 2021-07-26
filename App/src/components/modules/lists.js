@@ -1,33 +1,33 @@
-// import React from 'react';
 
+// Creating unordered list
 function unordered(elem) {
   var parent = elem.parentNode,
     active = document.activeElement,
     ul = document.createElement("ul"),
     li = document.createElement("li");
+
   if (active.nodeName == "LI") return;
 
   ul.appendChild(li);
   ul.classList.add("main");
   li.classList.add("main");
-
   li.contentEditable = "true";
   parent.replaceChild(ul, elem);
   li.focus();
 }
 
+// Creating ordered list
 function ordered(elem, start) {
   var parent = elem.parentNode,
     active = document.activeElement,
     ol = document.createElement("ol"),
     li = document.createElement("li");
-
   if (active.nodeName == "LI") return;
+  
   ol.appendChild(li);
   ol.start = start;
   ol.classList.add("main");
   li.classList.add("main");
-
   li.contentEditable = "true";
   parent.replaceChild(ol, elem);
   li.focus();

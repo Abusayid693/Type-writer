@@ -2,12 +2,8 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: rgb(219, 218, 218);
   padding: 0 0rem 0 25rem;
-  /* overflow: hidden; */
 }
-.pad {
-  margin-top: 70px;
-  margin-bottom: 50px;
-}
+.pad {}
 #heading {
   text-align: center;
   margin-bottom: 30px;
@@ -61,8 +57,8 @@ canvas {
   background-color: white;
   overflow: scroll;
   position: fixed;
-  height: 100vh;
-  padding: 10px 10px;
+  height: 50rem;
+  padding: 5px 10px 30px 10px;
   box-shadow: -2px -2px 15px 1px rgba(0, 0, 0, 0.05);
   cursor: url("./Assets/Vector.svg"), auto;
 }

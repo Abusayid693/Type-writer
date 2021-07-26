@@ -4,7 +4,6 @@ function hR(elem) {
   let parent = elem.parentNode,
     newElement = document.createElement("hr"),
     temp = document.createElement("p");
-
   temp.classList.add("main");
   temp.contentEditable = "true";
   parent.replaceChild(newElement, elem);
