@@ -1,5 +1,5 @@
 .codes {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(238, 232, 232);
   width: 600px;
   border-radius: 6px;
   padding: 10px 10px;
@@ -7,9 +7,15 @@
   font-family: "Ubuntu Mono", monospace;
   font-size: 1.2rem;
   position: relative;
+
+
 }
 
 CodeView {
   margin: 20px 20px 20px 30px;
   background-color: rgb(243, 206, 206);
+  cursor: url("../subcomponents/code.svg"), auto;
+}
+.code-syntax{
+  cursor: url("../subcomponents/code.svg"), auto;
 }

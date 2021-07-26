@@ -2,7 +2,7 @@ import React from "react";
 import "./control.css";
 import "./fonts.css";
 import Select from "react-select";
-import DownloadPDF from "../Downloading-formats/pdf.jsx";
+import DownloadPDF from "../Downloading-formats/Download.jsx";
 import { Link } from "react-router-dom";
 
 

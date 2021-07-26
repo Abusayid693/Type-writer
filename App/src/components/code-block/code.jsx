@@ -9,7 +9,7 @@ var numberOfCodeBlocks = 0,
 
 function renderCodeBlock(text, elem) {
   ReactDOM.render(
-    <CodeView text={text} plass={elem} />,
+    <CodeView  text={text} plass={elem} />,
     document.querySelector("." + elem)
   );
 }

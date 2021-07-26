@@ -1,11 +1,8 @@
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(
-    90deg,
-    rgba(251, 237, 150, 0.1) 0%,
-    rgba(171, 236, 214, 0.1) 100%
-  );
-  padding: 0 10rem 0 20rem;
+  background-color: rgb(219, 218, 218);
+  padding: 0 0rem 0 25rem;
+  /* overflow: hidden; */
 }
 .pad {
   margin-top: 70px;
@@ -59,4 +56,21 @@ canvas {
   border: none;
   font-size: 2.5rem;
   font-weight: 300;
+}
+.Whole {
+  background-color: white;
+  overflow: scroll;
+  position: fixed;
+  height: 100vh;
+  padding: 10px 10px;
+  box-shadow: -2px -2px 15px 1px rgba(0, 0, 0, 0.05);
+  cursor: url("./Assets/Vector.svg"), auto;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+li {
+  cursor: url("./Assets/Group.svg"), auto;
 }

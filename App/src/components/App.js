@@ -124,7 +124,6 @@ class Typewriter extends React.Component {
     document.addEventListener("keydown", deleteNode);
   }
 
-
   render() {
     const { selectedOption } = this.state;
 
