@@ -4,7 +4,9 @@ import {
   DownloadPDF,
   Link,
   options,
-  customStyles
+  customStyles,
+  PageSizer,
+  Checkboxes
 } from "./imports.jsx"
 
 class Fonts extends React.Component {
@@ -62,6 +64,8 @@ class Container extends React.Component {
         </div>
         <Fonts />
         <DownloadPDF />
+        <PageSizer/>
+        <Checkboxes/>
       </div>
     );
   }

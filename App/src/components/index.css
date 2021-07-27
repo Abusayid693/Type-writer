@@ -3,7 +3,7 @@ body {
   background-color: rgb(219, 218, 218);
   padding: 0 0rem 0 25rem;
 }
-.pad {}
+
 #heading {
   text-align: center;
   margin-bottom: 30px;
@@ -56,8 +56,10 @@ canvas {
 .Whole {
   background-color: white;
   overflow: scroll;
-  position: fixed;
+  /* position: fixed; */
+  position: relative;
   height: 50rem;
+  width: 55rem;
   padding: 5px 10px 30px 10px;
   box-shadow: -2px -2px 15px 1px rgba(0, 0, 0, 0.05);
   cursor: url("./Assets/Vector.svg"), auto;
@@ -69,4 +71,23 @@ h3,
 h4,
 li {
   cursor: url("./Assets/Group.svg"), auto;
+}
+.ruller{
+  width: 100%;
+}
+.left{
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: 0;
+  left: -47%;
+
+}
+.ruller {
+  /* border-bottom: 1.7px solid rgb(0, 0, 0); */
+  width: 98%;
+  position: absolute;
+  left: 1%;
+  margin-left: -3px;
+  top: 1%;
+  bottom: 1%;
 }
