@@ -3,8 +3,8 @@ import "./styles/fonts.css";
 import Select from "react-select";
 import DownloadPDF from "../Downloading-formats/Download.jsx";
 import { Link } from "react-router-dom";
-import {PageSizer} from "../Page-padding/pagePadding.jsx"
-import Checkboxes from "../check-boxes/check-boxes"
+import {PageSizer} from "../sub-components/Page-padding/pagePadding.jsx"
+import Checkboxes from "../sub-components/check-boxes/check-boxes"
 
 const options = [
   { value: "Montserrat, sans-serif", label: "Montserrat" },

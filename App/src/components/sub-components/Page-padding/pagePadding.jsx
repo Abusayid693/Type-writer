@@ -1,8 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
-import { withStyles, makeStyles }  from "@material-ui/core/styles";
-import "./imageResizer.css";
+import { withStyles}  from "@material-ui/core/styles";
 
 
 const PrettoSlider = withStyles({
@@ -47,7 +46,7 @@ function PageSizer() {
   return (
     <div className="slider">
       <Typography id="discrete-slider-custom" gutterBottom>
-        Custom marks
+        Page padding
       </Typography>
       <PrettoSlider
         valueLabelDisplay="auto"
