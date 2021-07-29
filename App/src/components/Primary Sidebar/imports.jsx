@@ -34,5 +34,4 @@ export{
     PageSizer,
     Checkboxes,
     ColorPicker
-
 }

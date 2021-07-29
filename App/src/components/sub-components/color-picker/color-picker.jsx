@@ -1,5 +1,5 @@
 import React from "react";
-import { SketchPicker } from "react-color";
+import { ChromePicker } from "react-color";
 
 class ColorPicker extends React.Component {
   state = {
@@ -27,13 +27,15 @@ class ColorPicker extends React.Component {
     // Changing the position of color picker next to content text selected
     const doSomethingWithSelectedText = () => {
       const selectedText = getSelectedText(),
-            elem = document.activeElement;
+            elem = document.activeElement,
+            colorPicker=document.querySelector(".color-picker");
+      if  (colorPicker==null) return;     
       if (selectedText && elem.classList.contains("main") ) {
            const  rect = document.activeElement.getBoundingClientRect(),
              left = rect.left + window.scrollX,
              top = rect.top + window.scrollY;
-        document.querySelector(".color-picker").style.top = top + "px";
-        document.querySelector(".color-picker").style.left = 200 + "px";
+             colorPicker.style.top = top + "px";
+             colorPicker.style.left = 200 + "px";
         this.setState({ selectedElem: elem });
         this.setState({ main: false });
       }
@@ -58,7 +60,7 @@ class ColorPicker extends React.Component {
   render() {
     return (
       <div className="color-picker">
-        <SketchPicker
+        <ChromePicker
           color={this.state.background}
           onChangeComplete={this.handleChangeComplete}
         />

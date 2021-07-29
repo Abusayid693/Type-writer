@@ -1,6 +1,6 @@
 import "../../index.css";
 import "../../code-block/code.css";
-import { formatEqn } from "../../Format-equation/Format-Equations.js";
+import { formatEquation } from "../../Format-equation/Format-Equations.js";
 import { unordered, ordered } from "../../modules/lists.js";
 import { heading } from "../../modules/header.js";
 import { hR } from "../../modules/horizontal-ruller.js";
@@ -24,7 +24,7 @@ function H4() {
 }
 
 export {
-  formatEqn,
+  formatEquation,
   unordered,
   ordered,
   heading,

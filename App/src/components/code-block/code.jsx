@@ -3,18 +3,22 @@ import ReactDOM from "react-dom";
 import "./code.css";
 import CodeView from "./syntaxhighlighter.jsx";
 
-var numberOfCodeBlocks = 0,
-  elem,
-  text;
+let numberOfCodeBlocks = 0,
+    elem,
+    text;
+
+// RENDERING : Newly added coding blocks with syntaxhighlighter
 
 function renderCodeBlock(text, elem) {
   ReactDOM.render(
-    <CodeView  text={text} plass={elem} />,
+    <CodeView text={text} plass={elem} />,
     document.querySelector("." + elem)
   );
 }
 
-function code(elem) {
+// INSERING : New coding coding blocks without syntaxhighlighter
+
+const InsertCodeBlocks = (elem) => {
   let newElement = document.createElement("div"),
     parent = elem.parentNode,
     classIdentification = "code-view" + numberOfCodeBlocks;
@@ -26,15 +30,12 @@ function code(elem) {
 
   parent.replaceChild(newElement, elem);
   numberOfCodeBlocks++;
-}
+};
 
-/*************************************************************************************************/
-/****************                                                                 ****************/
-/****************                                                                 ****************/
-/****************                                                                 ****************/
-/*************************************************************************************************/
 
-function initialize() {
+// The primary function to initialize coding blocks with prefix " ''' "
+const initialize = () => {
+
   var appendCodeBlock = false;
   document.addEventListener("keypress", (event) => {
     elem = document.activeElement;
@@ -47,7 +48,7 @@ function initialize() {
       renderCodeBlock(elem.textContent, elem.classList[1]);
       elem.classList.add("main");
     } else {
-      console.log("Active element is not code block");
+      console.log("Active element is not code block");  //Error handling
     }
   });
 
@@ -58,13 +59,15 @@ function initialize() {
       text = elem.textContent;
       if (text == "'''") {
         appendCodeBlock = true;
-        code(document.activeElement);
+        InsertCodeBlocks(document.activeElement);
       }
     }
   }
 
-  document.addEventListener("keypress", ContinueC);
-  function ContinueC(e) {
+  // EVENT ContinueWithCodeBlocks = continuation of Code blocks 
+  document.addEventListener("keypress", ContinueWithCodeBlocks);
+
+  function ContinueWithCodeBlocks(e) {
     elem = document.activeElement;
     if (
       e.which === 13 &&
@@ -75,10 +78,11 @@ function initialize() {
       newElem.contentEditable = "true";
       elem.parentNode.insertBefore(newElem, elem.nextSibling);
       newElem.focus();
-      code(newElem);
+      // Appending new code block on the stack
+      InsertCodeBlocks(newElem);  
       renderCodeBlock(elem.textContent, elem.classList[1]);
     }
   }
-}
+};
 
 export { initialize };

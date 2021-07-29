@@ -59,3 +59,5 @@ function PageSizer() {
 }
 
 export { PageSizer };
+
+/** PageSizer is a slider can */

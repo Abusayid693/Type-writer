@@ -19,8 +19,8 @@ const theme = createTheme({
         height: 48,
         padding: "0 30px",
         boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-        width :"100%",
-        margin:" 30px 0"
+        width: "100%",
+        margin: " 30px 0",
       },
     },
   },
@@ -52,7 +52,8 @@ class DownloadPDF extends React.Component {
     super(props);
   }
 
-  /** Downloading text file format */
+  /* ------- Downloading text file format ------------*/
+
   textFile = () => {
     var content = document.getElementById("content-22"),
       content = content.textContent;
@@ -65,7 +66,8 @@ class DownloadPDF extends React.Component {
     saveAs(blob, filename);
   };
 
-  /** Downloading code blocks */
+  /* --------- Downloading code blocks ----------------*/
+
   DownloadCodes = () => {
     var content = document.querySelectorAll(".code-view");
     var list = [].slice.call(content);
@@ -74,16 +76,17 @@ class DownloadPDF extends React.Component {
         return e.textContent;
       })
       .join("\n");
-    var filename = "hello.txt";
+ /*--- javascript files ----*/
+    var filename = "hello.js";  
 
     var blob = new Blob([innertext], {
       type: "text/plain;charset=utf-8",
     });
-
     saveAs(blob, filename);
   };
 
-  /** Downloading pdf format */
+  /* ----------- Downloading pdf format----------------*/
+
   pdfFile = () => {
     var doc = new jsPDF("l", "pt");
     var content = document.getElementById("content-22");
@@ -93,7 +96,9 @@ class DownloadPDF extends React.Component {
       },
     });
   };
-  /** Handling the click event to select downloadable format */
+
+  /*-- Handling the click event to select downloadable formats --*/
+
   handleClick = (selectedOption) => {
     this.setState({ selectedOption }, function () {
       var fileType = this.state.selectedOption.value;
@@ -102,7 +107,7 @@ class DownloadPDF extends React.Component {
     });
   };
 
-  /** Downloading selected file format */
+  /* ------------ Downloading selected file format -------*/
 
   downloadFile = () => {
     const fileType = this.state.fileType;
@@ -129,10 +134,7 @@ class DownloadPDF extends React.Component {
           placeholder="Select Format"
         />
         <ThemeProvider theme={theme}>
-          <Button
-            onClick={this.downloadFile}
-            disabled={this.state.disabled}
-          >
+          <Button onClick={this.downloadFile} disabled={this.state.disabled}>
             Download
           </Button>
         </ThemeProvider>

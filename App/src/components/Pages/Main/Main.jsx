@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  formatEqn,
+  formatEquation,
   unordered,
   ordered,
   heading,
@@ -35,39 +35,43 @@ class Typewriter extends React.Component {
       b = 0,
       initial_release = 0;
 
-    /** Event Append = When user presses `Enter` it creates a new `p`
+    /** EVENT Append : When user presses `Enter` it creates a new `p`
    element and append it to main child body, only to replace the child element according to users entry **/
 
     document.addEventListener("keypress", append);
 
     function append(e) {
-      if (e.which === 13 && document.activeElement.classList.contains("main")) {
-        var elem,
-          parent,
-          newH = document.createElement("hr"),
-          btn = document.createElement("p");
-        btn.classList.add("main");
 
-        //  only first time case
+      if (e.which === 13 && document.activeElement.classList.contains("main")) {
+        let elem,
+            parent,
+            tempElement = document.createElement("hr"),
+            appendingElem = document.createElement("p");
+            appendingElem.classList.add("main");
+
+        // ERROR HANDLING
         if (!initial_release) elem = document.querySelector(".pad");
         else elem = document.activeElement;
 
         parent = elem.parentNode;
-        btn.contentEditable = "true";
+        appendingElem.contentEditable = "true";
         initial_release = 1;
 
-        //   Handling exception for LI elements
+        // EXCEPTION HANDLING : for Li elements
         if (elem.nodeName == "LI") {
           elem = elem.parentNode;
           parent = elem.parentNode;
-          elem.parentNode.insertBefore(btn, elem.nextSibling);
+          elem.parentNode.insertBefore(appendingElem, elem.nextSibling);
         } else {
-          newH.style.opacity = 0;
-          elem.parentNode.insertBefore(newH, elem.nextSibling);
-          newH.parentNode.insertBefore(btn, newH.nextSibling);
+          tempElement.style.opacity = 0;
+          elem.parentNode.insertBefore(tempElement, elem.nextSibling);
+          tempElement.parentNode.insertBefore(appendingElem, tempElement.nextSibling);
         }
 
-        btn.focus();
+      // EVENT HANDLING : Formatting equations
+      if (document.activeElement.textContent[0] == "$") formatEquation(document.activeElement);
+
+        appendingElem.focus();
         e.preventDefault();
         i = 0;
         b = 0;
@@ -75,7 +79,7 @@ class Typewriter extends React.Component {
       }
     }
 
-    /** Event Replace = The primary function for replacing elements as per user entry **/
+    // EVENT REPLACE = The primary function for replacing elements as per user prefix entries [ eg : prefix "#" for h1  ] **/
 
     document.addEventListener("keypress", replace);
     function replace(e) {
@@ -83,13 +87,13 @@ class Typewriter extends React.Component {
         var elem = document.activeElement,
           text = elem.textContent;
 
-        //     Handling ordered list items
+        // EVENT HANDLING : for ordered lists
         if (!isNaN(text) && text !== "") ordered(elem, text);
-        //      Handling format equations
-        else if (text[0] == "$") formatEqn(elem);
 
-        //   else if i required
-        //     Handling different user entries
+        // EVENT HANDLING : Formatting equations
+        // else if (text[0] == "$") formatEqn(elem);
+
+        // MAIN EVENT HANDALING
         switch (text) {
           case "#":
             heading(elem, H1());
@@ -113,7 +117,10 @@ class Typewriter extends React.Component {
       }
     }
 
+    // EVENT HANDLING : for itilics and bold text [ few bugs needed to be fixed ]
     document.addEventListener("keypress", italicANDbold);
+
+    // EVENT HANDLING : Delecting the nodes if empty
     document.addEventListener("keydown", deleteNode);
   }
 
