@@ -6,16 +6,17 @@ import SavedFiles from "../Version-control/version-control.jsx";
 export default function Cpanel() {
   return (
     <Router>
-      <div>
+       <div>
         <Switch>
-          <Route path="/saved-files">
+          <Route path="/main/saved-files">
             <SavedFiles />
           </Route>
-          <Route path="/">
+          <Route path="/main">
             <Container />
           </Route>
         </Switch>
-      </div>
+      </div> 
     </Router>
   );
 }
+

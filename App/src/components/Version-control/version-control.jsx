@@ -65,7 +65,7 @@ class SavedFiles extends React.Component {
       <div className="saved-files panel">
         <div className="cheader">
           <p>saved files</p>
-          <Link to="/">
+          <Link to="/main/">
             <button>control</button>
           </Link>
         </div>

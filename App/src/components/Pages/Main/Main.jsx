@@ -1,20 +1,20 @@
 import React from "react";
 import {
-    formatEqn,
-    unordered,
-    ordered,
-    heading,
-    hR,
-    deleteNode,
-    italicANDbold,
-    imageCapture,
-    initialize,
-    H1,
-    H2,
-    H3,
-    H4
-  } from "./imports.jsx"
-
+  formatEqn,
+  unordered,
+  ordered,
+  heading,
+  hR,
+  deleteNode,
+  italicANDbold,
+  imageCapture,
+  initialize,
+  H1,
+  H2,
+  H3,
+  H4,
+  Cpanel
+} from "./imports.jsx";
 
 class Typewriter extends React.Component {
   state = {
@@ -135,4 +135,15 @@ class Typewriter extends React.Component {
   }
 }
 
- export default Typewriter
+function Main() {
+  return (
+    <div>
+      <Cpanel />
+      <div className="Whole" id="content-22">
+        <Typewriter />
+      </div>
+    </div>
+  );
+}
+
+export default Main;

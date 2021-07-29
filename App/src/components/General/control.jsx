@@ -58,7 +58,7 @@ class Container extends React.Component {
       <div className="panel">
         <div className="cheader">
           <p>C-Panel</p>
-          <Link to="/saved-files">
+          <Link to="/main/saved-files">
             <button>control</button>
           </Link>
         </div>
