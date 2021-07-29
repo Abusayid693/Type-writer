@@ -43,4 +43,14 @@ mongoose.connection.on("connected", () => {
   console.log("Database successfully connected");
 });
 
+
+
+
+
+// Production deployment
+if (process.env.NODE_ENV==="production"){
+app.use(express.static('../App/build'))
+}
+
+
 app.listen(PORT, console.log("Server running on port"));
