@@ -124,11 +124,11 @@ For heading user can use prefix "#"
 The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".
 
 #### 1. Algebric equations
+![](https://i.imgur.com/5oCKi1G.png)
+#### 2. Tragnometric and  equations
+![](https://i.imgur.com/ZCj3MkC.png)
+#### 3. Matrices 
 
-#### 1. Tragnometric and  equations
-
-#### 1. Matrices 
-
-
+![](https://i.imgur.com/dQE81Qr.png)
      
   
