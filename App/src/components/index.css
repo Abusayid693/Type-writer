@@ -62,6 +62,7 @@ canvas {
   padding: 5px 10px 30px 10px;
   box-shadow: -2px -2px 15px 1px #0000000d;
   cursor: url("./Assets/Vector.svg"), auto;  
+  z-index:0;
 }
 
 p,
@@ -79,4 +80,10 @@ li {
 }
 .paper-like{
   background-image: url("./Assets/paper-like.jpeg");
+}
+.color-picker{
+  position: fixed;
+  top: 76vh;
+  left: 2vh;
+  z-index: 4;
 }

@@ -5,6 +5,7 @@ import DownloadPDF from "../Downloading-formats/Download.jsx";
 import { Link } from "react-router-dom";
 import {PageSizer} from "../sub-components/Page-padding/pagePadding.jsx"
 import Checkboxes from "../sub-components/check-boxes/check-boxes"
+import ColorPicker from "../sub-components/color-picker/color-picker"
 
 const options = [
   { value: "Montserrat, sans-serif", label: "Montserrat" },
@@ -31,6 +32,7 @@ export{
     options,
     customStyles,
     PageSizer,
-    Checkboxes
+    Checkboxes,
+    ColorPicker
 
 }

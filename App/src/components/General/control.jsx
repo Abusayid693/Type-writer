@@ -6,7 +6,8 @@ import {
   options,
   customStyles,
   PageSizer,
-  Checkboxes
+  Checkboxes,
+  ColorPicker
 } from "./imports.jsx"
 
 class Fonts extends React.Component {
@@ -66,6 +67,7 @@ class Container extends React.Component {
         <DownloadPDF />
         <PageSizer/>
         <Checkboxes/>
+        <ColorPicker/>
       </div>
     );
   }

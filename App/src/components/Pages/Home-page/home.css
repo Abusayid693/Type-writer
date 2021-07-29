@@ -1,7 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap');
 .Homepage{
     width: 100%;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
+}
+.h-left{
+    position: absolute;
+    top: 37vh;
+    font-family: 'Roboto', sans-serif;
+    left: 20px;
+}
+.h-left h1{
+    font-weight: 500;
+    font-size: 4.2rem;
+}
+.h-left h2{
+    font-weight: 300;
+
+    font-size: 4rem;
+}
+.h-left button{
+    font-weight: 300;
+    padding: 12px;
 }
