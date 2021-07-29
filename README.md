@@ -1,8 +1,27 @@
 ![](https://i.imgur.com/EpGyFsb.png)
 
 # TYPE-WRITER
+
+<p>
+    <a href="https://www.npmjs.com/package/color-calendar">
+        <img src="https://img.shields.io/npm/v/color-calendar?style=flat-square" alt="npm version" />
+    </a>
+    <a href="https://www.npmjs.com/package/color-calendar">
+        <img src="https://img.shields.io/npm/dw/color-calendar?style=flat-square" alt="npm downloads" />
+    </a>
+    <img src="https://img.shields.io/bundlephobia/min/color-calendar?style=flat-square" alt="size" />
+    <a href="https://www.jsdelivr.com/package/npm/color-calendar">
+        <img src="https://data.jsdelivr.com/v1/package/npm/color-calendar/badge" alt="jsdelivr" />
+    </a>
+    <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FPawanKolhe%2Fcolor-calendar" alt="Hits">
+    <img src="https://img.shields.io/npm/l/color-calendar?style=flat-square" alt="license" />
+</p>
+
+Type writer is a modern documentating Application with support of prefix-edit-text.
+
+Get youtube [demo]() here
 ## Contents:
-- [About The Project]()
+- [Features]()
 - [Project Starter]()
 - [Getting Started]()
 - [Deployment]()
@@ -77,3 +96,39 @@
 └── README.md
 </pre>
 
+---
+# 🚀 Features
+##  [Prefix edit text support]()
+
+### Heading tags
+For heading user can use prefix "#"
+
+
+    Prefix " # "                                          -- For H1 tags
+    prefix " ## "                                         -- For H2 tags
+    prefix " ### "                                        -- for H3 tags
+    prefix " #### "                                       -- for H4 tags.  
+`user must press Space after entering prefix`    
+### Lists tags
+#### Unordered Lists 
+
+    prefix " - "                                          -- for Unordered Lists elements 
+#### Ordered Lists 
+
+    prefix " Numerical digits "                           -- for Ordered Lists elements     
+`user must press Space after entering prefix`    
+
+
+
+### Eqation formatting
+The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".
+
+#### 1. Algebric equations
+
+#### 1. Tragnometric and  equations
+
+#### 1. Matrices 
+
+
+     
+  
