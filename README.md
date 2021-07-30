@@ -158,7 +158,7 @@ For heading user can use prefix "#"
 
 
 ### Eqation formatting
-![](https://i.imgur.com/Jj8KUxj.gif)
+![](https://i.imgur.com/9DsfOrD.gif)
 
 The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".
 
@@ -175,7 +175,7 @@ The eqation formating features supports all Algebric, triagnometric and metrix f
 ### Coding Blocks
 The coding blocks supports syntaxhighlighter for `javascript code only` ( will be updated in future versions).
 
-![](https://i.imgur.com/TL7GjRn.gif)
+![](https://i.imgur.com/NtA7xDG.gif)
 
        prefix " ''' "                                  -- for syntaxhighlighting editor
 ![](https://i.imgur.com/fThdc0x.png)    
@@ -186,7 +186,7 @@ The coding blocks supports syntaxhighlighter for `javascript code only` ( will b
 
 Type-writer supports copy pasting images over browsers and reszie them accordingly.
 
-![](https://i.imgur.com/7gpaZTo.gif)
+![](https://i.imgur.com/sPs84G1.gifv)
 
 ## 3. [color palette]()
 
