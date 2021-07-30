@@ -121,6 +121,7 @@ For heading user can use prefix "#"
 
 
 ### Eqation formatting
+![](https://i.imgur.com/Jj8KUxj.gif)
 The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".
 
 #### 1. Algebric equations
@@ -131,4 +132,20 @@ The eqation formating features supports all Algebric, triagnometric and metrix f
 
 ![](https://i.imgur.com/dQE81Qr.png)
      
-  
+### Horizontal lines
+      prefix " --- "                                     --  for Horizontal lines
+### Coding Blocks
+The coding blocks supports syntaxhighlighter for javascript code only ( will be updated in future versions).
+
+![](https://i.imgur.com/TL7GjRn.gif)
+
+       prefix " ''' "                                  -- for syntaxhighlighting editor
+![](https://i.imgur.com/fThdc0x.png)    
+
+---
+
+##  [Image copy pasting and resizing]()
+
+Type-writer supports copy pasting images over browsers and reszie them accordingly.
+
+![](https://i.imgur.com/7gpaZTo.gif)
