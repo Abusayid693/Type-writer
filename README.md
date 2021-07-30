@@ -186,7 +186,7 @@ The coding blocks supports syntaxhighlighter for `javascript code only` ( will b
 
 Type-writer supports copy pasting images over browsers and reszie them accordingly.
 
-![](https://i.imgur.com/sPs84G1.gif)
+![](https://i.imgur.com/7gpaZTo.gif)
 
 ## 3. [color palette]()
 
