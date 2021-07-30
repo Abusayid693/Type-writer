@@ -160,9 +160,11 @@ For heading user can use prefix "#"
 
 
 ### [Eqation formatting]()
+***The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".***
+
 ![](https://i.imgur.com/9DsfOrD.gif)
 
-The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".
+
 
 - ####  Algebric equations
 ![](https://i.imgur.com/5oCKi1G.png)
@@ -186,10 +188,10 @@ The coding blocks supports syntaxhighlighter for `javascript code only` ( will b
 
 ## 2. [Image copy pasting and resizing]()
 
-Type-writer supports copy pasting images over browsers and reszie them accordingly.
+Type-writer supports copy pasting images over browsers and resize them accordingly.
 
-- Copy images over internet and paste them.
-- Resize them accoring to your need.
+- ***Copy images over internet and paste them.***
+- ***Resize them accoring to your need.***
 
 ![](https://i.imgur.com/7gpaZTo.gif)
 
