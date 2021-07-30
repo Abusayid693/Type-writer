@@ -18,7 +18,9 @@
     <img src="https://img.shields.io/npm/l/color-calendar?style=flat-square" alt="license" />
 </p>
 
-![](https://i.imgur.com/VKXMxTI.gif)
+![](https://i.imgur.com/07t6nFn.png)
+
+![](https://i.imgur.com/TtSRRF0.png)
 
 Type writer is a modern documentating Application with support of prefix-edit-text.
 
@@ -175,7 +177,7 @@ The eqation formating features supports all Algebric, triagnometric and metrix f
 ### [Coding Blocks]()
 The coding blocks supports syntaxhighlighter for `javascript code only` ( will be updated in future versions).
 
-![](https://i.imgur.com/VhGTv5M.gif)
+![](https://i.imgur.com/TL7GjRn.gif)
 
        prefix " ''' "                                  -- for syntaxhighlighting editor
 ![](https://i.imgur.com/fThdc0x.png)    
