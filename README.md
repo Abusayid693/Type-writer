@@ -238,7 +238,7 @@ Customize background colours,text colours as per your need, the color palette al
 
 
   | Package | Description | version |
-  | ------------ | ------------- |
+  | ------------ | ------------- | ------------- |
   | [axios](https://www.npmjs.com/package/axios) |Promise based HTTP client for the browser and node.js|  0.21.1 |
   | [react-equation](https://www.npmjs.com/package/react-equation) | Used of displaying equations over webpages | 0.2.1 |
   | [react-resizable](https://www.npmjs.com/package/react-resizable) | To make resizable react components |3.0.4 |
@@ -256,7 +256,7 @@ Customize background colours,text colours as per your need, the color palette al
 
 
   | Package | Description | version |
-  | ------------ | ------------- |
+  | ------------ | ------------- | ------------- |
   | [mongoose](https://mongoosejs.com) | elegant mongodb object modeling for node.js | 5.13.3 |
   | [morgan](https://www.npmjs.com/package/morgan) |HTTP request logger middleware for node.js | 1.10.0 |
   | [express](https://expressjs.com) | Node.js web application framework for server side scripting | 4.17.1 |
