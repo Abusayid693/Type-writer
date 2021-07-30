@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/npm/l/color-calendar?style=flat-square" alt="license" />
 </p>
 
-![](https://i.imgur.com/BSqv59r.gif)
+![](https://i.imgur.com/VKXMxTI.gif)
 
 Type writer is a modern documentating Application with support of prefix-edit-text.
 
@@ -146,7 +146,7 @@ For heading user can use prefix "#"
     prefix " ### "                                        -- for H3 tags
     prefix " #### "                                       -- for H4 tags.  
 `user must press Space after entering prefix`    
- ### Lists tags
+ ### [Lists tags]()
 #### Unordered Lists 
 
         prefix " - "                                          -- for Unordered Lists elements 
@@ -157,7 +157,7 @@ For heading user can use prefix "#"
 
 
 
-### Eqation formatting
+### [Eqation formatting]()
 ![](https://i.imgur.com/9DsfOrD.gif)
 
 The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".
@@ -170,12 +170,12 @@ The eqation formating features supports all Algebric, triagnometric and metrix f
 
 ![](https://i.imgur.com/dQE81Qr.png)
      
-### Horizontal lines
+### [Horizontal lines]()
       prefix " --- "                                     --  for Horizontal lines
-### Coding Blocks
+### [Coding Blocks]()
 The coding blocks supports syntaxhighlighter for `javascript code only` ( will be updated in future versions).
 
-![](https://i.imgur.com/NtA7xDG.gif)
+![](https://i.imgur.com/VhGTv5M.gif)
 
        prefix " ''' "                                  -- for syntaxhighlighting editor
 ![](https://i.imgur.com/fThdc0x.png)    
@@ -203,13 +203,13 @@ Customize background colours,text colours as per your need, the color palette al
 ## 4. [Version control]()
 
 
-** Version Control ** tracks and manage changes in your typewriter files,it keeps track of every modification to the files in our database hosted on the cloud , So user dont need to hustle over loosing their data. It also allows sharing of files with others for *** modification keeping the original version safe. ***
+**Version Control** tracks and manage changes in your typewriter files,it keeps track of every modification to the files in our database hosted on the cloud , So user dont need to hustle over loosing their data. It also allows sharing of files with others for ***modification keeping the original version safe.***
 
-![Gif here](https://i.imgur.com/tHYRZdx.gif)
+![Gif here](https://i.imgur.com/lMv7Awg.png)
 
-*** Iterate through different versions of your files ***
+***The sidebar contains date and time of saved versions for iterating through different versions of your files***
 
-![Gif here](https://i.imgur.com/9aLyRDi.png)
+
 
 
 
