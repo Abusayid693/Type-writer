@@ -186,7 +186,7 @@ The coding blocks supports syntaxhighlighter for `javascript code only` ( will b
 
 Type-writer supports copy pasting images over browsers and reszie them accordingly.
 
-![](https://i.imgur.com/sPs84G1.gifv)
+![](https://i.imgur.com/sPs84G1.gif)
 
 ## 3. [color palette]()
 
@@ -217,11 +217,12 @@ Customize background colours,text colours as per your need, the color palette al
 
 - #### Get downloadable document
 
-    |
-  ------------ | -------------
-  PDF | Whole type-writer contents in pdf formats.
-  Text | Only text contents of the type-writer.
-   Code block | Downloads coding blocks only in .js format
+|                 |            |
+| --------------- | --------------- 
+| PDF|  Whole type-writer contents in pdf formats |
+| Text| Only text contents of the type-writer. |
+| Code block | Downloads coding blocks only in .js format |
+
 
 ![](https://i.imgur.com/y6fsQfD.png)
 
@@ -232,28 +233,28 @@ Customize background colours,text colours as per your need, the color palette al
 ## Client 
 
 
-   Package | Description | version
-  ------------ | -------------
-  [axios](https://www.npmjs.com/package/axios) |Promise based HTTP client for the browser and node.js|  0.21.1
-  [react-equation](https://www.npmjs.com/package/react-equation) | Used of displaying equations over webpages | 0.2.1
-  [react-resizable](https://www.npmjs.com/package/react-resizable) | To make resizable react components |3.0.4
-  [react-dropdown](https://www.npmjs.com/package/react-dropdown) | React dropdown menu      | 1.9.2
-  [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) | Used for syntaxhighlighting in coding blocks,texts etc | 11.0.3
-  [react-typed](https://www.npmjs.com/package/react-typed) | Typing annimation in react | 1.2.0
-  [file-saver](https://www.npmjs.com/package/file-saver) | provides downloadable formats of files  | 2.0.5
-  [jsPDF](https://www.npmjs.com/package/jspdf) |A library to generate PDFs in JavaScript.  | 2.3.1
-  [material-ui](https://material-ui.com)| Customized React components | 4.12.2
-  [react-color](https://casesandberg.github.io/react-color/) | color palette | 2.19.3
+  | Package | Description | version |
+  | ------------ | ------------- |
+  | [axios](https://www.npmjs.com/package/axios) |Promise based HTTP client for the browser and node.js|  0.21.1 |
+  | [react-equation](https://www.npmjs.com/package/react-equation) | Used of displaying equations over webpages | 0.2.1 |
+  | [react-resizable](https://www.npmjs.com/package/react-resizable) | To make resizable react components |3.0.4 |
+  | [react-dropdown](https://www.npmjs.com/package/react-dropdown) | React dropdown menu      | 1.9.2 |
+  | [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) | Used for syntaxhighlighting in coding blocks,texts etc | 11.0.3 |
+  | [react-typed](https://www.npmjs.com/package/react-typed) | Typing annimation in react | 1.2.0 |
+  | [file-saver](https://www.npmjs.com/package/file-saver) | provides downloadable formats of files  | 2.0.5 |
+  | [jsPDF](https://www.npmjs.com/package/jspdf) |A library to generate PDFs in JavaScript.  | 2.3.1 |
+  | [material-ui](https://material-ui.com)| Customized React components | 4.12.2 |
+  | [react-color](https://casesandberg.github.io/react-color/) | color palette | 2.19.3 |
 
 
 ## Server
 
 
 
-   Package | Description | version
-  ------------ | -------------
-  [mongoose](https://mongoosejs.com) | elegant mongodb object modeling for node.js | 5.13.3
-  [morgan](https://www.npmjs.com/package/morgan) |HTTP request logger middleware for node.js | 1.10.0
-  [express](https://expressjs.com) | Node.js web application framework for server side scripting | 4.17.1
-  [MongoDB](https://www.mongodb.com) | a NoSQL database | 4.4.3
+  | Package | Description | version |
+  | ------------ | ------------- |
+  | [mongoose](https://mongoosejs.com) | elegant mongodb object modeling for node.js | 5.13.3 |
+  | [morgan](https://www.npmjs.com/package/morgan) |HTTP request logger middleware for node.js | 1.10.0 |
+  | [express](https://expressjs.com) | Node.js web application framework for server side scripting | 4.17.1 |
+  | [MongoDB](https://www.mongodb.com) | a NoSQL database | 4.4.3 |
 
