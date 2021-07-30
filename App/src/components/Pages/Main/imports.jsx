@@ -8,7 +8,7 @@ import { deleteNode } from "../../modules/nodeDelete.js";
 import { italicANDbold } from "../../modules/text_format.js";
 import { imageCapture } from "../../image-capture/ClipboardAPI.js";
 import { initialize } from "../../code-block/code.jsx";
-import Cpanel from "../../Sidebar/c-panel-routes.jsx"
+import Cpanel from "../../Sidebar Routes/c-panel-routes.jsx"
 
 function H1() {
   return document.createElement("h1");

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Container from "../General/control.jsx";
+import Container from "../Primary Sidebar/control.jsx";
 import SavedFiles from "../Version-control/version-control.jsx";
 
 export default function Cpanel() {

@@ -10,8 +10,8 @@ export default function MytypedComponent(){
          <h2>
             <Typed
                 strings={[
-                '24 hours of creation',
-                'Win awesome prizes'
+                'Copy paste images',
+                'Choose customised colours'
                 
                 ]}
                 typeSpeed={80}
