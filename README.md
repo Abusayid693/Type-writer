@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/npm/l/color-calendar?style=flat-square" alt="license" />
 </p>
 
-![](https://i.imgur.com/sCnsHkV.gif)
+![](https://i.imgur.com/BSqv59r.gif)
 
 Type writer is a modern documentating Application with support of prefix-edit-text.
 
