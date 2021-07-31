@@ -10,13 +10,15 @@ import {
   ColorPicker,
 } from "./imports.jsx";
 
-// CONTEXT API FOR HOLDING VALUE OF FONTS
-
+// Context to store session data globally
 const FontsContext = React.createContext({
   font: "none",
   setFont: () => {},
 });
-
+/* React Hook that gives you access
+ * to the fonts type user selected in 
+ * Main page to update 
+*/
 
 
 function Fonts() {
@@ -31,8 +33,8 @@ function Fonts() {
 
   const handleChange = (selectedOption) => {
     var a = selectedOption;
-    setFont(a.value)
-    document.querySelector("body").style.fontFamily = a.value;
+    // Changing value of react hook value with new font type
+    setFont(a.value)     
   };
 
   return (

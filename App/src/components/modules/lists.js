@@ -1,5 +1,5 @@
 
-// Creating unordered list
+//-------- Creating unordered list elements ---------------
 function unordered(elem) {
   var parent = elem.parentNode,
     active = document.activeElement,
@@ -16,7 +16,7 @@ function unordered(elem) {
   li.focus();
 }
 
-// Creating ordered list
+//---------- Creating ordered list elements -----------------
 function ordered(elem, start) {
   var parent = elem.parentNode,
     active = document.activeElement,

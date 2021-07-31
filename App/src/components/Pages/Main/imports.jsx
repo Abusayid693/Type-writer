@@ -6,7 +6,7 @@ import { heading } from "../../modules/header.js";
 import { horizontalRuller } from "../../modules/horizontal-ruller.js";
 import { deleteNode } from "../../modules/nodeDelete.js";
 import { italicANDbold } from "../../modules/text_format.js";
-import { imageCapture } from "../../image-capture/ClipboardAPI.js";
+import { imageCapture } from "../../image-capture/ClipboardAPI";
 import { initialize } from "../../code-block/code.jsx";
 import Cpanel from "../../Sidebar Routes/c-panel-routes.jsx";
 import { OutlineContext, FormatContext } from "../../sub-components/check-boxes/check-boxes";

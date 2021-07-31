@@ -1,17 +1,19 @@
+
+// -------- Method to set italics and bold text -----------
+
+// This method uses vanilla JavaScript version and does not depend on react,
+// it creates a new element of present active element (active-element.nodeName) with 
+// italics or bold text type and append itelf next to the active element.
+
+
+
 var i = 0,
   b = 0,
   code;
 
 function italicANDbold(e) {
-  if (e.keyCode == 96 && !i && b) {
-    cursive(e, "both");
-    i = 1;
-  }
-  if (e.keyCode == 42 && i && !b) {
-    cursive(e, "both");
-    b = 1;
-  }
-  //   Returning to normal from italics
+
+  //   Returning to normal from italics or bold 
   if ((e.keyCode == 96 || e.keyCode == 42) && i | b) {
     cursive(e, "normal");
     i = 0;
@@ -32,13 +34,13 @@ function italicANDbold(e) {
 
 function cursive(e, type) {
   var elem = document.activeElement,
-    newElement;
+      newElement;
 
   e.preventDefault();
   if (elem.nodeName == "LI") {
     assign(elem, type);
     return;
-  } else if (elem.classList.contains(code)) return;
+  } else if (elem.classList.contains(code)) return;  //------ Return if its a code block----
   else {
     newElement = document.createElement(elem.nodeName);
     newElement.classList.add("main");
