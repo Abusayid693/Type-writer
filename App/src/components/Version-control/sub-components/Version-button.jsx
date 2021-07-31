@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
     Button,
   }  from "../imports.jsx"
 
-export default function File(props) {
+
+
+  // const CurrentVersion = React.createContext({
+  //   version:<h1>Hello everyone i am fuked up</h1>,
+  //   setVersion: () => {},
+  // });
+
+
+
+
+
+
+ function File(props) {
+
+
+  // const { version, setVersion } = useContext(CurrentVersion);
+
+
     function showVersion() {
       document.querySelector(".Whole").innerHTML = props.data.body;
+      // setVersion(props.data.body);
     }
     return (
       <div className="versions">
@@ -19,3 +37,5 @@ export default function File(props) {
       </div>
     );
   }
+
+  export {File}

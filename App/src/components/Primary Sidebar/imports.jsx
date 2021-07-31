@@ -4,7 +4,7 @@ import Select from "react-select";
 import DownloadPDF from "../Downloading-formats/Download.jsx";
 import { Link } from "react-router-dom";
 import {PageSizer} from "../sub-components/Page-padding/pagePadding.jsx"
-import Checkboxes from "../sub-components/check-boxes/check-boxes"
+import {Checkboxes} from "../sub-components/check-boxes/check-boxes"
 import ColorPicker from "../sub-components/color-picker/color-picker"
 
 const options = [

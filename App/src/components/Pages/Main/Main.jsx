@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   formatEquation,
   unordered,
@@ -13,8 +13,13 @@ import {
   H2,
   H3,
   H4,
-  Cpanel
+  Cpanel,
+  OutlineContext,
+  FormatContext,
+  cx,
 } from "./imports.jsx";
+import {PaddingContext} from "../../sub-components/Page-padding/pagePadding"
+import { Markup } from "interweave";
 
 class Typewriter extends React.Component {
   state = {
@@ -41,13 +46,12 @@ class Typewriter extends React.Component {
     document.addEventListener("keypress", append);
 
     function append(e) {
-
       if (e.which === 13 && document.activeElement.classList.contains("main")) {
         let elem,
-            parent,
-            tempElement = document.createElement("hr"),
-            appendingElem = document.createElement("p");
-            appendingElem.classList.add("main");
+          parent,
+          tempElement = document.createElement("hr"),
+          appendingElem = document.createElement("p");
+        appendingElem.classList.add("main");
 
         // ERROR HANDLING
         if (!initial_release) elem = document.querySelector(".pad");
@@ -65,11 +69,15 @@ class Typewriter extends React.Component {
         } else {
           tempElement.style.opacity = 0;
           elem.parentNode.insertBefore(tempElement, elem.nextSibling);
-          tempElement.parentNode.insertBefore(appendingElem, tempElement.nextSibling);
+          tempElement.parentNode.insertBefore(
+            appendingElem,
+            tempElement.nextSibling
+          );
         }
 
-      // EVENT HANDLING : Formatting equations
-      if (document.activeElement.textContent[0] == "$") formatEquation(document.activeElement);
+        // EVENT HANDLING : Formatting equations
+        if (document.activeElement.textContent[0] == "$")
+          formatEquation(document.activeElement);
 
         appendingElem.focus();
         e.preventDefault();
@@ -142,15 +150,42 @@ class Typewriter extends React.Component {
   }
 }
 
+
+
 function Main() {
+ 
+// React Context API 
+  const [outline, setOutline] = useState("none");
+  const [format, setFormat] = useState("none");
+  const [padding, setPadding] = useState("5px 10px 30px 10px;",);
+
+
+  const value = { outline, setOutline };
+  const valueF = { format, setFormat };
+  const valueP = { padding, setPadding };
+
   return (
-    <div>
-      <Cpanel />
-      <div className="Whole" id="content-22">
-        <Typewriter />
-      </div>
-    </div>
+    <OutlineContext.Provider value={value}>
+      <FormatContext.Provider value={valueF}>
+      <PaddingContext.Provider value={valueP}>
+        <div>
+          <Cpanel />
+          <div
+            className={cx("Whole", {
+              outline: outline === "outline",
+              paper: format === "paper",
+            })}
+            id="content-22"
+            style={{padding:padding}}
+          >
+            <Typewriter />
+          </div>
+        </div>
+        </PaddingContext.Provider>
+      </FormatContext.Provider>
+    </OutlineContext.Provider>
   );
 }
 
 export default Main;
+
