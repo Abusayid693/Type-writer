@@ -18,7 +18,9 @@
     <img src="https://img.shields.io/npm/l/color-calendar?style=flat-square" alt="license" />
 </p>
 
-![](https://i.imgur.com/BSqv59r.gif)
+![](https://i.imgur.com/07t6nFn.png)
+
+![](https://i.imgur.com/TtSRRF0.png)
 
 Type writer is a modern documentating Application with support of prefix-edit-text.
 
@@ -146,7 +148,7 @@ For heading user can use prefix "#"
     prefix " ### "                                        -- for H3 tags
     prefix " #### "                                       -- for H4 tags.  
 `user must press Space after entering prefix`    
- ### Lists tags
+ ### [Lists tags]()
 #### Unordered Lists 
 
         prefix " - "                                          -- for Unordered Lists elements 
@@ -157,10 +159,12 @@ For heading user can use prefix "#"
 
 
 
-### Eqation formatting
+### [Eqation formatting]()
+***The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".***
+
 ![](https://i.imgur.com/9DsfOrD.gif)
 
-The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".
+
 
 - ####  Algebric equations
 ![](https://i.imgur.com/5oCKi1G.png)
@@ -170,12 +174,12 @@ The eqation formating features supports all Algebric, triagnometric and metrix f
 
 ![](https://i.imgur.com/dQE81Qr.png)
      
-### Horizontal lines
+### [Horizontal lines]()
       prefix " --- "                                     --  for Horizontal lines
-### Coding Blocks
+### [Coding Blocks]()
 The coding blocks supports syntaxhighlighter for `javascript code only` ( will be updated in future versions).
 
-![](https://i.imgur.com/NtA7xDG.gif)
+![](https://i.imgur.com/TL7GjRn.gif)
 
        prefix " ''' "                                  -- for syntaxhighlighting editor
 ![](https://i.imgur.com/fThdc0x.png)    
@@ -184,9 +188,13 @@ The coding blocks supports syntaxhighlighter for `javascript code only` ( will b
 
 ## 2. [Image copy pasting and resizing]()
 
-Type-writer supports copy pasting images over browsers and reszie them accordingly.
+Type-writer supports copy pasting images over browsers and resize them accordingly.
 
-![](https://i.imgur.com/sPs84G1.gifv)
+- ***Copy images over internet and paste them.***
+- ***Resize them accoring to your need.***
+
+![](https://i.imgur.com/7gpaZTo.gif)
+
 
 ## 3. [color palette]()
 
@@ -199,13 +207,13 @@ Customize background colours,text colours as per your need, the color palette al
 ## 4. [Version control]()
 
 
-** Version Control ** tracks and manage changes in your typewriter files,it keeps track of every modification to the files in our database hosted on the cloud , So user dont need to hustle over loosing their data. It also allows sharing of files with others for *** modification keeping the original version safe. ***
+**Version Control** tracks and manage changes in your typewriter files,it keeps track of every modification to the files in our database hosted on the cloud , So user dont need to hustle over loosing their data. It also allows sharing of files with others for ***modification keeping the original version safe.***
 
-![Gif here](https://i.imgur.com/tHYRZdx.gif)
+![Gif here](https://i.imgur.com/lMv7Awg.png)
 
-*** Iterate through different versions of your files ***
+***The sidebar contains date and time of saved versions for iterating through different versions of your files***
 
-![Gif here](https://i.imgur.com/9aLyRDi.png)
+
 
 
 
@@ -217,11 +225,13 @@ Customize background colours,text colours as per your need, the color palette al
 
 - #### Get downloadable document
 
- |
-  ------------ | -------------
-  PDF | Whole type-writer contents in pdf formats.
-  Text | Only text contents of the type-writer.
-   Code block | Downloads coding blocks only in .js format
+|                 |            |
+| --------------- | --------------- 
+| PDF|  Whole type-writer contents in pdf formats |
+| Text| Only text contents of the type-writer. |
+| Code block | Downloads coding blocks only in .js format |
+
+
 ![](https://i.imgur.com/y6fsQfD.png)
 
 ---
@@ -230,25 +240,29 @@ Customize background colours,text colours as per your need, the color palette al
 
 ## Client 
 
- Package | Description | version
-  ------------ | -------------
-  [axios](https://www.npmjs.com/package/axios) |Promise based HTTP client for the browser and node.js|  0.21.1
-  [react-equation](https://www.npmjs.com/package/react-equation) | Used of displaying equations over webpages | 0.2.1
-  [react-resizable](https://www.npmjs.com/package/react-resizable) | To make resizable react components |3.0.4
-  [react-dropdown](https://www.npmjs.com/package/react-dropdown) | React dropdown menu      | 1.9.2
-  [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) | Used for syntaxhighlighting in coding blocks,texts etc | 11.0.3
-  [react-typed](https://www.npmjs.com/package/react-typed) | Typing annimation in react | 1.2.0
-  [file-saver](https://www.npmjs.com/package/file-saver) | provides downloadable formats of files  | 2.0.5
-  [jsPDF](https://www.npmjs.com/package/jspdf) |A library to generate PDFs in JavaScript.  | 2.3.1
-  [material-ui](https://material-ui.com)| Customized React components | 4.12.2
-  [react-color](https://casesandberg.github.io/react-color/) | color palette | 2.19.3
+
+  | Package | Description | version |
+  | ------------ | ------------- | ------------- |
+  | [axios](https://www.npmjs.com/package/axios) |Promise based HTTP client for the browser and node.js|  0.21.1 |
+  | [react-equation](https://www.npmjs.com/package/react-equation) | Used of displaying equations over webpages | 0.2.1 |
+  | [react-resizable](https://www.npmjs.com/package/react-resizable) | To make resizable react components |3.0.4 |
+  | [react-dropdown](https://www.npmjs.com/package/react-dropdown) | React dropdown menu      | 1.9.2 |
+  | [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) | Used for syntaxhighlighting in coding blocks,texts etc | 11.0.3 |
+  | [react-typed](https://www.npmjs.com/package/react-typed) | Typing annimation in react | 1.2.0 |
+  | [file-saver](https://www.npmjs.com/package/file-saver) | provides downloadable formats of files  | 2.0.5 |
+  | [jsPDF](https://www.npmjs.com/package/jspdf) |A library to generate PDFs in JavaScript.  | 2.3.1 |
+  | [material-ui](https://material-ui.com)| Customized React components | 4.12.2 |
+  | [react-color](https://casesandberg.github.io/react-color/) | color palette | 2.19.3 |
+
 
 ## Server
 
 
- Package | Description | version
-  ------------ | -------------
-  [mongoose](https://mongoosejs.com) | elegant mongodb object modeling for node.js | 5.13.3
-  [morgan](https://www.npmjs.com/package/morgan) |HTTP request logger middleware for node.js | 1.10.0
-  [express](https://expressjs.com) | Node.js web application framework for server side scripting | 4.17.1
-  [MongoDB](https://www.mongodb.com) | a NoSQL database | 4.4.3
+
+  | Package | Description | version |
+  | ------------ | ------------- | ------------- |
+  | [mongoose](https://mongoosejs.com) | elegant mongodb object modeling for node.js | 5.13.3 |
+  | [morgan](https://www.npmjs.com/package/morgan) |HTTP request logger middleware for node.js | 1.10.0 |
+  | [express](https://expressjs.com) | Node.js web application framework for server side scripting | 4.17.1 |
+  | [MongoDB](https://www.mongodb.com) | a NoSQL database | 4.4.3 |
+
