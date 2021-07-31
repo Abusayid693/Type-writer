@@ -10,13 +10,15 @@ app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+//----------- Connecting with MONGODB clusters ------------
 mongoose.connect(
-  "mongodb://localhost/typewriter1" ||
-    "mongodb+srv://Rehan:Alexa693@cluster0.2wzmd.mongodb.net/typeWriter?retryWrites=true&writeConcern=majority/locationDB ",
+  "mongodb://localhost/typewriter1",
   { useUnifiedTopology: true },
   { useNewUrlParser: true }
 );
 
+// --------- Fetching and sending requested data to clients -
 app.get("/data", (req, res) => {
   TextFile.find({})
     .then((data) => {
@@ -28,6 +30,8 @@ app.get("/data", (req, res) => {
     });
 });
 
+
+// -------- Handaling post request from client server -------
 app.post("/", (req, res) => {
   console.log("POST", req.body);
   const payload = req.body;
@@ -39,6 +43,8 @@ app.post("/", (req, res) => {
   res.send("Data received in server");
 });
 
+
+// ------- Verifying database connection ---------------------
 mongoose.connection.on("connected", () => {
   console.log("Database successfully connected");
 });
@@ -47,7 +53,7 @@ mongoose.connection.on("connected", () => {
 
 
 
-// Production deployment
+// ------ For Production deployment ---------------------------
 if (process.env.NODE_ENV==="production"){
 app.use(express.static('../App/build'))
 }
