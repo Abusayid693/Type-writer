@@ -1,6 +1,6 @@
 /************ Event for horizontal ruller ****************/
 
-function hR(elem) {
+function horizontalRuller(elem) {
   let parent = elem.parentNode,
     newElement = document.createElement("hr"),
     temp = document.createElement("p");
@@ -11,4 +11,4 @@ function hR(elem) {
   temp.focus();
 }
 
-export { hR };
+export { horizontalRuller };

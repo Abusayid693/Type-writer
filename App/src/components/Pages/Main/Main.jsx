@@ -4,7 +4,7 @@ import {
   unordered,
   ordered,
   heading,
-  hR,
+  horizontalRuller,
   deleteNode,
   italicANDbold,
   imageCapture,
@@ -16,10 +16,12 @@ import {
   Cpanel,
   OutlineContext,
   FormatContext,
+  PaddingContext,
+  FontsContext,
   cx,
 } from "./imports.jsx";
-import {PaddingContext} from "../../sub-components/Page-padding/pagePadding"
-import { Markup } from "interweave";
+
+
 
 class Typewriter extends React.Component {
   state = {
@@ -41,7 +43,7 @@ class Typewriter extends React.Component {
       initial_release = 0;
 
     /** EVENT Append : When user presses `Enter` it creates a new `p`
-   element and append it to main child body, only to replace the child element according to users entry **/
+        element and append it to main child body, only to replace the child element according to users entry **/
 
     document.addEventListener("keypress", append);
 
@@ -97,9 +99,7 @@ class Typewriter extends React.Component {
 
         // EVENT HANDLING : for ordered lists
         if (!isNaN(text) && text !== "") ordered(elem, text);
-
-        // EVENT HANDLING : Formatting equations
-        // else if (text[0] == "$") formatEqn(elem);
+        
 
         // MAIN EVENT HANDALING
         switch (text) {
@@ -119,7 +119,7 @@ class Typewriter extends React.Component {
             unordered(elem);
             break;
           case "---":
-            hR(elem);
+            horizontalRuller(elem);
             break;
         }
       }
@@ -150,37 +150,39 @@ class Typewriter extends React.Component {
   }
 }
 
-
-
 function Main() {
- 
-// React Context API 
+
+  // Handaling React Context API
+
   const [outline, setOutline] = useState("none");
   const [format, setFormat] = useState("none");
-  const [padding, setPadding] = useState("5px 10px 30px 10px;",);
+  const [padding, setPadding] = useState("5px 10px 30px 10px;");
+  const [font, setFont] = useState("'Roboto', sans-serif");
 
-
-  const value = { outline, setOutline };
-  const valueF = { format, setFormat };
-  const valueP = { padding, setPadding };
+  const OutlineContextValue = { outline, setOutline };
+  const FormatContextValue = { format, setFormat };
+  const PaddingContextValue = { padding, setPadding };
+  const FontsContextValue = { font, setFont };
 
   return (
-    <OutlineContext.Provider value={value}>
-      <FormatContext.Provider value={valueF}>
-      <PaddingContext.Provider value={valueP}>
-        <div>
-          <Cpanel />
-          <div
-            className={cx("Whole", {
-              outline: outline === "outline",
-              paper: format === "paper",
-            })}
-            id="content-22"
-            style={{padding:padding}}
-          >
-            <Typewriter />
-          </div>
-        </div>
+    <OutlineContext.Provider value={OutlineContextValue}>
+      <FormatContext.Provider value={FormatContextValue}>
+        <PaddingContext.Provider value={PaddingContextValue}>
+          <FontsContext.Provider value={FontsContextValue}>
+            <div>
+              <Cpanel />
+              <div
+                className={cx("Whole", {
+                  outline: outline === "outline",
+                  paper: format === "paper",
+                })}
+                id="content-22"
+                style={{ padding: padding, fontFamily: font }}
+              >
+                <Typewriter />
+              </div>
+            </div>
+          </FontsContext.Provider>
         </PaddingContext.Provider>
       </FormatContext.Provider>
     </OutlineContext.Provider>
@@ -189,3 +191,9 @@ function Main() {
 
 export default Main;
 
+
+/** ---------------------------- SUMMARY ----------------------------------
+ * 
+ *  Main page uses context api to get updated states for fonts, padding etc
+ *  and reflects them in the main page
+ */

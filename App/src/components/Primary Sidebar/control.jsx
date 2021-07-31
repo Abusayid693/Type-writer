@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Select,
   DownloadPDF,
@@ -7,35 +7,44 @@ import {
   customStyles,
   PageSizer,
   Checkboxes,
-  ColorPicker
-} from "./imports.jsx"
+  ColorPicker,
+} from "./imports.jsx";
 
-class Fonts extends React.Component {
-  state = {
+// CONTEXT API FOR HOLDING VALUE OF FONTS
+
+const FontsContext = React.createContext({
+  font: "none",
+  setFont: () => {},
+});
+
+
+
+function Fonts() {
+
+  const [state, setState] = React.useState({
     selectedOption: null,
+  });
+
+ 
+  const { font, setFont } = useContext(FontsContext);
+
+
+  const handleChange = (selectedOption) => {
+    var a = selectedOption;
+    setFont(a.value)
+    document.querySelector("body").style.fontFamily = a.value;
   };
-  constructor(props) {
-    super(props);
-  }
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption }, function () {
-      var a = this.state.selectedOption;
-      document.querySelector("body").style.fontFamily = a.value;
-    });
-  };
-  render() {
-    const { selectedOption } = this.state;
-    return (
-      <Select
-        styles={customStyles}
-        className="drop"
-        value={selectedOption}
-        onChange={this.handleChange}
-        options={options}
-        placeholder="Select fonts"
-      />
-    );
-  }
+
+  return (
+    <Select
+      styles={customStyles}
+      className="drop"
+      value={state.selectedOption}
+      onChange={handleChange}
+      options={options}
+      placeholder="Select fonts"
+    />
+  );
 }
 
 class Container extends React.Component {
@@ -65,12 +74,12 @@ class Container extends React.Component {
         </div>
         <Fonts />
         <DownloadPDF />
-        <PageSizer/>
-        <Checkboxes/>
-        <ColorPicker/>
+        <PageSizer />
+        <Checkboxes />
+        <ColorPicker />
       </div>
     );
   }
 }
 
-export default Container;
+export {Container,FontsContext};

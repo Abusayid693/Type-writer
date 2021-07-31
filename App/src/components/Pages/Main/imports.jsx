@@ -3,13 +3,15 @@ import "../../code-block/code.css";
 import { formatEquation } from "../../Format-equation/Format-Equations.js";
 import { unordered, ordered } from "../../modules/lists.js";
 import { heading } from "../../modules/header.js";
-import { hR } from "../../modules/horizontal-ruller.js";
+import { horizontalRuller } from "../../modules/horizontal-ruller.js";
 import { deleteNode } from "../../modules/nodeDelete.js";
 import { italicANDbold } from "../../modules/text_format.js";
 import { imageCapture } from "../../image-capture/ClipboardAPI.js";
 import { initialize } from "../../code-block/code.jsx";
 import Cpanel from "../../Sidebar Routes/c-panel-routes.jsx";
 import { OutlineContext, FormatContext } from "../../sub-components/check-boxes/check-boxes";
+import { PaddingContext } from "../../sub-components/Page-padding/pagePadding";
+import { FontsContext } from "../../Primary Sidebar/control";
 import cx from "classnames";
 
 function H1() {
@@ -30,7 +32,7 @@ export {
   unordered,
   ordered,
   heading,
-  hR,
+  horizontalRuller,
   deleteNode,
   italicANDbold,
   imageCapture,
@@ -42,5 +44,7 @@ export {
   Cpanel,
   OutlineContext,
   FormatContext,
+  PaddingContext,
+  FontsContext,
   cx
 };

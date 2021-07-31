@@ -1,5 +1,4 @@
 body {
-  font-family: "Roboto", sans-serif;
   background-color: rgb(219, 218, 218);
   padding: 0 0rem 0 25rem;
 }
@@ -54,6 +53,7 @@ canvas {
   font-weight: 300;
 }
 .Whole {
+  
   background-color: white;
   overflow: scroll;
   position: relative;
