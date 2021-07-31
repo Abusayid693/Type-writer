@@ -11,7 +11,7 @@ import { initialize } from "../../code-block/code.jsx";
 import Cpanel from "../../Sidebar Routes/c-panel-routes.jsx";
 import { OutlineContext, FormatContext } from "../../sub-components/check-boxes/check-boxes";
 import { PaddingContext } from "../../sub-components/Page-padding/pagePadding";
-import { FontsContext } from "../../Primary Sidebar/control";
+import { FontsContext } from "../../sub-components/Switch-fonts/switch-fonts";
 import cx from "classnames";
 
 function H1() {

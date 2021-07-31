@@ -21,6 +21,11 @@ const themes = {
 const OutlineContext = React.createContext(themes.language);
 // CONTEXT API
 const FormatContext = React.createContext(themes.format);
+/* React Hook that gives you access
+ * to the fonts type user selected in 
+ * Main page to update 
+ */
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Checkboxes() {
-  
+
   const [state, setState] = React.useState({
     have_Outline: false,
     paper_Format: false
