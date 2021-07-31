@@ -8,7 +8,8 @@ import {
   deleteNode,
   italicANDbold,
   imageCapture,
-  initialize,
+  endCodingBlocks,
+  continueWithCodingBlocks,
   H1,
   H2,
   H3,
@@ -18,6 +19,7 @@ import {
   FormatContext,
   PaddingContext,
   FontsContext,
+  InsertCodeBlocks,
   cx,
 } from "./imports.jsx";
 
@@ -33,8 +35,9 @@ class Typewriter extends React.Component {
 
   componentDidMount() {
     imageCapture();
-    initialize();
+    endCodingBlocks();
     this.typewriter();
+    continueWithCodingBlocks();
   }
 
   typewriter() {
@@ -121,20 +124,20 @@ class Typewriter extends React.Component {
           case "---":
             horizontalRuller(elem);
             break;
+          case "'''":
+            InsertCodeBlocks(elem)
+            break;  
         }
       }
     }
 
     // EVENT HANDLING : for itilics and bold text [ few bugs needed to be fixed ]
     document.addEventListener("keypress", italicANDbold);
-
     // EVENT HANDLING : Delecting the nodes if empty
     document.addEventListener("keydown", deleteNode);
   }
-
   render() {
     const { selectedOption } = this.state;
-
     return (
       <div className="pad">
         <h1 id="heading">TYPE - WRITER PAD </h1>

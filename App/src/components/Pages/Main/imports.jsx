@@ -7,7 +7,7 @@ import { horizontalRuller } from "../../modules/horizontal-ruller.js";
 import { deleteNode } from "../../modules/nodeDelete.js";
 import { italicANDbold } from "../../modules/text_format.js";
 import { imageCapture } from "../../image-capture/ClipboardAPI";
-import { initialize } from "../../code-block/code.jsx";
+import { endCodingBlocks,InsertCodeBlocks,continueWithCodingBlocks } from "../../code-block/code";
 import Cpanel from "../../Sidebar Routes/c-panel-routes.jsx";
 import { OutlineContext, FormatContext } from "../../sub-components/check-boxes/check-boxes";
 import { PaddingContext } from "../../sub-components/Page-padding/pagePadding";
@@ -36,7 +36,8 @@ export {
   deleteNode,
   italicANDbold,
   imageCapture,
-  initialize,
+  endCodingBlocks,
+  continueWithCodingBlocks,
   H1,
   H2,
   H3,
@@ -46,5 +47,6 @@ export {
   FormatContext,
   PaddingContext,
   FontsContext,
+  InsertCodeBlocks,
   cx
 };
