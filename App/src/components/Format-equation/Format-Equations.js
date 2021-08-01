@@ -13,13 +13,15 @@ function AppendEquation(props) {
 }
 
 // RENDERING : The formatted equations
-
 function renderEquation(elem, text) {
   ReactDOM.render(
     <AppendEquation text={text} />,
     document.querySelector("." + elem)
   );
 }
+
+// Note : This function is called form main page when ever user uses prefix "$"
+//        to format equations.
 
 function formatEquation(elem) {
   var div = document.createElement("div"),
@@ -38,7 +40,6 @@ function formatEquation(elem) {
 export { formatEquation };
 
 /* SUMMARY : Normal equtions inserted by user are properly formatted with <sup> and  <sub> 
-             scripts.
-
-Please refer : https://kgram.github.io/react-equation/master/storybook/ documentation.                
+ *           scripts.
+ * Please refer : https://kgram.github.io/react-equation/master/storybook/ documentation.                
 */

@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Resizable } from "react-resizable";
 import "react-resizable/css/styles.css";
-import "./img.css";
+import "./imageCapture.css";
 
 var numImages = 0;  /*-----Tracking no of images captured---------*/
 

@@ -8,7 +8,7 @@ let numberOfCodeBlocks = 0,
     elem,
     text;
 
-// If `appendCodeBlock` is true the user will continue to get new coding blcoks
+// Note => If `appendCodeBlock` is true the user will continue to get new coding blcoks
 
 // RENDERING : Newly added coding blocks with syntaxhighlighter
 function renderCodeBlock(text, elem) {
@@ -21,7 +21,7 @@ function renderCodeBlock(text, elem) {
 // EVENT InsertCodeBlocks : New coding blocks without syntaxhighlighter
 
 const InsertCodeBlocks = (elem) => {
-  // appendCodeBlock : true = Initializing the loop
+  //Note => appendCodeBlock : true = Initializing the loop
   appendCodeBlock = true;
   let newElement = document.createElement("div"),
     parent = elem.parentNode,
@@ -49,7 +49,7 @@ const continueWithCodingBlocks=()=>{
    var elem = document.activeElement;
     if (
       e.which === 13 &&
-      // Only if `appendCodeBlock` is true 
+      // Note => Only if `appendCodeBlock` is true 
       appendCodeBlock &&
       elem.classList.contains("code-view")
     ) {
@@ -79,9 +79,9 @@ const endCodingBlocks = () => {
       elem.classList.contains("code-view") &&
       appendCodeBlock
     ) {
-    // appendCodeBlock : true = Ending the loop
+      // Note => appendCodeBlock : true = Ending the loop
       appendCodeBlock = false;
-      // elem.textContent : Passing text content as props
+      // Note => elem.textContent : Passing text content as props to render with syntax-highlighting
       renderCodeBlock(elem.textContent, elem.classList[1]);
       elem.classList.add("main");
     } else {
