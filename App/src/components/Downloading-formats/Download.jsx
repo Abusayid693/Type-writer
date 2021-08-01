@@ -72,7 +72,9 @@ class DownloadPDF extends React.Component {
     var content = document.querySelectorAll(".code-view");
     var list = [].slice.call(content);
     var innertext = list
-      .map(function (e) {
+// elem.textContent appends all contents together so in the case we are
+// required to use javascript mapping to insert new-line characters.
+    .map(function (e) {
         return e.textContent;
       })
       .join("\n");

@@ -1,42 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
-  Select,
   DownloadPDF,
   Link,
-  options,
-  customStyles,
   PageSizer,
   Checkboxes,
-  ColorPicker
-} from "./imports.jsx"
+  ColorPicker,
+  Fonts,
+} from "./imports.jsx";
 
-class Fonts extends React.Component {
-  state = {
-    selectedOption: null,
-  };
-  constructor(props) {
-    super(props);
-  }
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption }, function () {
-      var a = this.state.selectedOption;
-      document.querySelector("body").style.fontFamily = a.value;
-    });
-  };
-  render() {
-    const { selectedOption } = this.state;
-    return (
-      <Select
-        styles={customStyles}
-        className="drop"
-        value={selectedOption}
-        onChange={this.handleChange}
-        options={options}
-        placeholder="Select fonts"
-      />
-    );
-  }
-}
+const VERSIONS = "/main/saved-files";
 
 class Container extends React.Component {
   state = {
@@ -45,32 +17,32 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  componentDidMount() {
-    this.initialize();
-  }
-
-  initialize() {}
+// Just upper button and texts of the side-bar
+  UpperContainer = () => {
+    return (
+    <div className="cheader">
+      <p>C-Panel</p>
+      <Link to={VERSIONS}>
+        <button>control</button>
+      </Link>
+    </div>
+    )
+  };
 
   render() {
     const { selectedOption } = this.state;
 
     return (
       <div className="panel">
-        <div className="cheader">
-          <p>C-Panel</p>
-          <Link to="/main/saved-files">
-            <button>control</button>
-          </Link>
-        </div>
+        <this.UpperContainer/>
         <Fonts />
         <DownloadPDF />
-        <PageSizer/>
-        <Checkboxes/>
-        <ColorPicker/>
+        <PageSizer />
+        <Checkboxes />
+        <ColorPicker />
       </div>
     );
   }
 }
 
-export default Container;
+export { Container };

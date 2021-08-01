@@ -1,8 +1,19 @@
-import React from "react";
+import React,{ useContext }  from "react";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import { withStyles}  from "@material-ui/core/styles";
 
+
+
+// CONTEXT API 
+const PaddingContext = React.createContext({
+  padding: " 5px 10px 30px 10px;",
+  setPadding: () => {},
+});
+
+
+
+/* -------------------- Inbuild styles for slider ------------------- */
 
 const PrettoSlider = withStyles({
   root: {
@@ -37,12 +48,15 @@ const PrettoSlider = withStyles({
 
 
 function PageSizer() {
-  function valuetext(value) {
-    const elem = document.querySelector(".Whole");
-    if (elem === null) return;
-    var a = value / 2 +5+ "px";
-    elem.style.padding = a;
+
+  const { padding, setPadding } = useContext(PaddingContext);
+
+
+  const GetSliderValue=(value)=> {
+   const a = value / 2 +5+ "px";
+    setPadding(a); /*--------- updating value of context ----------- */
   }
+
   return (
     <div className="slider">
       <Typography id="discrete-slider-custom" gutterBottom>
@@ -52,12 +66,12 @@ function PageSizer() {
         valueLabelDisplay="auto"
         aria-label="pretto slider"
         defaultValue={20}
-        getAriaValueText={valuetext}
+        getAriaValueText={GetSliderValue}
       />
     </div>
   );
 }
 
-export { PageSizer };
+export { PageSizer,PaddingContext };
 
-/** PageSizer is a slider can */
+// SUMMARY : We used context to pass values of slider to main page

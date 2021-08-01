@@ -25,11 +25,9 @@ function formatEquation(elem) {
   var div = document.createElement("div"),
     parent = elem.parentNode,
     text = "";
-
   div.contentEditable = "true";
   div.classList.add("equation" + i);
   div.classList.add("main");
-
   // Getting the text content for formatting equations
   for (var j = 1; j < elem.textContent.length; j++) text += elem.textContent[j];
   parent.replaceChild(div, elem);

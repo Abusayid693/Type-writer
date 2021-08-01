@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import FormLabel from "@material-ui/core/FormLabel";
 import FormControl from "@material-ui/core/FormControl";
@@ -6,34 +6,67 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
+const themes = {
+  language: {
+    outline: "none",
+    setOutline: () => {},
+  },
+  format: {
+    format: "none",
+    setFormat: () => {},
+  },
+};
+
+// CONTEXT API
+const OutlineContext = React.createContext(themes.language);
+// CONTEXT API
+const FormatContext = React.createContext(themes.format);
+/* React Hook that gives you access
+ * to the fonts type user selected in 
+ * Main page to update 
+ */
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
-  formControl: {
-    margin: theme.spacing(3),
-  },
 }));
 
-export default function Checkboxes() {
-  const classes = useStyles();
+function Checkboxes() {
+
   const [state, setState] = React.useState({
-    outline: false,
-    paper: false,
-    antoine: false,
+    have_Outline: false,
+    paper_Format: false
   });
 
-  const handleChange = (event) => {
+  const { outline, setOutline } = useContext(OutlineContext),
+        { format, setFormat } = useContext(FormatContext),
+         classes = useStyles();
+
+  const handleChange_outline = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
     const target = event.target.name;
-    switch (target) {
-      case "outline":
-        document.querySelector(".Whole").classList.toggle("outline");
-        break;
-      case "paper":
-        document.querySelector(".Whole").classList.toggle("paper-like");
-        break;
-    }
+        if (!state.have_Outline) {
+          setOutline(target);
+          setState({ have_Outline: true });
+        } else {
+          setOutline("none");
+          setState({ have_Outline: false });
+        }   
+  };
+
+
+  const handleChange_format = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+    const target = event.target.name;
+        if (!state.paper_Format) {
+          setFormat(target);
+          setState({ paper_Format: true });
+        } else {
+          setFormat("none");
+          setState({ paper_Format: false });
+        }   
   };
 
   const { gilad, jason, antoine } = state;
@@ -48,7 +81,7 @@ export default function Checkboxes() {
             control={
               <Checkbox
                 checked={gilad}
-                onChange={handleChange}
+                onChange={handleChange_outline}
                 name="outline"
               />
             }
@@ -56,15 +89,14 @@ export default function Checkboxes() {
           />
           <FormControlLabel
             control={
-              <Checkbox checked={jason} onChange={handleChange} name="paper" />
+              <Checkbox checked={jason} onChange={handleChange_format} name="paper" />
             }
-            label="Paper-like"
+            label="Paper"
           />
           <FormControlLabel
             control={
               <Checkbox
                 checked={antoine}
-                onChange={handleChange}
                 name="antoine"
               />
             }
@@ -75,3 +107,5 @@ export default function Checkboxes() {
     </div>
   );
 }
+
+export { OutlineContext, Checkboxes, FormatContext };

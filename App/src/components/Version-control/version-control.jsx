@@ -1,7 +1,9 @@
 import React from "react";
 import { Link, axios, getPayLoad, File } from "./imports.jsx";
 
+
 class SavedFiles extends React.Component {
+
   state = {
     Data: [],
     type: "Start version control",
@@ -14,6 +16,7 @@ class SavedFiles extends React.Component {
     this.getData(false);
   }
 
+  //------------ FETCHING DATA FROM THE SERVER -------------
   getData = (isSaved) => {
     axios
       .get("/data")
@@ -32,15 +35,17 @@ class SavedFiles extends React.Component {
   };
 
   handleClick = () => {
+
     const lastSaved = this.state.Data[0].body;
     console.log("Last saved data : ", lastSaved);
-
     const payload = getPayLoad();
-
+   // If last saved version of file and current file are
+   // same dont update on database
     if (lastSaved == payload.body) {
       alert("Already upto date");
       return;
     }
+// ----------- SENDING DATA TO BE SERVER -----------------
     this.getData(true);
     axios({
       url: "/",
@@ -54,6 +59,7 @@ class SavedFiles extends React.Component {
         console.log("Data sending error");
       });
   };
+
 
   displayVersions = (data) => {
     if (!data.length) return null;
@@ -79,3 +85,5 @@ class SavedFiles extends React.Component {
 }
 
 export default SavedFiles;
+
+

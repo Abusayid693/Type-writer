@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
     Button,
   }  from "../imports.jsx"
 
-export default function File(props) {
+
+ function File(props) {
+
     function showVersion() {
       document.querySelector(".Whole").innerHTML = props.data.body;
     }
@@ -19,3 +21,5 @@ export default function File(props) {
       </div>
     );
   }
+
+  export {File}

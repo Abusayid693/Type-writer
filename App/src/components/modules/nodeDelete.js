@@ -1,5 +1,10 @@
 import { pTag } from "./paragraph.js";
 
+
+// NOTE : We delete active node only if it has no text content and transfer
+//        focus to its previous sibling
+
+
 function deleteNode(event) {
   const key = event.key; 
 
@@ -10,22 +15,33 @@ function deleteNode(event) {
       parent,
       p_parent;
     if (elem.id == "pad_parent") return;
+    // Only is the active element is empty (i.e : without any text content)
     else if (elem.textContent == "") {
+      // Handling exception : Replacing LI tag with a paragraph tag instead of deleting it.
       if (elem.nodeName == "LI") {
         parent = elem.parentElement;
         pTag(parent);
-      } else if (elem.previousSibling == null) {
+      }
+      // Handling exception : If active element does not contain any previous sibling
+      // then it is simply removed from the body without transferring focus.
+       else if (elem.previousSibling == null) {
         elem.remove();
         return;
-      } else {
+      }
+      // If the active element has a previous sibling in that case the active element is 
+      // removed and focus is transferrred to its previous siblings.
+      else {
         previousElem = elem.previousSibling;
         elem.remove();
-        //     Removing HR from the thread
+        // Handling exception : If the previous sibling of an active element is horizontal 
+        // ruller then it is also removed along with the active element and focus is transferred
+        // to its previous sibling (i.e : horizontal ruller previous sibling)
         if (previousElem.nodeName == "HR") {
           p_previousElem = previousElem.previousSibling;
           previousElem.remove();
-          p_previousElem.focus();
+          p_previousElem.previousSibling.focus();
         }
+        // General case : Active element is removed and focus is transferred to its previous sibling
         if (previousElem !== "undefined") {
           previousElem.focus();
         }
@@ -35,3 +51,9 @@ function deleteNode(event) {
 }
 
 export { deleteNode };
+
+/** ---------- SUMMARY ------------- 
+ * 
+ * The function deletes active node element if it has no content,
+ * while handaling lots of exeption cases.
+*/

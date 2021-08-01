@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   formatEquation,
   unordered,
   ordered,
   heading,
-  hR,
+  horizontalRuller,
   deleteNode,
   italicANDbold,
   imageCapture,
-  initialize,
+  endCodingBlocks,
+  continueWithCodingBlocks,
   H1,
   H2,
   H3,
   H4,
-  Cpanel
+  Cpanel,
+  OutlineContext,
+  FormatContext,
+  PaddingContext,
+  FontsContext,
+  InsertCodeBlocks,
+  cx,
 } from "./imports.jsx";
+
+
 
 class Typewriter extends React.Component {
   state = {
@@ -26,8 +35,9 @@ class Typewriter extends React.Component {
 
   componentDidMount() {
     imageCapture();
-    initialize();
+    endCodingBlocks();
     this.typewriter();
+    continueWithCodingBlocks();
   }
 
   typewriter() {
@@ -36,18 +46,17 @@ class Typewriter extends React.Component {
       initial_release = 0;
 
     /** EVENT Append : When user presses `Enter` it creates a new `p`
-   element and append it to main child body, only to replace the child element according to users entry **/
+        element and append it to main child body, only to replace the child element according to users entry **/
 
     document.addEventListener("keypress", append);
 
     function append(e) {
-
       if (e.which === 13 && document.activeElement.classList.contains("main")) {
         let elem,
-            parent,
-            tempElement = document.createElement("hr"),
-            appendingElem = document.createElement("p");
-            appendingElem.classList.add("main");
+          parent,
+          tempElement = document.createElement("hr"),
+          appendingElem = document.createElement("p");
+        appendingElem.classList.add("main");
 
         // ERROR HANDLING
         if (!initial_release) elem = document.querySelector(".pad");
@@ -65,11 +74,15 @@ class Typewriter extends React.Component {
         } else {
           tempElement.style.opacity = 0;
           elem.parentNode.insertBefore(tempElement, elem.nextSibling);
-          tempElement.parentNode.insertBefore(appendingElem, tempElement.nextSibling);
+          tempElement.parentNode.insertBefore(
+            appendingElem,
+            tempElement.nextSibling
+          );
         }
 
-      // EVENT HANDLING : Formatting equations
-      if (document.activeElement.textContent[0] == "$") formatEquation(document.activeElement);
+        // EVENT HANDLING : Formatting equations
+        if (document.activeElement.textContent[0] == "$")
+          formatEquation(document.activeElement);
 
         appendingElem.focus();
         e.preventDefault();
@@ -89,9 +102,7 @@ class Typewriter extends React.Component {
 
         // EVENT HANDLING : for ordered lists
         if (!isNaN(text) && text !== "") ordered(elem, text);
-
-        // EVENT HANDLING : Formatting equations
-        // else if (text[0] == "$") formatEqn(elem);
+        
 
         // MAIN EVENT HANDALING
         switch (text) {
@@ -111,22 +122,22 @@ class Typewriter extends React.Component {
             unordered(elem);
             break;
           case "---":
-            hR(elem);
+            horizontalRuller(elem);
             break;
+          case "'''":
+            InsertCodeBlocks(elem)
+            break;  
         }
       }
     }
 
     // EVENT HANDLING : for itilics and bold text [ few bugs needed to be fixed ]
     document.addEventListener("keypress", italicANDbold);
-
     // EVENT HANDLING : Delecting the nodes if empty
     document.addEventListener("keydown", deleteNode);
   }
-
   render() {
     const { selectedOption } = this.state;
-
     return (
       <div className="pad">
         <h1 id="heading">TYPE - WRITER PAD </h1>
@@ -143,14 +154,49 @@ class Typewriter extends React.Component {
 }
 
 function Main() {
+
+  // Handaling React Context API
+
+  const [outline, setOutline] = useState("none");
+  const [format, setFormat] = useState("none");
+  const [padding, setPadding] = useState("5px 10px 30px 10px;");
+  const [font, setFont] = useState("'Roboto', sans-serif");
+
+  const OutlineContextValue = { outline, setOutline };
+  const FormatContextValue = { format, setFormat };
+  const PaddingContextValue = { padding, setPadding };
+  const FontsContextValue = { font, setFont };
+
   return (
-    <div>
-      <Cpanel />
-      <div className="Whole" id="content-22">
-        <Typewriter />
-      </div>
-    </div>
+    <OutlineContext.Provider value={OutlineContextValue}>
+      <FormatContext.Provider value={FormatContextValue}>
+        <PaddingContext.Provider value={PaddingContextValue}>
+          <FontsContext.Provider value={FontsContextValue}>
+            <div>
+              <Cpanel />
+              <div
+                className={cx("Whole", {
+                  outline: outline === "outline",
+                  paper: format === "paper",
+                })}
+                id="content-22"
+                style={{ padding: padding, fontFamily: font }}
+              >
+                <Typewriter />
+              </div>
+            </div>
+          </FontsContext.Provider>
+        </PaddingContext.Provider>
+      </FormatContext.Provider>
+    </OutlineContext.Provider>
   );
 }
 
 export default Main;
+
+
+/** ---------------------------- SUMMARY ----------------------------------
+ * 
+ *  Main page uses context api to get updated states for fonts, padding etc
+ *  and reflects them in the main page
+ */
