@@ -17,8 +17,6 @@ const BackGroundColorContext = React.createContext("null");
  */
 
 
-
-
 class ColorPicker extends React.Component {
 
   static contextType = BackGroundColorContext;

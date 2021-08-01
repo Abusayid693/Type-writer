@@ -56,7 +56,7 @@ class Typewriter extends React.Component {
           parent,
           tempElement = document.createElement("hr"),
           appendingElem = document.createElement("p");
-        appendingElem.classList.add("main");
+          appendingElem.classList.add("main");
 
         // ERROR HANDLING
         if (!initial_release) elem = document.querySelector(".pad");

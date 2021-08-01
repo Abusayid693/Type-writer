@@ -1,4 +1,4 @@
-import { pTag } from "./paragraph.js";
+import { pTag } from "../paragraph/paragraph";
 
 
 // NOTE : We delete active node only if it has no text content and transfer

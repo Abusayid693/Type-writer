@@ -1,11 +1,11 @@
 import "../../index.css";
 import "../../code-block/code.css";
 import { formatEquation } from "../../Format-equation/Format-Equations.js";
-import { unordered, ordered } from "../../modules/lists.js";
-import { heading } from "../../modules/header.js";
-import { horizontalRuller } from "../../modules/horizontal-ruller.js";
-import { deleteNode } from "../../modules/nodeDelete.js";
-import { italicANDbold } from "../../modules/text_format.js";
+import { unordered, ordered } from "../../modules/Lists/lists.js";
+import { heading } from "../../modules/Header/header.js";
+import { horizontalRuller } from "../../modules/Horizontal line/horizontal-ruller.js";
+import { deleteNode } from "../../modules/Delete Node/nodeDelete";
+import { italicANDbold } from "../../modules/Text format/text_format.js";
 import { imageCapture } from "../../image-capture/ClipboardAPI";
 import { endCodingBlocks,InsertCodeBlocks,continueWithCodingBlocks } from "../../code-block/code";
 import Cpanel from "../../Sidebar Routes/c-panel-routes.jsx";

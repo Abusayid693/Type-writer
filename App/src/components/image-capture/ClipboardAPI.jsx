@@ -72,7 +72,7 @@ function imageCapture() {
 
     c.classList.add("captured", "main");
     c.id = "img" + numImages;
-// [ e.clipboardData.files.length ] : Checks if clipboard item is an IMAGE FILE, if not IMAGE then skip
+// NOTE => [ e.clipboardData.files.length ] : Checks if clipboard item is an IMAGE FILE, if not IMAGE then skip
 //  Note : Not sure if this is an perfect approach but it seems to work fine handling all cases
     if (e.clipboardData.files.length > 0 && elem.classList.contains("main")) {
 

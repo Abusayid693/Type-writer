@@ -59,7 +59,7 @@ const continueWithCodingBlocks=()=>{
       newElem.focus();
       // Inserting new non syntax highlighting coding block
       InsertCodeBlocks(newElem); 
-      // elem.textContent : Passing text content as props
+      // NOTE => elem.textContent : Passing text content as props
       renderCodeBlock(elem.textContent, elem.classList[1]);
       e.preventDefault();
     }

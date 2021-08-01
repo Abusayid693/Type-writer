@@ -10,6 +10,7 @@ const FontsContext = React.createContext({
    * to the fonts type user selected in 
    * Main page to update 
   */
+
   const options = [
     { value: "Montserrat, sans-serif", label: "Montserrat" },
     { value: "Roboto, sans-serif", label: "Roboto" },
@@ -33,11 +34,9 @@ const FontsContext = React.createContext({
     const [state, setState] = React.useState({
       selectedOption: null,
     });
-  
    
     const { font, setFont } = useContext(FontsContext);
-  
-  
+
     const handleChange = (selectedOption) => {
       var a = selectedOption;
       // Changing value of react hook value with new font type
