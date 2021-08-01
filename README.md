@@ -5,11 +5,10 @@
 
 <p>
   
-  
- <img src="https://i.imgur.com/JFKGNCH.png" style=flat-square" alt="size" />
-   
-   
- <img src="https://i.imgur.com/Vl9Nfjx.png" style=flat-square" alt="license" />
+ <img src="https://i.imgur.com/JFKGNCH.png"  alt="size" />
+
+ <img src="https://i.imgur.com/Vl9Nfjx.png"  alt="license" />
+
 </p>
 
 ![](https://i.imgur.com/07t6nFn.png)
