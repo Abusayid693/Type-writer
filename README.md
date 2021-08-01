@@ -4,18 +4,12 @@
 
 
 <p>
-    <a href="https://www.npmjs.com/package/color-calendar">
-        <img src="https://img.shields.io/npm/v/color-calendar?style=flat-square" alt="npm version" />
-    </a>
-    <a href="https://www.npmjs.com/package/color-calendar">
-        <img src="https://img.shields.io/npm/dw/color-calendar?style=flat-square" alt="npm downloads" />
-    </a>
-    <img src="https://img.shields.io/bundlephobia/min/color-calendar?style=flat-square" alt="size" />
-    <a href="https://www.jsdelivr.com/package/npm/color-calendar">
-        <img src="https://data.jsdelivr.com/v1/package/npm/color-calendar/badge" alt="jsdelivr" />
-    </a>
-    <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FPawanKolhe%2Fcolor-calendar" alt="Hits">
-    <img src="https://img.shields.io/npm/l/color-calendar?style=flat-square" alt="license" />
+  
+  
+    <img src="https://i.imgur.com/JFKGNCH.png"style=flat-square" alt="size" />
+   
+   
+    <img src="https://i.imgur.com/Vl9Nfjx.png" style=flat-square" alt="license" />
 </p>
 
 ![](https://i.imgur.com/07t6nFn.png)
@@ -26,9 +20,9 @@ Type writer is a modern documentating Application with support of prefix-edit-te
 
 Get youtube [demo]() here
 ## Contents:
-- [Features]()
 - [Project Starter]()
-- [Getting Started]()
+- [Features]()
+- [Tools and Packages]()
 - [Deployment]()
 --- 
 # 👨‍💻 Getting started
@@ -159,8 +153,8 @@ For heading user can use prefix "#"
 
 
 
-### [Eqation formatting]()
-***The eqation formating features supports all Algebric, triagnometric and metrix formatting, following with prefix " $ ".***
+### [Equation formatting]()
+***The equation formatting features supports all Algebric, triagnometric and Matrices formatting, following with prefix " $ ".***
 
 ![](https://i.imgur.com/9DsfOrD.gif)
 
