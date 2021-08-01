@@ -6,7 +6,7 @@
 <p>
   
   
-    <img src="https://i.imgur.com/JFKGNCH.png"style=flat-square" alt="size" />
+    <img src="https://i.imgur.com/JFKGNCH.png" style=flat-square" alt="size" />
    
    
     <img src="https://i.imgur.com/Vl9Nfjx.png" style=flat-square" alt="license" />
