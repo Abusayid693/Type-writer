@@ -38,9 +38,10 @@ const InsertCodeBlocks = (elem) => {
 
 
 // EVENT ContinueWithCodeBlocks = Continuation of Code blocks is necessary to provide user with new coding 
-//                                 blocks after they press `enter` since user are only allowed to type single
-//                                 line of code snippet per block. if they dont want to continue they can press
-//                                 any key holding `control` to initialize `endCodingBlocks` 
+//  with new coding  blocks after they press `enter` since user are only allowed to type single line of code 
+//  snippet per block. if they dont want to continue they can press any key holding `control` to initialize 
+// `endCodingBlocks` 
+ 
 
 const continueWithCodingBlocks=()=>{
   document.addEventListener("keypress", ContinueWithCodeBlocks);
@@ -70,7 +71,7 @@ const continueWithCodingBlocks=()=>{
 
 
 // EVENT endCodingBlocks = To end loop for getting continuous coding blocks user need to press any key
-//                         holding `control` this will render the current coding block and end the loop.
+//  holding `control` this will render the current coding block and end the loop.
 const endCodingBlocks = () => {
   document.addEventListener("keypress", (event) => {
     elem = document.activeElement;

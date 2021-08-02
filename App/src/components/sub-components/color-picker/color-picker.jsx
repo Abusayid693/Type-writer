@@ -11,9 +11,8 @@ const backgroundColor= {
 
 // CONTEXT API FOR HANDALING BACKGROUND COLOR
 const BackGroundColorContext = React.createContext("null");
-/* React Hook that gives you access
- * to the fonts type user selected in 
- * Main page to update 
+/* React Hook that gives you access to the  data user selected 
+ * for Main page to update 
  */
 
 

@@ -10,9 +10,8 @@ const PaddingContext = React.createContext({
   padding: " 5px 10px 30px 10px;",
   setPadding: () => {},
 });
-/* React Hook that gives you access
- * to the fonts type user selected in 
- * Main page to update 
+/* React Hook that gives you access to the  data user selected 
+ * for Main page to update 
  */
 
 

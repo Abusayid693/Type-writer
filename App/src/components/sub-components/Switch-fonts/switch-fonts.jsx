@@ -6,8 +6,7 @@ const FontsContext = React.createContext({
     font: "none",
     setFont: () => {},
   });
-  /* React Hook that gives you access
-   * to the fonts type user selected in 
+  /* React Hook that gives you access to the fonts type user selected in 
    * Main page to update 
   */
 

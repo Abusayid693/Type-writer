@@ -6,7 +6,7 @@ import { heading } from "../../modules/Header/header.js";
 import { horizontalRuller } from "../../modules/Horizontal line/HorizontalRuller.js";
 import { deleteNode } from "../../modules/Delete Node/DeleteEmptyNode";
 import { italicANDbold } from "../../modules/Text format/FormatTexts.js";
-import { imageCapture } from "../../image-capture/ImageCapture";
+import { imageCapture } from "../../image-capture/HandleClipboardAPI";
 import { endCodingBlocks,InsertCodeBlocks,continueWithCodingBlocks } from "../../code-block/code";
 import Cpanel from "../../Sidebar Routes/SidebarRoutes.jsx";
 import { OutlineContext, FormatContext } from "../../sub-components/check-boxes/check-boxes";

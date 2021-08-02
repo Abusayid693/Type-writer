@@ -21,7 +21,7 @@ function renderEquation(elem, text) {
 }
 
 // Note : This function is called form main page when ever user uses prefix "$"
-//        to format equations.
+// to format equations.
 
 function formatEquation(elem) {
   var div = document.createElement("div"),
