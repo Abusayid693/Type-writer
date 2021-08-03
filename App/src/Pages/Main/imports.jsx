@@ -3,7 +3,7 @@ import "../../code-block/code.css";
 import { formatEquation } from "../../Format-equation/Format-Equations.js";
 import { unordered, ordered } from "../../modules/Lists/lists.js";
 import { heading } from "../../modules/Header/header.js";
-import { horizontalRuller } from "../../modules/Horizontal line/HorizontalRuller.js";
+import { horizontalRuller } from "../../../modules/Horizontal line/HorizontalRuller.js";
 import { deleteNode } from "../../modules/Delete Node/DeleteEmptyNode";
 import { italicANDbold } from "../../modules/Text format/FormatTexts.js";
 import { imageCapture } from "../../image-capture/HandleClipboardAPI";
