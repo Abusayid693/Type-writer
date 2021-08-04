@@ -1,4 +1,5 @@
 const express = require("express");
+const userRoutes = require("./routes/user")
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const path = require("path");
@@ -42,6 +43,21 @@ app.post("/", (req, res) => {
   });
   res.send("Data received in server");
 });
+
+
+
+
+// -----------User authentication-------------------
+
+app.use("/api/users",userRoutes)
+
+
+
+
+
+
+
+
 
 
 // ------- Verifying database connection ---------------------
