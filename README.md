@@ -5,13 +5,13 @@
 
 <p>
   
- <img src="https://i.imgur.com/JFKGNCH.png"  alt="size" />
+ <img src="https://img.shields.io/github/languages/code-size/Abusayid693/Type-writer"  alt="size" />
 
  <img src="https://i.imgur.com/Vl9Nfjx.png"  alt="license" />
 
 </p>
 
-![](https://img.shields.io/github/languages/code-size/Abusayid693/Type-writer)
+![]()
 
 ![](https://i.imgur.com/TtSRRF0.png)
 
