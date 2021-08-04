@@ -7,7 +7,9 @@
   
  <img src="https://img.shields.io/github/languages/code-size/Abusayid693/Type-writer"  alt="size" />
 
- <img src="https://i.imgur.com/Vl9Nfjx.png"  alt="license" />
+ <img src="https://img.shields.io/github/languages/top/Abusayid693/Type-writer  alt="license" />
+  
+ <img src= "https://img.shields.io/github/issues/Abusayid693/Type-writer" /> 
 
 </p>
 
