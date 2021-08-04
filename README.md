@@ -11,7 +11,7 @@
 
 </p>
 
-![](https://i.imgur.com/07t6nFn.png)
+![](https://img.shields.io/github/languages/code-size/Abusayid693/Type-writer)
 
 ![](https://i.imgur.com/TtSRRF0.png)
 
