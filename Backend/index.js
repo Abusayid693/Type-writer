@@ -4,9 +4,9 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const path = require("path");
 const app = express();
-const TextFile = require("./Models/models");
 const PORT = process.env.PORT || 8000;
 const { notFound, errorHandler } = require("./middlewares/error");
+const dataRoutes = require("./routes/TextFiles")
 
 app.use(morgan("tiny"));
 app.use(express.json());
@@ -19,29 +19,9 @@ mongoose.connect(
   { useNewUrlParser: true }
 );
 
-// --------- Fetching and sending requested data to clients -
-app.get("/data", (req, res) => {
-  TextFile.find({})
-    .then((data) => {
-      console.log("Data: ", data);
-      res.json(data);
-    })
-    .catch((error) => {
-      console.log("Error: ", error);
-    });
-});
+// ------------------ API request for data --------- 
 
-// -------- Handaling post request from client server -------
-app.post("/", (req, res) => {
-  console.log("POST", req.body);
-  const payload = req.body;
-  const newTextFile = new TextFile(payload);
-  newTextFile.save((error) => {
-    if (error) console.log(error);
-    else console.log("Text file added to database");
-  });
-  res.send("Data received in server");
-});
+app.use("/", dataRoutes);
 
 // -----------User authentication-------------------
 
