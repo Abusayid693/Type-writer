@@ -1,7 +1,7 @@
 import React from "react";
-import bg from "../../Assets/Frame.svg";
+import bg from "../../components/Assets/Frame.svg";
 import { Link } from "react-router-dom";
-import MytypedComponent from "../../sub-components/typing-effect/typed.jsx";
+import MytypedComponent from "../../components/sub-components/typing-effect/typed.jsx";
 import "./home.css";
 
 export default function HomePage() {
@@ -11,7 +11,7 @@ export default function HomePage() {
         <h1>Type-writer : </h1>
         <h1>Start documentating</h1>
         <MytypedComponent />
-        <Link to="/main/">
+        <Link to="/user">
           <button>
             Start here <i class="fas fa-chevron-right"></i>
           </button>

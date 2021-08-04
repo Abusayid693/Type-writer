@@ -1,17 +1,17 @@
-import "../../index.css";
-import "../../code-block/code.css";
-import { formatEquation } from "../../Format-equation/Format-Equations.js";
+import "../../components/index.css";
+import "../../components/code-block/code.css";
+import { formatEquation } from "../../components/Format-equation/Format-Equations.js";
 import { unordered, ordered } from "../../modules/Lists/lists.js";
 import { heading } from "../../modules/Header/header.js";
-import { horizontalRuller } from "../../../modules/Horizontal line/HorizontalRuller.js";
+import { horizontalRuller } from "../../modules/Horizontal line/HorizontalRuller.js";
 import { deleteNode } from "../../modules/Delete Node/DeleteEmptyNode";
 import { italicANDbold } from "../../modules/Text format/FormatTexts.js";
-import { imageCapture } from "../../image-capture/HandleClipboardAPI";
-import { endCodingBlocks,InsertCodeBlocks,continueWithCodingBlocks } from "../../code-block/code";
-import Cpanel from "../../Sidebar Routes/SidebarRoutes.jsx";
-import { OutlineContext, FormatContext } from "../../sub-components/check-boxes/check-boxes";
-import { PaddingContext } from "../../sub-components/Page-padding/pagePadding";
-import { FontsContext } from "../../sub-components/Switch-fonts/switch-fonts";
+import { imageCapture } from "../../components/image-capture/HandleClipboardAPI";
+import { endCodingBlocks,InsertCodeBlocks,continueWithCodingBlocks } from "../../components/code-block/code";
+import Cpanel from "../../components/Sidebar Routes/SidebarRoutes.jsx";
+import { OutlineContext, FormatContext } from "../../components/sub-components/check-boxes/check-boxes";
+import { PaddingContext } from "../../components/sub-components/Page-padding/pagePadding";
+import { FontsContext } from "../../components/sub-components/Switch-fonts/switch-fonts";
 import cx from "classnames";
 
 function H1() {
