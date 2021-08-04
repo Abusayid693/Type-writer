@@ -1,16 +1,16 @@
 const express = require("express");
-const userRoutes = require("./routes/user")
+const userRoutes = require("./routes/user");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const path = require("path");
 const app = express();
 const TextFile = require("./Models/models");
 const PORT = process.env.PORT || 8000;
+const { notFound, errorHandler } = require("./middlewares/error");
 
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 
 //----------- Connecting with MONGODB clusters ------------
 mongoose.connect(
@@ -31,7 +31,6 @@ app.get("/data", (req, res) => {
     });
 });
 
-
 // -------- Handaling post request from client server -------
 app.post("/", (req, res) => {
   console.log("POST", req.body);
@@ -44,35 +43,20 @@ app.post("/", (req, res) => {
   res.send("Data received in server");
 });
 
-
-
-
 // -----------User authentication-------------------
 
-app.use("/api/users",userRoutes)
-
-
-
-
-
-
-
-
-
+app.use("/api/users", userRoutes);
+app.use(notFound);
+app.use(errorHandler);
 
 // ------- Verifying database connection ---------------------
 mongoose.connection.on("connected", () => {
   console.log("Database successfully connected");
 });
 
-
-
-
-
 // ------ For Production deployment ---------------------------
-if (process.env.NODE_ENV==="production"){
-app.use(express.static('../App/build'))
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("../App/build"));
 }
-
 
 app.listen(PORT, console.log("Server running on port"));
