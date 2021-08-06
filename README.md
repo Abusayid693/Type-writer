@@ -149,12 +149,13 @@ If you dont have [MongoDB]() you use [MongoDB Atls]()
 3. Inside the .env file, add key `DB_CONNECTION` and assign your MongoDB local host or Mongo Atls like this, also add `NODE_ENV` and `JWT_SECRET`.
 
 
-        // .env
+      ``` // .env
        DB_CONNECTION = "YOUR_DB_LOCAL_HOST" 
         // eg : mongodb://localhost/typewriter1 or mongodb+srv://"Your username ":" your password "....
 
        JWT_SECRET = "YOUR_JWT_SECRET"
        NODE_ENV = development
+       ```
 
 
 Warning: Treat your tokens like passwords and keep them secret. When working with the API, use tokens as environment variables instead of hardcoding them into your programs.
