@@ -5,9 +5,11 @@
 
 <p>
   
- <img src="https://i.imgur.com/JFKGNCH.png"  alt="size" />
+ <img src="https://img.shields.io/github/languages/code-size/Abusayid693/Type-writer"  alt="size" />
 
- <img src="https://i.imgur.com/Vl9Nfjx.png"  alt="license" />
+ <img src="https://img.shields.io/github/languages/top/Abusayid693/Type-writer " alt="license" />
+  
+ <img src= "https://img.shields.io/github/issues/Abusayid693/Type-writer" /> 
 
 </p>
 
@@ -23,6 +25,16 @@ Get youtube [demo]() here
 - [Features]()
 - [Tools and Packages]()
 - [Deployment]()
+
+<p>
+<a  href="https://codepen.io/abusayid693/pen/RwVVRKG" target="_blank">
+<img src="https://i.imgur.com/H2hdsgz.png" />
+</a>
+</p>
+
+
+>  *Initial project development on codepen*
+
 --- 
 # 👨‍💻 Getting started
 
@@ -258,4 +270,6 @@ Customize background colours,text colours as per your need, the color palette al
   | [morgan](https://www.npmjs.com/package/morgan) |HTTP request logger middleware for node.js | 1.10.0 |
   | [express](https://expressjs.com) | Node.js web application framework for server side scripting | 4.17.1 |
   | [MongoDB](https://www.mongodb.com) | a NoSQL database | 4.4.3 |
+  | [bcryptjs](https://www.npmjs.com/package/bcrypt) | A library to help you hash password | 4.4.3 |
+  | [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) | An implementation of JSON Web Tokens | 8.5.1 |  
 
