@@ -7,7 +7,9 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const { notFound, errorHandler } = require("./middlewares/error");
 const dataRoutes = require("./routes/TextFiles")
+const dotenv = require('dotenv');
 
+dotenv.config();
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
