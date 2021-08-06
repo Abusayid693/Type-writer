@@ -164,17 +164,19 @@ Warning: Treat your tokens like passwords and keep them secret. When working wit
 
 
 4. Starting the server application.
-
-        Cd Type-writer && Cd Backend 
-        npm install
-        Nodemon index.js
+```bash
+Cd Type-writer && Cd Backend 
+npm install
+Nodemon index.js
+```
    `This will start server on localhost:8000`     
 
 5. Starting the Client application.
-
-        Cd Type-writer && Cd App 
-        npm install
-        npm start
+```bash
+Cd Type-writer && Cd App 
+npm install
+npm start
+```
    `This will start client app on localhost:3000`  
 
 
@@ -188,19 +190,23 @@ Warning: Treat your tokens like passwords and keep them secret. When working wit
 ### Heading tags
 For heading user can use prefix "#"
 
-
-    Prefix " # "                                          -- For H1 tags
-    prefix " ## "                                         -- For H2 tags
-    prefix " ### "                                        -- for H3 tags
-    prefix " #### "                                       -- for H4 tags.  
+```bash
+Prefix " # "                                          -- For H1 tags
+prefix " ## "                                         -- For H2 tags
+prefix " ### "                                        -- for H3 tags
+prefix " #### "                                       -- for H4 tags.  
+```
 `user must press Space after entering prefix`    
  ### [Lists tags]()
 #### Unordered Lists 
 
-        prefix " - "                                          -- for Unordered Lists elements 
+```bash
+prefix " - "                                          -- for Unordered Lists elements 
+```
 #### Ordered Lists 
-
-    prefix " Numerical digits "                           -- for Ordered Lists elements     
+```bash
+prefix " Numerical digits "                           -- for Ordered Lists elements   
+```
 `user must press Space after entering prefix`    
 
 
