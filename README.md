@@ -119,25 +119,61 @@ This section will work you through how you can get started with the project.
 
 ### Run on your local server
 
-`You will need NodeJS, MongoDB installed to run this project locally`
+You will need [NodeJS](), [Git]() and [MongoDB]() installed to run this project locally
+
+      node@v10.16.0 or higher
+      npm@6.9.0 or higher
+      git@2.17.1 or higher
+
+If you dont have [MongoDB]() you use [MongoDB Atls]()
+
 
 1. Clone the repo
 
         git clone https://github.com/Abusayid693/Type-writer.git
 
-2. Starting the server application.
+2. Create a file called .env in the Backend directory of your project:
+
+
+     Backend
+     └──- Controllers
+        - Models
+        - .env         <-- create it here
+        - .gitignore
+        - index.js
+        - package-lock.json
+        - package.json
+
+3. Inside the .env file, add key `DB_CONNECTION` and assign your MongoDB local host or Mongo Atls like this, also add `NODE_ENV` and `JWT_SECRET`.
+
+
+    // .env
+    DB_CONNECTION = "YOUR_DB_LOCAL_HOST" 
+    // eg : mongodb://localhost/typewriter1 or mongodb+srv://"Your username ":" your password "....
+
+    JWT_SECRET = "YOUR_JWT_SECRET"
+    NODE_ENV = development
+
+
+Warning: Treat your tokens like passwords and keep them secret. When working with the API, use tokens as environment variables instead of hardcoding them into your programs.
+
+
+4. Starting the server application.
 
         Cd Type-writer && Cd Backend 
         npm install
         Nodemon index.js
    `This will start server on localhost:8000`     
 
-3. Starting the Client application.
+5. Starting the Client application.
 
         Cd Type-writer && Cd App 
         npm install
         npm start
    `This will start client app on localhost:3000`  
+
+
+
 
 
 ---
