@@ -8,12 +8,13 @@ const PORT = process.env.PORT || 8000;
 const { notFound, errorHandler } = require("./middlewares/error");
 const dataRoutes = require("./routes/TextFiles")
 const dotenv = require('dotenv');
+const cors = require('cors')
 
 dotenv.config();
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors())
 //----------- Connecting with MONGODB clusters ------------
 mongoose.connect(
   "mongodb://localhost/typewriter1",
