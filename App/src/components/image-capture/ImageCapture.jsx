@@ -5,7 +5,6 @@ import { Resizable } from "react-resizable";
 import "react-resizable/css/styles.css";
 import "./imageCapture.css";
 
-
 class MyResizable extends React.Component {
   constructor(props) {
     super(props);
@@ -55,7 +54,6 @@ class MyResizable extends React.Component {
   }
 }
 
-
 /*------------------------- Randering captured image ------------------------ */
 function renderImage(src, s) {
   ReactDOM.render(<MyResizable src={src} />, document.querySelector("#" + s));
@@ -63,6 +61,5 @@ function renderImage(src, s) {
 
 // Note : renderImage function is called from HandleClipboardAPI and image src
 // is passed as props
-
 
 export { renderImage };

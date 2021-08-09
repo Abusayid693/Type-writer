@@ -1,4 +1,3 @@
-
 //-------- Creating unordered list elements ---------------
 function unordered(elem) {
   var parent = elem.parentNode,
@@ -23,7 +22,7 @@ function ordered(elem, start) {
     ol = document.createElement("ol"),
     li = document.createElement("li");
   if (active.nodeName == "LI") return;
-  
+
   ol.appendChild(li);
   ol.start = start;
   ol.classList.add("main");

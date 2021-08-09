@@ -22,10 +22,9 @@ const OutlineContext = React.createContext(themes.language);
 // CONTEXT API
 const FormatContext = React.createContext(themes.format);
 /* React Hook that gives you access
- * to the fonts type user selected in 
- * Main page to update 
+ * to the fonts type user selected in
+ * Main page to update
  */
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,39 +33,37 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Checkboxes() {
-
   const [state, setState] = React.useState({
     have_Outline: false,
-    paper_Format: false
+    paper_Format: false,
   });
 
   const { outline, setOutline } = useContext(OutlineContext),
-        { format, setFormat } = useContext(FormatContext),
-         classes = useStyles();
+    { format, setFormat } = useContext(FormatContext),
+    classes = useStyles();
 
   const handleChange_outline = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
     const target = event.target.name;
-        if (!state.have_Outline) {
-          setOutline(target);
-          setState({ have_Outline: true });
-        } else {
-          setOutline("none");
-          setState({ have_Outline: false });
-        }   
+    if (!state.have_Outline) {
+      setOutline(target);
+      setState({ have_Outline: true });
+    } else {
+      setOutline("none");
+      setState({ have_Outline: false });
+    }
   };
-
 
   const handleChange_format = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
     const target = event.target.name;
-        if (!state.paper_Format) {
-          setFormat(target);
-          setState({ paper_Format: true });
-        } else {
-          setFormat("none");
-          setState({ paper_Format: false });
-        }   
+    if (!state.paper_Format) {
+      setFormat(target);
+      setState({ paper_Format: true });
+    } else {
+      setFormat("none");
+      setState({ paper_Format: false });
+    }
   };
 
   const { gilad, jason, antoine } = state;
@@ -89,17 +86,16 @@ function Checkboxes() {
           />
           <FormControlLabel
             control={
-              <Checkbox checked={jason} onChange={handleChange_format} name="paper" />
+              <Checkbox
+                checked={jason}
+                onChange={handleChange_format}
+                name="paper"
+              />
             }
             label="Paper"
           />
           <FormControlLabel
-            control={
-              <Checkbox
-                checked={antoine}
-                name="antoine"
-              />
-            }
+            control={<Checkbox checked={antoine} name="antoine" />}
             label="Antoine Llorca"
           />
         </FormGroup>

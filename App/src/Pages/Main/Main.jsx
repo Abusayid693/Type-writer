@@ -7,13 +7,9 @@ import {
   FontsContext,
   cx,
 } from "./imports.jsx";
-import Typewriter from "./Typewriter"
-
-
-
+import Typewriter from "./Typewriter";
 
 function Main() {
-
   // Handaling React Context API
 
   const [outline, setOutline] = useState("none");
@@ -53,9 +49,8 @@ function Main() {
 
 export default Main;
 
-
 /** ---------------------------- SUMMARY ----------------------------------
- * 
+ *
  *  Main page uses CONTEXT API to get updated states for fonts, padding etc
  *  and reflects them in the main page
  */

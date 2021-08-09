@@ -1,38 +1,32 @@
-import React,{ useContext }  from "react";
+import React, { useContext } from "react";
 import { ChromePicker } from "react-color";
 
-
-
-const backgroundColor= {
+const backgroundColor = {
   Color: {
-    background: "#ffdef"
+    background: "#ffdef",
   },
-}
+};
 
 // CONTEXT API FOR HANDALING BACKGROUND COLOR
 const BackGroundColorContext = React.createContext("null");
-/* React Hook that gives you access to the  data user selected 
- * for Main page to update 
+/* React Hook that gives you access to the  data user selected
+ * for Main page to update
  */
 
-
 class ColorPicker extends React.Component {
-
   static contextType = BackGroundColorContext;
 
   // State handaling color picker position
 
   state = {
-    background: "#fff",     
+    background: "#fff",
     main: true,
-    top: "76vh",        /* -- This state gets changed with new postions of color palatte */
-    left: "2vh",        /* -- This state gets changed with new postions of color palatte */
+    top: "76vh" /* -- This state gets changed with new postions of color palatte */,
+    left: "2vh" /* -- This state gets changed with new postions of color palatte */,
     selectedElem: null,
   };
 
-
   componentDidMount() {
-
     // Checking whether text selected or not
     const getSelectedText = () => {
       var text = "";
@@ -50,16 +44,14 @@ class ColorPicker extends React.Component {
     // Changing the position of color picker next to content text selected
 
     const doSomethingWithSelectedText = () => {
-
       const selectedText = getSelectedText(),
         elem = document.activeElement;
 
       if (selectedText && elem.classList.contains("main")) {
-
         const rect = document.activeElement.getBoundingClientRect(),
           left = rect.left + window.scrollX,
           top = rect.top + window.scrollY;
- 
+
         this.setState({
           selectedElem: elem,
           top: top + "px",
@@ -67,14 +59,12 @@ class ColorPicker extends React.Component {
           main: false,
         });
       }
-
     };
 
     // Event to trigger changing of colors
     document.onmouseup = doSomethingWithSelectedText;
     document.onkeyup = doSomethingWithSelectedText;
   }
-
 
   //   Changing the color of selected text
 
@@ -87,9 +77,7 @@ class ColorPicker extends React.Component {
       this.state.selectedElem.style.color = color.hex;
   };
 
-
   render() {
-
     const Color_picker = {
       position: "fixed",
       top: this.state.top,
@@ -98,14 +86,12 @@ class ColorPicker extends React.Component {
     };
 
     return (
-
       <div className="color-picker" style={Color_picker}>
         <ChromePicker
           color={this.state.background}
           onChangeComplete={this.handleChangeComplete}
         />
       </div>
- 
     );
   }
 }

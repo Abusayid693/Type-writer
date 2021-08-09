@@ -1,7 +1,7 @@
 import React from "react";
 import HomePage from "./Pages/Home-page/home";
 import Main from "./Pages/Main/Main.jsx";
-import User from "./components/user/user"
+import User from "./components/user/user";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,9 +10,9 @@ import {
   Redirect,
 } from "react-router-dom";
 
-const MAIN_PAGE ="/main"
-const USER ="/user"
-const HOME_PAGE ="/"
+const MAIN_PAGE = "/main";
+const USER = "/user";
+const HOME_PAGE = "/";
 
 class App extends React.Component {
   render() {

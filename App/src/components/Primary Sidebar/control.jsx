@@ -17,16 +17,16 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
   }
-// Just upper button and texts of the side-bar
+  // Just upper button and texts of the side-bar
   UpperContainer = () => {
     return (
-    <div className="cheader">
-      <p>C-Panel</p>
-      <Link to={VERSIONS}>
-        <button>control</button>
-      </Link>
-    </div>
-    )
+      <div className="cheader">
+        <p>C-Panel</p>
+        <Link to={VERSIONS}>
+          <button>control</button>
+        </Link>
+      </div>
+    );
   };
 
   render() {
@@ -34,7 +34,7 @@ class Container extends React.Component {
 
     return (
       <div className="panel">
-        <this.UpperContainer/>
+        <this.UpperContainer />
         <Fonts />
         <DownloadPDF />
         <PageSizer />

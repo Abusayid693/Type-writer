@@ -17,8 +17,6 @@ import {
   InsertCodeBlocks,
 } from "./imports.jsx";
 
-
-
 class Typewriter extends React.Component {
   state = {
     selectedOption: null,
@@ -50,7 +48,7 @@ class Typewriter extends React.Component {
           parent,
           tempElement = document.createElement("hr"),
           appendingElem = document.createElement("p");
-          appendingElem.classList.add("main");
+        appendingElem.classList.add("main");
 
         // ERROR HANDLING
         if (!initial_release) elem = document.querySelector(".pad");
@@ -96,7 +94,6 @@ class Typewriter extends React.Component {
 
         // EVENT HANDLING : for ordered lists
         if (!isNaN(text) && text !== "") ordered(elem, text);
-        
 
         // MAIN EVENT HANDALING
         switch (text) {
@@ -119,8 +116,8 @@ class Typewriter extends React.Component {
             horizontalRuller(elem);
             break;
           case "'''":
-            InsertCodeBlocks(elem)
-            break;  
+            InsertCodeBlocks(elem);
+            break;
         }
       }
     }

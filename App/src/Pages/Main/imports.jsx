@@ -7,9 +7,16 @@ import { horizontalRuller } from "../../modules/Horizontal line/HorizontalRuller
 import { deleteNode } from "../../modules/Delete Node/DeleteEmptyNode";
 import { italicANDbold } from "../../modules/Text format/FormatTexts.js";
 import { imageCapture } from "../../components/image-capture/HandleClipboardAPI";
-import { endCodingBlocks,InsertCodeBlocks,continueWithCodingBlocks } from "../../components/code-block/code";
+import {
+  endCodingBlocks,
+  InsertCodeBlocks,
+  continueWithCodingBlocks,
+} from "../../components/code-block/code";
 import Cpanel from "../../components/Sidebar Routes/SidebarRoutes.jsx";
-import { OutlineContext, FormatContext } from "../../components/sub-components/check-boxes/check-boxes";
+import {
+  OutlineContext,
+  FormatContext,
+} from "../../components/sub-components/check-boxes/check-boxes";
 import { PaddingContext } from "../../components/sub-components/Page-padding/pagePadding";
 import { FontsContext } from "../../components/sub-components/Switch-fonts/switch-fonts";
 import cx from "classnames";
@@ -48,5 +55,5 @@ export {
   PaddingContext,
   FontsContext,
   InsertCodeBlocks,
-  cx
+  cx,
 };

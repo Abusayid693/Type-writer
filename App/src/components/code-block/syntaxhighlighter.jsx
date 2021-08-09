@@ -11,7 +11,7 @@ export default function CodeView(props) {
     borderRadius: "5px",
     fontSize: "1.2rem",
     width: "500px",
-    cursor:"url("+courser+"), auto"
+    cursor: "url(" + courser + "), auto",
   };
   return (
     <div className={("code-syntax", props.plass)} contentEditable="true">
@@ -28,5 +28,3 @@ export default function CodeView(props) {
     </div>
   );
 }
-
-

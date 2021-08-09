@@ -1,11 +1,11 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Alert, AlertTitle } from '@material-ui/lab';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Alert, AlertTitle } from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
-    '& > * + *': {
+    width: "100%",
+    "& > * + *": {
       marginTop: theme.spacing(2),
     },
   },
@@ -16,7 +16,9 @@ export default function SignInError(props) {
 
   return (
     <div className={classes.root}>
-       <Alert variant="outlined" severity="error">{props.text}</Alert>
+      <Alert variant="outlined" severity="error">
+        {props.text}
+      </Alert>
     </div>
   );
 }

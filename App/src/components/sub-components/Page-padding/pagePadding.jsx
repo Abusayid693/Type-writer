@@ -1,19 +1,16 @@
-import React,{ useContext }  from "react";
+import React, { useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
-import { withStyles}  from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 
-
-
-// CONTEXT API 
+// CONTEXT API
 const PaddingContext = React.createContext({
   padding: " 5px 10px 30px 10px;",
   setPadding: () => {},
 });
-/* React Hook that gives you access to the  data user selected 
- * for Main page to update 
+/* React Hook that gives you access to the  data user selected
+ * for Main page to update
  */
-
 
 /* -------------------- Inbuild styles for slider ------------------- */
 
@@ -47,17 +44,13 @@ const PrettoSlider = withStyles({
   },
 })(Slider);
 
-
-
 function PageSizer() {
-
   const { padding, setPadding } = useContext(PaddingContext);
 
-
-  const GetSliderValue=(value)=> {
-   const a = value / 2 +5+ "px";
+  const GetSliderValue = (value) => {
+    const a = value / 2 + 5 + "px";
     setPadding(a); /*--------- updating value of context ----------- */
-  }
+  };
 
   return (
     <div className="slider">
@@ -74,6 +67,6 @@ function PageSizer() {
   );
 }
 
-export { PageSizer,PaddingContext };
+export { PageSizer, PaddingContext };
 
 // SUMMARY : We used context to pass values of slider to main page

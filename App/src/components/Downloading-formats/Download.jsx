@@ -4,8 +4,7 @@ import { jsPDF } from "jspdf";
 import { saveAs } from "file-saver";
 import Button from "@material-ui/core/Button";
 import { ThemeProvider } from "@material-ui/core/styles";
-import {theme,options,customStyles} from "./constants"
-
+import { theme, options, customStyles } from "./constants";
 
 class DownloadPDF extends React.Component {
   state = {
@@ -37,14 +36,14 @@ class DownloadPDF extends React.Component {
     var content = document.querySelectorAll(".code-view");
     var list = [].slice.call(content);
     var innertext = list
-// Note => elem.textContent appends all contents together so in the case we are
-//         required to use javascript mapping to insert new-line characters.
-    .map(function (e) {
+      // Note => elem.textContent appends all contents together so in the case we are
+      //         required to use javascript mapping to insert new-line characters.
+      .map(function (e) {
         return e.textContent;
       })
       .join("\n");
- /*--- javascript files ----*/
-    var filename = "hello.js";  
+    /*--- javascript files ----*/
+    var filename = "hello.js";
 
     var blob = new Blob([innertext], {
       type: "text/plain;charset=utf-8",

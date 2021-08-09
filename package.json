@@ -4,7 +4,7 @@
   "description": "![](https://i.imgur.com/EpGyFsb.png)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format":"prettier --write \"App/**/*.{js,jsx}\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Abusayid693/Type-writer/issues"
   },
-  "homepage": "https://github.com/Abusayid693/Type-writer#readme"
+  "homepage": "https://github.com/Abusayid693/Type-writer#readme",
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
 }
