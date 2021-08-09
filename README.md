@@ -151,9 +151,9 @@ If you dont have [MongoDB]() you use [MongoDB Atls]()
 
 
 ```bash
-// .env
+# .env
 DB_CONNECTION = "YOUR_DB_LOCAL_HOST" 
-// eg : mongodb://localhost/typewriter1 or mongodb+srv://"Your username ":" your password "....
+# eg : mongodb://localhost/typewriter1 or mongodb+srv://"Your username ":" your password "....
 
 JWT_SECRET = "YOUR_JWT_SECRET"
 NODE_ENV = development
@@ -165,7 +165,7 @@ Warning: Treat your tokens like passwords and keep them secret. When working wit
 
 4. Starting the server application.
 ```bash
-Cd Type-writer && Cd Backend 
+cd Type-writer && cd Backend 
 npm install
 Nodemon index.js
 ```
@@ -173,7 +173,7 @@ Nodemon index.js
 
 5. Starting the Client application.
 ```bash
-Cd Type-writer && Cd App 
+cd Type-writer && cd App 
 npm install
 npm start
 ```
@@ -193,8 +193,8 @@ For heading user can use prefix "#"
 ```bash
 Prefix " # "                                          -- For H1 tags
 prefix " ## "                                         -- For H2 tags
-prefix " ### "                                        -- for H3 tags
-prefix " #### "                                       -- for H4 tags.  
+prefix " ### "                                        -- For H3 tags
+prefix " #### "                                       -- For H4 tags.  
 ```
 `user must press Space after entering prefix`    
  ### [Lists tags]()
