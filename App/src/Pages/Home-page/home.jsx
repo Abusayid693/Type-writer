@@ -1,8 +1,8 @@
-import React from "react";
-import bg from "../../components/Assets/Frame.svg";
-import { Link } from "react-router-dom";
-import MytypedComponent from "../../components/sub-components/typing-effect/typed.jsx";
-import "./home.css";
+import React from 'react';
+import bg from '../../components/Assets/Frame.svg';
+import { Link } from 'react-router-dom';
+import MytypedComponent from '../../components/sub-components/typing-effect/typed.jsx';
+import './home.css';
 
 export default function HomePage() {
   return (
@@ -14,6 +14,11 @@ export default function HomePage() {
         <Link to="/user">
           <button>
             Start here <i class="fas fa-chevron-right"></i>
+          </button>
+        </Link>
+        <Link to="/register">
+          <button>
+            New user <i class="fas fa-chevron-right"></i>
           </button>
         </Link>
       </div>
