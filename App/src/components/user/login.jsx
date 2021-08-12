@@ -4,10 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import './user.css';
 import bg from '../Assets/Frame.svg';
-import axios from 'axios';
 import SignInError from '../sub-components/Error/SignInError';
 import CircularIndeterminate from '../sub-components/Loader/loader';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import {login} from "../../actions/user"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,53 +21,24 @@ const useStyles = makeStyles((theme) => ({
 
 export default function UserLogin() {
   const classes = useStyles();
-  let history = useHistory();
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
 
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.userLogin);
 
+  const{loading,error,userInfo} = userLogin;
 
-  useEffect(()=>{
-
-    const userInfo=localStorage.getItem("UserInfo");
-
-    if(userInfo){
-        history.push("/main")
+  useEffect(() => {
+    if (userInfo) {
+      history.push('/main');
     }
-  },[history])
-
-
+  }, [history,userInfo]);
 
   const handleClick = async (e) => {
     e.preventDefault();
-    
-    try {
-      const config = {
-        headers: {
-          'Content-type': 'application/json',
-        },
-      };
-
-      setLoading(true);
-
-      const { data } = await axios.post(
-        'http://localhost:8000/api/users/login',
-        {
-          email,
-          password,
-        },
-        config,
-      );
-      localStorage.setItem('UserInfo', JSON.stringify(data));
-      console.log(data);
-    } catch (error) {
-      setError('Invalid login request');
-      console.log('LOGIN ERROR :', error.response.data.message);
-      setLoading(false);
-    }
-    setLoading(false);
+    dispatch(login(email,password))
   };
 
   return (
@@ -102,4 +74,3 @@ export default function UserLogin() {
     </div>
   );
 }
-

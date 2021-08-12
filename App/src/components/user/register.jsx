@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import './user.css';
 import bg from '../Assets/Frame.svg';
-import validator from "validator";
-import axios from 'axios';
+import validator from 'validator';
 import SignInError from '../sub-components/Error/SignInError';
 import CircularIndeterminate from '../sub-components/Loader/loader';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { register } from '../../actions/user';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,57 +22,44 @@ const useStyles = makeStyles((theme) => ({
 
 export default function UserRegistration() {
   const classes = useStyles();
+  const history = useHistory();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [pic,setPic] = useState("null");
+  const [message, setMessage] = useState('');
+  const [pic, setPic] = useState('null');
+
+  const dispatch = useDispatch();
+
+  const userRegistration = useSelector((state) => state.userRegistration);
+  const { loading, error, userInfo } = userRegistration;
+
+  useEffect(() => {
+    if (userInfo) {
+      history.push('/main');
+    }
+  }, [history,userInfo]);
 
 
   const handleClick = async (e) => {
     e.preventDefault();
     //  Confirming user
-    if (password !== confirmPassword)
-    setError("Passwords does not match")
-    else if (!validator.isEmail(email))
-    setError("Invalid email")
-    else if (name.length == 0) 
-    setError("Invalid name")
-    else{
-        try {
-            const config = {
-              headers: {
-                "Content-type": "application/json",
-              },
-            };
-    
-            const { data } = await axios.post(
-              "http://localhost:8000/api/users",
-              {
-                name,
-                email,
-                password,
-                pic,
-              },
-              config
-            );
-            console.log(data);
-          } catch (error) {
-            console.log("REGISTRATION ERROR :", error.response.data.message);
-            setError(error.response.data.message)
-          }
-        }
-
-
+    if (password !== confirmPassword) setMessage('Passwords does not match');
+    else if (!validator.isEmail(email)) setMessage('Invalid email');
+    else if (name.length == 0) setMessage('Invalid name');
+    else {
+      dispatch(register(email, password, name, pic));
+      setMessage(false);
     }
+  };
 
   return (
     <div className="User-page" style={{ backgroundImage: `url(${bg})` }}>
       <div className="form">
-      {error && <SignInError text={error} />}
+        {error && <SignInError text={error} />}
+        {message && <SignInError text={message} />}
         {loading && <CircularIndeterminate />}
         <form className={classes.root} noValidate autoComplete="off">
           <TextField

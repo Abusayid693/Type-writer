@@ -1,7 +1,6 @@
 import React from "react";
 import HomePage from "./Pages/Home-page/home";
 import Main from "./Pages/Main/Main.jsx";
-import User from "./components/user/user";
 import UserLogin from "./components/user/login"
 import UserRegistration from "./components/user/register"
 
