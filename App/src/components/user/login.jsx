@@ -8,7 +8,7 @@ import SignInError from '../sub-components/Error/SignInError';
 import CircularIndeterminate from '../sub-components/Loader/loader';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import {login} from "../../actions/user"
+import { login } from '../../actions/user';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,17 +28,17 @@ export default function UserLogin() {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
 
-  const{loading,error,userInfo} = userLogin;
+  const { loading, error, userInfo } = userLogin;
 
   useEffect(() => {
     if (userInfo) {
       history.push('/main');
     }
-  }, [history,userInfo]);
+  }, [history, userInfo]);
 
   const handleClick = async (e) => {
     e.preventDefault();
-    dispatch(login(email,password))
+    dispatch(login(email, password));
   };
 
   return (

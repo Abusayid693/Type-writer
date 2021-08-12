@@ -46,7 +46,6 @@ const InsertCodeBlocks = (elem) => {
 
 const continueWithCodingBlocks = () => {
   document.addEventListener("keypress", ContinueWithCodeBlocks);
-
   function ContinueWithCodeBlocks(e) {
     var elem = document.activeElement;
     if (

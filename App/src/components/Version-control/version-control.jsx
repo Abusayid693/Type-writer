@@ -1,11 +1,14 @@
 import React from "react";
 import { Link, axios, getPayLoad, File } from "./imports.jsx";
+import {sendData} from "../../actions/version-control-data"
+import { useDispatch, useSelector } from 'react-redux';
 
 class VersionControl extends React.Component {
   state = {
     Data: [],
     type: "Start version control",
   };
+
   constructor(props) {
     super(props);
   }
@@ -40,22 +43,11 @@ class VersionControl extends React.Component {
     // same dont update on database
     if (lastSaved == payload.body) {
       alert("Already upto date");
-      return;
-    }
-    // ----------- SENDING DATA TO BE SERVER -----------------
-    this.getData(true);
-    axios({
-      url: "/",
-      method: "POST",
-      data: payload,
-    })
-      .then(() => {
-        console.log("Data sent to the server");
-      })
-      .catch(() => {
-        console.log("Data sending error");
-      });
+      return;}
+      sendData(payload)    // ----------- SENDING DATA TO BE SERVER -----------------
+      this.getData(true);
   };
+
 
   displayVersions = (data) => {
     if (!data.length) return null;
