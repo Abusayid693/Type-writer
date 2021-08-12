@@ -8,9 +8,11 @@ let numberOfCodeBlocks = 0,
   elem,
   text;
 
-// Note => If `appendCodeBlock` is true the user will continue to get new coding blcoks
+/**** 
+** Note => If `appendCodeBlock` is true the user will continue to get new coding blcoks
+** RENDERING : Newly added coding blocks with syntaxhighlighter
+*/
 
-// RENDERING : Newly added coding blocks with syntaxhighlighter
 function renderCodeBlock(text, elem) {
   ReactDOM.render(
     <CodeView text={text} plass={elem} />,
@@ -26,7 +28,6 @@ const InsertCodeBlocks = (elem) => {
   let newElement = document.createElement("div"),
     parent = elem.parentNode,
     classIdentification = "code-view" + numberOfCodeBlocks;
-
   newElement.classList.add("code-view", classIdentification);
   newElement.contentEditable = "true";
   newElement.innerHTML =
@@ -36,10 +37,12 @@ const InsertCodeBlocks = (elem) => {
   newElement.focus();
 };
 
-// EVENT ContinueWithCodeBlocks = Continuation of Code blocks is necessary to provide user with new coding
-//  with new coding  blocks after they press `enter` since user are only allowed to type single line of code
-//  snippet per block. if they dont want to continue they can press any key holding `control` to initialize
-// `endCodingBlocks`
+/**** 
+ ** EVENT ContinueWithCodeBlocks = Continuation of Code blocks is necessary to provide user with new coding
+ **  with new coding  blocks after they press `enter` since user are only allowed to type single line of code
+ ** snippet per block. if they dont want to continue they can press any key holding `control` to initialize
+ ** `endCodingBlocks`
+*/
 
 const continueWithCodingBlocks = () => {
   document.addEventListener("keypress", ContinueWithCodeBlocks);
@@ -65,8 +68,11 @@ const continueWithCodingBlocks = () => {
   }
 };
 
-// EVENT endCodingBlocks = To end loop for getting continuous coding blocks user need to press any key
-//  holding `control` this will render the current coding block and end the loop.
+/**** 
+** EVENT endCodingBlocks = To end loop for getting continuous coding blocks user need to press any key
+**  holding `control` this will render the current coding block and end the loop.
+*/
+
 const endCodingBlocks = () => {
   document.addEventListener("keypress", (event) => {
     elem = document.activeElement;

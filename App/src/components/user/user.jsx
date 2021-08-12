@@ -146,7 +146,7 @@ class User extends React.Component {
     if (redirectToMainPage) {
       return <Redirect to="/main" />;
     } else if (doRegisterInstead) {
-      // User registration
+      // REGISTRATION SCREEN VIEW
       return (
         <div className="User-page" style={{ backgroundImage: `url(${bg})` }}>
           <div className="form">
@@ -199,7 +199,7 @@ class User extends React.Component {
     }
 
     return (
-      // LOGIN
+      // LOGIN SCREEN VIEW
       <div className="User-page" style={{ backgroundImage: `url(${bg})` }}>
         <div className="form">
           {error && <SignInError text={error} />}
@@ -237,3 +237,8 @@ class User extends React.Component {
 }
 
 export default withStyles(useStyles)(User);
+
+
+/** SUMMARY
+ * It handels user registrations and authentications
+ */

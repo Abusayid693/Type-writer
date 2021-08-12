@@ -10,7 +10,7 @@ import {
 
 const VERSIONS = "/main/saved-files";
 
-class Container extends React.Component {
+class PrimarySidebar extends React.Component {
   state = {
     selectedOption: null,
   };
@@ -45,4 +45,4 @@ class Container extends React.Component {
   }
 }
 
-export { Container };
+export { PrimarySidebar };

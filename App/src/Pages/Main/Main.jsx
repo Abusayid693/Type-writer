@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Cpanel,
   OutlineContext,
@@ -6,15 +6,14 @@ import {
   PaddingContext,
   FontsContext,
   cx,
-} from "./imports.jsx";
-import Typewriter from "./Typewriter";
+} from './imports.jsx';
+import Typewriter from './Typewriter';
 
 function Main() {
-  // Handaling React Context API
-
-  const [outline, setOutline] = useState("none");
-  const [format, setFormat] = useState("none");
-  const [padding, setPadding] = useState("5px 10px 30px 10px;");
+  // Handeling React Context API
+  const [outline, setOutline] = useState('none');
+  const [format, setFormat] = useState('none');
+  const [padding, setPadding] = useState('5px 10px 30px 10px;');
   const [font, setFont] = useState("'Roboto', sans-serif");
 
   const OutlineContextValue = { outline, setOutline };
@@ -30,9 +29,9 @@ function Main() {
             <div>
               <Cpanel />
               <div
-                className={cx("Whole", {
-                  outline: outline === "outline",
-                  paper: format === "paper",
+                className={cx('Whole', {
+                  outline: outline === 'outline',
+                  paper: format === 'paper',
                 })}
                 id="content-22"
                 style={{ padding: padding, fontFamily: font }}
@@ -50,7 +49,6 @@ function Main() {
 export default Main;
 
 /** ---------------------------- SUMMARY ----------------------------------
- *
  *  Main page uses CONTEXT API to get updated states for fonts, padding etc
  *  and reflects them in the main page
  */

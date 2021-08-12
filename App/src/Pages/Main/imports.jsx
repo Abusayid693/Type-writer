@@ -5,7 +5,7 @@ import { unordered, ordered } from "../../modules/Lists/lists.js";
 import { heading } from "../../modules/Header/header.js";
 import { horizontalRuller } from "../../modules/Horizontal line/HorizontalRuller.js";
 import { deleteNode } from "../../modules/Delete Node/DeleteEmptyNode";
-import { italicANDbold } from "../../modules/Text format/FormatTexts.js";
+import { italicAndBoldTextFormating } from "../../modules/Text format/FormatTexts.js";
 import { imageCapture } from "../../components/image-capture/HandleClipboardAPI";
 import {
   endCodingBlocks,
@@ -41,7 +41,7 @@ export {
   heading,
   horizontalRuller,
   deleteNode,
-  italicANDbold,
+  italicAndBoldTextFormating,
   imageCapture,
   endCodingBlocks,
   continueWithCodingBlocks,

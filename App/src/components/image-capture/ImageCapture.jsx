@@ -59,7 +59,8 @@ function renderImage(src, s) {
   ReactDOM.render(<MyResizable src={src} />, document.querySelector("#" + s));
 }
 
-// Note : renderImage function is called from HandleClipboardAPI and image src
-// is passed as props
-
+/** 
+** Note : renderImage function is called from HandleClipboardAPI and image src
+** is passed as props
+*/
 export { renderImage };

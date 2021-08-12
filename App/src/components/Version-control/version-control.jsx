@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, axios, getPayLoad, File } from "./imports.jsx";
 
-class SavedFiles extends React.Component {
+class VersionControl extends React.Component {
   state = {
     Data: [],
     type: "Start version control",
@@ -80,4 +80,4 @@ class SavedFiles extends React.Component {
   }
 }
 
-export default SavedFiles;
+export default VersionControl;

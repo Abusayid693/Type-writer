@@ -8,7 +8,7 @@ var i = 0,
   b = 0,
   code;
 
-function italicANDbold(e) {
+function italicAndBoldTextFormating(e) {
   //   Returning to normal from italics or bold
   if ((e.keyCode == 96 || e.keyCode == 42) && i | b) {
     cursive(e, "normal");
@@ -69,4 +69,4 @@ function assign(elem, type) {
   }
 }
 
-export { italicANDbold };
+export { italicAndBoldTextFormating };
