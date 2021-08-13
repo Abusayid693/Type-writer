@@ -40,8 +40,7 @@ export default function UserRegistration() {
     if (userInfo) {
       history.push('/main');
     }
-  }, [history,userInfo]);
-
+  }, [history, userInfo]);
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -50,7 +49,7 @@ export default function UserRegistration() {
     else if (!validator.isEmail(email)) setMessage('Invalid email');
     else if (name.length == 0) setMessage('Invalid name');
     else {
-      dispatch(register(email, password, name, pic));
+      dispatch(register(name, email, password, pic));
       setMessage(false);
     }
   };
@@ -80,6 +79,7 @@ export default function UserRegistration() {
             required={true}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            type="password"
           />
           <TextField
             className="input"
@@ -89,6 +89,7 @@ export default function UserRegistration() {
             required={true}
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            type="password"
           />
           <TextField
             className="input"

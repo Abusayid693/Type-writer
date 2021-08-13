@@ -43,7 +43,7 @@ export default function UserLogin() {
 
   return (
     // LOGIN SCREEN VIEW
-    <div className="User-page" className={classes.root} style={{ backgroundImage: `url(${bg})` }}>
+    <div className="User-page" style={{ backgroundImage: `url(${bg})` }}>
       <div className="form">
         {error && <SignInError text={error} />}
         {loading && <CircularIndeterminate />}
@@ -65,6 +65,7 @@ export default function UserLogin() {
             required={true}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            type="password"
           />
           <button onClick={handleClick}>
             Login <i class="fas fa-chevron-right"></i>
