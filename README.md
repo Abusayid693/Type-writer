@@ -1,7 +1,6 @@
 
 # TYPE-WRITER
 
-
 <p>
   
  <img src="https://img.shields.io/github/languages/code-size/Abusayid693/Type-writer"  alt="size" />
@@ -10,29 +9,47 @@
   
  <img src= "https://img.shields.io/github/issues/Abusayid693/Type-writer" /> 
 
-</p>
+[<img src="https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white"/>]()
 
-![](https://i.imgur.com/07t6nFn.png)
-
-![](https://i.imgur.com/TtSRRF0.png)
-
-Type writer is a modern documentating Application with support of prefix-edit-text.
-
-Get youtube [demo]() here
 ## Contents:
+- [About]()
 - [Project Starter]()
 - [Features]()
 - [Tools and Packages]()
 - [Deployment]()
 
-<p>
-<a  href="https://codepen.io/abusayid693/pen/RwVVRKG" target="_blank">
-<img src="https://i.imgur.com/H2hdsgz.png" />
-</a>
+---
+
+# ✊ About
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"/>
+
+<img src ="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white"/>
+
+<img src ="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white"/>
+
 </p>
 
+> Type-writer is a documenting web application that supports markdown editing, copy pasting images etc.
 
->  *Initial project development on codepen*
+
+
+![](https://i.imgur.com/07t6nFn.png)
+
+![](https://i.imgur.com/TtSRRF0.png)
+
+
+Get youtube [demo]() here
+
+
 
 --- 
 # 👨‍💻 Getting started
@@ -46,75 +63,75 @@ This section will work you through how you can get started with the project.
 <pre>
 .
 ├── <strong>Backend</strong>
+│   │  
+│   ├── <strong>Controllers</strong>
+│   │
 │   ├── <strong>Models</strong>
-│   │   └── models.js
-│   ├── package.json
+│   │
+│   ├── <strong>middlewares</strong>
+│   │
+│   ├── <strong>Routes</strong>
+│   │
+│   ├── <strong>Utils</strong>
+│   │  
 │   └── index.js
+│ 
 ├── <strong>App</strong>
-│   ├── package.json
 │   ├── <strong>public</strong>
-│   │   ├── index.html
-│   │   └── manifest.json
 │   └── <strong>src</strong>
 │       ├── <strong>components</strong>
+│       │   │  
 │       │   ├── <strong>Assets</strong>
 │       │   │  
 │       │   ├── <strong>Downloading-formats</strong>
-│       │   │    └── Download.jsx
-│       │   │  
-│       │   ├── <strong>Format-equation</strong>
-│       │   │    └── Format-equation.jsx
 │       │   │  
 │       │   ├── <strong>Primary Sidebar</strong>
-│       │   │    ├── <strong>Styles</strong>
-│       │   │    ├── control.jsx
-│       │   │    └── Imports.jsx
-│       │   │  
-│       │   ├── <strong>Pages</strong>
-│       │   │       ├──<strong>Main</strong>
-│       │   │       │  ├── Main.jsx
-│       │   │       │  └── Imports.jsx
-│       │   │       │   
-│       │   │       └──<strong>Home-page</strong>
-│       │   │          ├── home.jsx
-│       │   │          └── home.css
-│       │   │  
+│       │   │   
 │       │   ├── <strong>Side bar routes</strong>
-│       │   │    └── Sidebar-routes.jsx
+│       │   │  
+│       │   ├── <strong>resizable</strong>
 │       │   │ 
 │       │   ├── <strong>Version-control</strong>
-│       │   │       ├──<strong>sub-components</strong>
-│       │   │       ├── Imports.jsx
-│       │   │       ├── Version-control.css
-│       │   │       └── Version-control.jsx
 │       │   │ 
 │       │   ├── <strong>Code-block</strong>
-│       │   │       ├── code.jsx
-│       │   │       ├── code.css
-│       │   │       └── syntaxhighlighter.jsx
 │       │   │ 
-│       │   ├── <strong>Image-capture</strong>
-│       │   │       ├── ClipboardAPI.jsx
-│       │   │       └── img.css
+│       │   ├── <strong>User</strong>
 │       │   │ 
-│       │   ├──<strong>sub-components</strong>
-│       │   │          ├──<strong>page-padding</strong>
-│       │   │          ├──<strong>check-boxes</strong>
-│       │   │          ├──<strong>color-picker</strong>
-│       │   │          └──<strong>yping-effect</strong> 
-│       │   │ 
-│       │   ├── <strong>Modules</strong>
-│       │   │       ├── header.js
-│       │   │       ├── horizontal-ruller.js
-│       │   │       ├── lists.js
-│       │   │       ├── node-delete.js
-│       │   │       ├── paragraph.js
-│       │   │       └── text-format.js
-│       │   ├── App.js
-│       │   └── index.css
-│       └── index.js
+│       │   └──<strong>sub-components</strong>
+│       │              ├──<strong>page-padding</strong>
+│       │              ├──<strong>check-boxes</strong>
+│       │              ├──<strong>color-picker</strong>
+│       │              └──<strong>yping-effect</strong> 
+│       │    
+│       ├── <strong>Pages</strong>
+│       │     ├── <strong>Main</strong>  
+│       │     └──<strong>Home-page</strong>
+│       │  
+│       ├── <strong> lib</strong>
+│       │      ├── <strong>header</strong>
+│       │      ├── <strong>horizontal-ruller.js</strong>
+│       │      ├── <strong>lists.js</strong>
+│       │      ├── <strong>node-delete.js</strong>
+│       │      ├── <strong>paragraph.js</strong>
+│       │      └── <strong>text-format.js</strong> 
+│       │ 
+│       ├── <strong> Renders</strong>
+│       │      ├── <strong>Format equation</strong>
+│       │      ├── <strong>Code-block</strong>
+│       │      └── <strong>image-capture</strong>
+│       │ 
+│       ├── <strong> Actions</strong>
+│       │ 
+│       ├── <strong> Constants</strong>
+│       │ 
+│       └── <strong> Reducers</strong>
 └── README.md
 </pre>
+
+
+
+
+
 
 ### Run on your local server
 
@@ -226,7 +243,11 @@ prefix " Numerical digits "                           -- for Ordered Lists eleme
 ![](https://i.imgur.com/dQE81Qr.png)
      
 ### [Horizontal lines]()
-      prefix " --- "                                     --  for Horizontal lines
+
+ ```bash
+prefix " --- "                                     --  for Horizontal lines
+```
+
 ### [Coding Blocks]()
 The coding blocks supports syntaxhighlighter for `javascript code only` ( will be updated in future versions).
 
@@ -295,6 +316,7 @@ Customize background colours,text colours as per your need, the color palette al
   | Package | Description | version |
   | ------------ | ------------- | ------------- |
   | [axios](https://www.npmjs.com/package/axios) |Promise based HTTP client for the browser and node.js|  0.21.1 |
+   | [React-redux](https://react-redux.js.org) |A predictable state container for JavaScript applications|  0.21.1 |
   | [react-equation](https://www.npmjs.com/package/react-equation) | Used of displaying equations over webpages | 0.2.1 |
   | [react-resizable](https://www.npmjs.com/package/react-resizable) | To make resizable react components |3.0.4 |
   | [react-dropdown](https://www.npmjs.com/package/react-dropdown) | React dropdown menu      | 1.9.2 |
