@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import "./code.css";
-import CodeView from "./syntaxhighlighter.jsx";
+import CodeView from "../../components/code-block/syntaxhighlighter.jsx";
 
 let numberOfCodeBlocks = 0,
   appendCodeBlock = false,
