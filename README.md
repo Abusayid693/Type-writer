@@ -9,7 +9,9 @@
   
  <img src= "https://img.shields.io/github/issues/Abusayid693/Type-writer" /> 
 
-[<img src="https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white"/>]()
+<img src="https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white"/>
+
+</p>
 
 ## Contents:
 - [About]()
@@ -22,6 +24,7 @@
 
 # ✊ About
 
+<p>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
