@@ -4,9 +4,8 @@
   border-radius: 6px;
   padding: 10px 10px;
   margin: 20px 20px 20px 30px;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 1.2rem;
   position: relative;
-
-
+  height: 15px;
 }

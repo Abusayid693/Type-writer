@@ -4,8 +4,7 @@ import CodeView from "../../components/code-block/syntaxhighlighter.jsx";
 
 let numberOfCodeBlocks = 0,
   appendCodeBlock = false,
-  elem,
-  text;
+  elem;
 
 /**** 
 ** Note => If `appendCodeBlock` is true the user will continue to get new coding blcoks
@@ -30,7 +29,7 @@ const InsertCodeBlocks = (elem) => {
   newElement.classList.add("code-view", classIdentification);
   newElement.contentEditable = "true";
   newElement.innerHTML =
-    "<div class='codes' contentEditable='true' ><p contentEditable='true' class='code'>- </p></div>";
+    "<div class='codes' contentEditable='true' ><p contentEditable='true' class='code'> </p></div>";
   parent.replaceChild(newElement, elem);
   numberOfCodeBlocks++;
   newElement.focus();
