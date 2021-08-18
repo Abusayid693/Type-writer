@@ -1,4 +1,4 @@
-import { renderImage } from "./ImageCapture";
+import { renderImage } from "../Renders/ImageCapture";
 
 var numImages = 0; /*-----Tracking no of images captured---------*/
 

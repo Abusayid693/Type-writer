@@ -1,17 +1,16 @@
 import "../../components/index.css";
 import "../../components/code-block/code.css";
-import { formatEquation } from "../../Renders/Format-equation/Format-Equations.js";
+import { formatEquation } from "../../lib/equation-formatting";
 import { unordered, ordered } from "../../lib/Lists/lists.js";
 import { heading } from "../../lib/Header/header.js";
 import { horizontalRuller } from "../../lib/Horizontal line/HorizontalRuller.js";
 import { deleteNode } from "../../lib/Delete Node/DeleteEmptyNode";
 import { italicAndBoldTextFormating } from "../../lib/Text format/FormatTexts.js";
-import { imageCapture } from "../../Renders/image-capture/HandleClipboardAPI";
+import { imageCapture } from "../../lib/HandleClipboardAPI";
 import {
-  endCodingBlocks,
+  initializeCodingBlocks,
   InsertCodeBlocks,
-  continueWithCodingBlocks,
-} from "../../Renders/code-block/code";
+} from "../../lib/codeblock";
 import Cpanel from "../../components/Sidebar Routes/SidebarRoutes.jsx";
 import {
   OutlineContext,
@@ -43,8 +42,7 @@ export {
   deleteNode,
   italicAndBoldTextFormating,
   imageCapture,
-  endCodingBlocks,
-  continueWithCodingBlocks,
+  initializeCodingBlocks,
   H1,
   H2,
   H3,

@@ -8,8 +8,7 @@ import {
   deleteNode,
   italicAndBoldTextFormating,
   imageCapture,
-  endCodingBlocks,
-  continueWithCodingBlocks,
+  initializeCodingBlocks,
   H1,
   H2,
   H3,
@@ -27,9 +26,8 @@ class Typewriter extends React.Component {
 
   componentDidMount() {
     imageCapture();
-    endCodingBlocks();
+    initializeCodingBlocks();
     this.typewriter();
-    continueWithCodingBlocks();
   }
   typewriter() {
     var i = 0,
