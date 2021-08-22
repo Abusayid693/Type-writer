@@ -267,8 +267,9 @@ prefix " --- "                                     --  for Horizontal lines
 
 ```bash
  prefix " ''' "                                  -- for syntaxhighlighting editor
+ ```
 ![](https://i.imgur.com/fThdc0x.png)    
-```
+
 
 ---
 
