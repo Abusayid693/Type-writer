@@ -211,7 +211,7 @@ npm start
 
 ---
 # 🚀 Features
-## 1. [Prefix edit text support]()
+## 1. [Markdown rules]()
 
 ### Heading tags
 For heading user can use prefix "#"
@@ -238,7 +238,8 @@ prefix " Numerical digits "                           -- for Ordered Lists eleme
 
 
 ### [Equation formatting]()
-***The equation formatting features supports all Algebric, triagnometric and Matrices formatting, following with prefix " $ ".***
+
+> ***The equation formatting features supports all Algebric, triagnometric and Matrices formatting, following with prefix " $ ".***
 
 ![](https://i.imgur.com/9DsfOrD.gif)
 
@@ -259,12 +260,15 @@ prefix " --- "                                     --  for Horizontal lines
 ```
 
 ### [Coding Blocks]()
-The coding blocks supports syntaxhighlighter for `javascript code only` ( will be updated in future versions).
+
+> The coding blocks supports syntaxhighlighter for `javascript code only` ( will be updated in future versions).
 
 ![](https://i.imgur.com/TL7GjRn.gif)
 
-       prefix " ''' "                                  -- for syntaxhighlighting editor
+```bash
+ prefix " ''' "                                  -- for syntaxhighlighting editor
 ![](https://i.imgur.com/fThdc0x.png)    
+```
 
 ---
 
