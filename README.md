@@ -1,7 +1,7 @@
 
-# TYPE-WRITER
+<h1 align="center">  TYPE-WRITER </h1>
 
-<p>
+<p align="center">
   
  <img src="https://img.shields.io/github/languages/code-size/Abusayid693/Type-writer"  alt="size" />
 
@@ -16,9 +16,11 @@
 
 #### Short Brief
 
+<p align="center">
 Type-writer is a documenting web application with the support of many modern techniques to make documenting easier and faster. The web application itself contains clean and interactive UI making it easier to navigate. Some of the most promising features include markdown editing, copy pasting of images and resizing, mathematical equation formatting, syntax highlighter for code blocks etc. The application also contains user authentication through login/sign-up feature.
  Type-writer is also well equipped with version control to keep a track record for all saved versions of a file in the cloud. Users are also given choices in 3 different formats to download their files in local environment (i.e PDF format, text format, code block format).
 
+  </p>
 
 ## Contents:
 - [About]()
