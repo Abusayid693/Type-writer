@@ -14,7 +14,7 @@
 </p>
 
 
-#### Short Brief
+<h3 align="center"> Short Brief </h3>
 
 <p align="center">
 Type-writer is a documenting web application with the support of many modern techniques to make documenting easier and faster. The web application itself contains clean and interactive UI making it easier to navigate. Some of the most promising features include markdown editing, copy pasting of images and resizing, mathematical equation formatting, syntax highlighter for code blocks etc. The application also contains user authentication through login/sign-up feature.
