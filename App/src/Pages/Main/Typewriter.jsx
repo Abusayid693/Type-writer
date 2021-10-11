@@ -17,6 +17,7 @@ import {
 } from './imports.jsx';
 
 class Typewriter extends React.Component {
+
   state = {
     selectedOption: null,
   };
@@ -24,18 +25,27 @@ class Typewriter extends React.Component {
     super(props);
   }
 
+
   componentDidMount() {
     imageCapture();
     initializeCodingBlocks();
     this.typewriter();
   }
+
   typewriter() {
-    var i = 0,
-      b = 0,
-      initial_release = 0;
+    var initial_release = 0;
+
     /** EVENT Append : When user presses `Enter` it creates a new `p`
-        element and append it to main child body, only to replace the child element according to users entry **/
+     *  element and append it to main child body, only to replace the 
+     *  child element according to users entry 
+    **/
+
+    /* <<<===================== Event-Listener ===========>>>>  */
+
+    
     document.addEventListener('keypress', append);
+
+    /* <<<===================== Corresponding-function ===========>>>>  */
 
     function append(e) {
       if (e.which === 13 && document.activeElement.classList.contains('main')) {
@@ -66,13 +76,21 @@ class Typewriter extends React.Component {
         if (document.activeElement.textContent[0] == '$') formatEquation(document.activeElement);
         appendingElem.focus();
         e.preventDefault();
-        i = 0;
-        b = 0;
-        return 1;
       }
     }
-    // EVENT REPLACE = The primary function for replacing elements as per user prefix entries [ eg : prefix "#" for h1  ] **/
+
+    /** 
+     *  EVENT REPLACE = The primary function for replacing elements as per 
+     *  user prefix entries [ eg : prefix "#" for h1  ]
+     **/
+
+    /* <<<===================== Event-Listener ===========>>>>  */
+
     document.addEventListener('keypress', replace);
+
+    /* <<<===================== Corresponding-function ===========>>>>  */
+
+
     function replace(e) {
       if (e.keyCode == 32) {
         var elem = document.activeElement,

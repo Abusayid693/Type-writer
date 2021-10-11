@@ -5,7 +5,7 @@ import {
   FormatContext,
   PaddingContext,
   FontsContext,
-  cx,
+  cx
 } from './imports.jsx';
 import Typewriter from './Typewriter';
 
