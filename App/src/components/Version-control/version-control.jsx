@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link, getPayLoad, File } from './imports.jsx';
-import { sendData, axiosGetData } from '../../actions/version-control-data';
+import { axiosGetData, sendData } from '../../actions/version-control-data';
+import { File, getPayLoad, Link } from './imports.jsx';
+
 
 function VersionControl() {
   const [Data, setData] = useState([]);
@@ -22,8 +23,11 @@ function VersionControl() {
   };
 
   const handleClick = () => {
+    if(!Data.length) {
+      setType('No availabe in beta')
+      return;
+    }
     const lastSaved = Data[0].body;
-    console.log('Last saved data : ', lastSaved);
     const payload = getPayLoad();
     // If last saved version of file and current file are
     // same dont update on database
@@ -49,7 +53,7 @@ function VersionControl() {
         </Link>
       </div>
       <div className="saved-versions">
-        <button onClick={handleClick}>{type}</button>
+        <button className='version-btn' onClick={handleClick}>{type}</button>
         {displayVersions(Data)}
       </div>
     </div>
