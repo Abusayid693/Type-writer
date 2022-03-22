@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Type-writer/static/css/main.87935e14.chunk.css",
+    "main.js": "/Type-writer/static/js/main.d6d6cc7f.chunk.js",
+    "main.js.map": "/Type-writer/static/js/main.d6d6cc7f.chunk.js.map",
+    "runtime-main.js": "/Type-writer/static/js/runtime-main.ff4d360c.js",
+    "runtime-main.js.map": "/Type-writer/static/js/runtime-main.ff4d360c.js.map",
+    "static/css/2.1544d75d.chunk.css": "/Type-writer/static/css/2.1544d75d.chunk.css",
+    "static/js/2.eacb79a3.chunk.js": "/Type-writer/static/js/2.eacb79a3.chunk.js",
+    "static/js/2.eacb79a3.chunk.js.map": "/Type-writer/static/js/2.eacb79a3.chunk.js.map",
+    "static/js/3.c5825bd0.chunk.js": "/Type-writer/static/js/3.c5825bd0.chunk.js",
+    "static/js/3.c5825bd0.chunk.js.map": "/Type-writer/static/js/3.c5825bd0.chunk.js.map",
+    "static/js/4.382c0263.chunk.js": "/Type-writer/static/js/4.382c0263.chunk.js",
+    "static/js/4.382c0263.chunk.js.map": "/Type-writer/static/js/4.382c0263.chunk.js.map",
+    "static/js/5.c23f93b7.chunk.js": "/Type-writer/static/js/5.c23f93b7.chunk.js",
+    "static/js/5.c23f93b7.chunk.js.map": "/Type-writer/static/js/5.c23f93b7.chunk.js.map",
+    "index.html": "/Type-writer/index.html",
+    "static/css/2.1544d75d.chunk.css.map": "/Type-writer/static/css/2.1544d75d.chunk.css.map",
+    "static/css/main.87935e14.chunk.css.map": "/Type-writer/static/css/main.87935e14.chunk.css.map",
+    "static/js/2.eacb79a3.chunk.js.LICENSE.txt": "/Type-writer/static/js/2.eacb79a3.chunk.js.LICENSE.txt",
+    "static/js/3.c5825bd0.chunk.js.LICENSE.txt": "/Type-writer/static/js/3.c5825bd0.chunk.js.LICENSE.txt",
+    "static/js/4.382c0263.chunk.js.LICENSE.txt": "/Type-writer/static/js/4.382c0263.chunk.js.LICENSE.txt",
+    "static/js/5.c23f93b7.chunk.js.LICENSE.txt": "/Type-writer/static/js/5.c23f93b7.chunk.js.LICENSE.txt",
+    "static/media/Frame.9b54036b.svg": "/Type-writer/static/media/Frame.9b54036b.svg",
+    "static/media/index.css": "/Type-writer/static/media/paper-like.fe036721.jpeg",
+    "static/media/code.0b8448e9.svg": "/Type-writer/static/media/code.0b8448e9.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff4d360c.js",
+    "static/css/2.1544d75d.chunk.css",
+    "static/js/2.eacb79a3.chunk.js",
+    "static/css/main.87935e14.chunk.css",
+    "static/js/main.d6d6cc7f.chunk.js"
+  ]
+}
